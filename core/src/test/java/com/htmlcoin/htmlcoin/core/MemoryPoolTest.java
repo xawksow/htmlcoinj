@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.UnitTestParams;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.peercoinj.utils.TestUtils;
+import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,7 +36,7 @@ public class MemoryPoolTest {
     public void setup() throws Exception {
         BriefLogFormatter.init();
         tx1 = TestUtils.createFakeTx(params, Utils.toNanoCoins(1, 0), new ECKey().toAddress(params));
-        tx2 = new Transaction(params, tx1.peercoinSerialize());
+        tx2 = new Transaction(params, tx1.htmlcoinSerialize());
 
         address1 = new PeerAddress(InetAddress.getByAddress(new byte[] { 127, 0, 0, 1 }));
         address2 = new PeerAddress(InetAddress.getByAddress(new byte[] { 127, 0, 0, 2 }));

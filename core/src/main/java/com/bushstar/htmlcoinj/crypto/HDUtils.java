@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
 import com.google.common.collect.ImmutableList;
 import org.spongycastle.crypto.digests.SHA512Digest;
 import org.spongycastle.crypto.macs.HMac;

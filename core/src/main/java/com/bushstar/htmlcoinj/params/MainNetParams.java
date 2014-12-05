@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.params;
+package com.matthewmitchell.htmlcoinj.params;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 
 import static com.google.common.base.Preconditions.checkState;
 

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.jni;
+package com.matthewmitchell.htmlcoinj.jni;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.core.WalletEventListener;
-import com.matthewmitchell.peercoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.core.WalletEventListener;
+import com.matthewmitchell.htmlcoinj.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

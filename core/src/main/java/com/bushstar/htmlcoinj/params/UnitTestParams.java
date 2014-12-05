@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.params;
+package com.matthewmitchell.htmlcoinj.params;
 
-import com.matthewmitchell.peercoinj.core.Block;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Block;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
 
 import java.math.BigInteger;
 
 /**
- * Network parameters used by the peercoinj unit tests (and potentially your own). This lets you solve a block using
- * {@link com.matthewmitchell.peercoinj.core.Block#solve()} by setting difficulty to the easiest possible.
+ * Network parameters used by the htmlcoinj unit tests (and potentially your own). This lets you solve a block using
+ * {@link com.matthewmitchell.htmlcoinj.core.Block#solve()} by setting difficulty to the easiest possible.
  */
 public class UnitTestParams extends NetworkParameters {
     public UnitTestParams() {

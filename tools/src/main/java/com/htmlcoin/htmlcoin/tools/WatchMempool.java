@@ -1,9 +1,9 @@
-package com.matthewmitchell.peercoinj.tools;
+package com.matthewmitchell.htmlcoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

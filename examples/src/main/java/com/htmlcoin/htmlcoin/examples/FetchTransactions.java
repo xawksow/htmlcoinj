@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.net.InetAddress;

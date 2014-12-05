@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,8 +25,8 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import static com.matthewmitchell.peercoinj.core.Utils.uint32ToByteStreamLE;
-import static com.matthewmitchell.peercoinj.core.Utils.uint64ToByteStreamLE;
+import static com.matthewmitchell.htmlcoinj.core.Utils.uint32ToByteStreamLE;
+import static com.matthewmitchell.htmlcoinj.core.Utils.uint64ToByteStreamLE;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
@@ -108,7 +108,7 @@ public class PeerAddress extends ChildMessage {
     }
 
     @Override
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         if (protocolVersion >= 31402) {
             //TODO this appears to be dynamic because the client only ever sends out it's own address
             //so assumes itself to be up.  For a fuller implementation this needs to be dynamic only if

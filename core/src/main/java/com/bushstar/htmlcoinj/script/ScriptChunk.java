@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.script;
+package com.matthewmitchell.htmlcoinj.script;
 
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.OP_PUSHDATA1;
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.OP_PUSHDATA2;
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.OP_PUSHDATA4;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.OP_PUSHDATA1;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.OP_PUSHDATA2;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.OP_PUSHDATA4;
 import static com.google.common.base.Preconditions.checkState;
 
 /**

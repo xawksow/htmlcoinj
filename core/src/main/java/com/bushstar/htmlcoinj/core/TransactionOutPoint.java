@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.Script;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
@@ -105,7 +105,7 @@ public class TransactionOutPoint extends ChildMessage implements Serializable {
     }
 
     @Override
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         stream.write(Utils.reverseBytes(hash.getBytes()));
         Utils.uint32ToByteStreamLE(index, stream);
     }

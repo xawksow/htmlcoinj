@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
@@ -161,7 +161,7 @@ public class VersionMessage extends Message {
     }
 
     @Override
-    public void peercoinSerializeToStream(OutputStream buf) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream buf) throws IOException {
         Utils.uint32ToByteStreamLE(clientVersion, buf);
         Utils.uint32ToByteStreamLE(localServices, buf);
         Utils.uint32ToByteStreamLE(localServices >> 32, buf);
@@ -169,9 +169,9 @@ public class VersionMessage extends Message {
         Utils.uint32ToByteStreamLE(time >> 32, buf);
         try {
             // My address.
-            myAddr.peercoinSerialize(buf);
+            myAddr.htmlcoinSerialize(buf);
             // Their address.
-            theirAddr.peercoinSerialize(buf);
+            theirAddr.htmlcoinSerialize(buf);
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);  // Can't happen.
         } catch (IOException e) {

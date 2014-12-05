@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 @SuppressWarnings("serial")
 public class ProtocolException extends VerificationException {

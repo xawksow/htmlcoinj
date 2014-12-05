@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.InsufficientMoneyException;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.net.NioClient;
-import com.matthewmitchell.peercoinj.net.ProtobufParser;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.InsufficientMoneyException;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.net.NioClient;
+import com.matthewmitchell.htmlcoinj.net.ProtobufParser;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import org.peercoin.paymentchannel.Protos;
+import org.htmlcoin.paymentchannel.Protos;
 
 import java.io.IOException;
 import java.math.BigInteger;

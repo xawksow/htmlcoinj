@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
 /**
  * Thrown when something goes wrong with storing a block. Examples: out of disk space.

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
@@ -37,14 +37,14 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.matthewmitchell.peercoinj.core.Utils.doubleDigest;
-import static com.matthewmitchell.peercoinj.core.Utils.doubleDigestTwoBuffers;
+import static com.matthewmitchell.htmlcoinj.core.Utils.doubleDigest;
+import static com.matthewmitchell.htmlcoinj.core.Utils.doubleDigestTwoBuffers;
 
 /**
  * <p>A block is a group of transactions, and is one of the fundamental data structures of the HTMLcoin system.
  * It records a set of {@link Transaction}s together with some data that links it into a place in the global block
  * chain, and proves that a difficult calculation was done over its contents. See
- * <a href="http://www.peercoin.org/peercoin.pdf">the HTMLcoin technical paper</a> for
+ * <a href="http://www.htmlcoin.org/htmlcoin.pdf">the HTMLcoin technical paper</a> for
  * more detail on blocks. <p/>
  *
  * To get a block, you can either build one from the raw bytes you can get from another implementation, or request one
@@ -168,7 +168,7 @@ public class Block extends Message {
      * the system it was 50 coins per block, in late 2012 it went to 25 coins per block, and so on. The size of
      * a coinbase transaction is inflation plus fees.</p>
      *
-     * <p>The half-life is controlled by {@link com.matthewmitchell.peercoinj.core.NetworkParameters#getSubsidyDecreaseBlockCount()}.
+     * <p>The half-life is controlled by {@link com.matthewmitchell.htmlcoinj.core.NetworkParameters#getSubsidyDecreaseBlockCount()}.
      * </p>
      */
     public BigInteger getBlockInflation(int height) {
@@ -413,7 +413,7 @@ public class Block extends Message {
         if (transactions != null) {
             stream.write(new VarInt(transactions.size()).encode());
             for (Transaction tx : transactions) {
-                tx.peercoinSerialize(stream);
+                tx.htmlcoinSerialize(stream);
             }
         }
         
@@ -431,7 +431,7 @@ public class Block extends Message {
      *
      * @throws IOException
      */
-    public byte[] peercoinSerialize() {
+    public byte[] htmlcoinSerialize() {
         // we have completely cached byte array.
         if (headerBytesValid && transactionBytesValid) {
             Preconditions.checkNotNull(bytes, "Bytes should never be null if headerBytesValid && transactionBytesValid");
@@ -458,7 +458,7 @@ public class Block extends Message {
     }
 
     @Override
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         writeHeader(stream);
         // We may only have enough data to write the header.
         writeTransactions(stream);
@@ -907,7 +907,7 @@ public class Block extends Message {
      * Returns the difficulty of the proof of work that this block should meet encoded <b>in compact form</b>. The {@link
      * BlockChain} verifies that this is not too easy by looking at the length of the chain when the block is added.
      * To find the actual value the hash should be compared against, use
-     * {@link com.matthewmitchell.peercoinj.core.Block#getDifficultyTargetAsInteger()}. Note that this is <b>not</b> the same as
+     * {@link com.matthewmitchell.htmlcoinj.core.Block#getDifficultyTargetAsInteger()}. Note that this is <b>not</b> the same as
      * the difficulty value reported by the HTMLcoin "getdifficulty" RPC that you may see on various block explorers.
      * That number is the result of applying a formula to the underlying difficulty to normalize the minimum to 1.
      * Calculating the difficulty that way is currently unsupported.
@@ -967,7 +967,7 @@ public class Block extends Message {
                 ScriptBuilder.createOutputScript(new ECKey(null, pubKeyTo)).getProgram()));
         transactions.add(coinbase);
         coinbase.setParent(this);
-        coinbase.length = coinbase.peercoinSerialize().length;
+        coinbase.length = coinbase.htmlcoinSerialize().length;
         adjustLength(transactions.size(), coinbase.length);
     }
 

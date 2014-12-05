@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypter;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterScrypt;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.matthewmitchell.peercoinj.script.ScriptChunk;
-import com.matthewmitchell.peercoinj.store.UnreadableWalletException;
-import com.matthewmitchell.peercoinj.store.WalletProtobufSerializer;
-import com.matthewmitchell.peercoinj.utils.ListenerRegistration;
-import com.matthewmitchell.peercoinj.utils.Threading;
-import com.matthewmitchell.peercoinj.wallet.*;
-import com.matthewmitchell.peercoinj.wallet.WalletTransaction.Pool;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypter;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.script.ScriptChunk;
+import com.matthewmitchell.htmlcoinj.store.UnreadableWalletException;
+import com.matthewmitchell.htmlcoinj.store.WalletProtobufSerializer;
+import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.wallet.*;
+import com.matthewmitchell.htmlcoinj.wallet.WalletTransaction.Pool;
 import com.google.common.collect.*;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.Longs;
@@ -37,7 +37,7 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import org.peercoinj.wallet.Protos.Wallet.EncryptionType;
+import org.htmlcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -54,8 +54,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static com.matthewmitchell.peercoinj.core.Utils.peercoinValueToFriendlyString;
-import static com.matthewmitchell.peercoinj.core.Utils.peercoinValueToPlainString;
+import static com.matthewmitchell.htmlcoinj.core.Utils.htmlcoinValueToFriendlyString;
+import static com.matthewmitchell.htmlcoinj.core.Utils.htmlcoinValueToPlainString;
 import static com.google.common.base.Preconditions.*;
 
 // To do list:
@@ -90,12 +90,12 @@ import static com.google.common.base.Preconditions.*;
  * other objects, see the <a href="http://code.google.com/p/bitcoinj/wiki/GettingStarted">Getting started</a> tutorial
  * on the website to learn more about how to set everything up.</p>
  *
- * <p>Wallets can be serialized using either Java serialization - this is not compatible across versions of peercoinj,
+ * <p>Wallets can be serialized using either Java serialization - this is not compatible across versions of htmlcoinj,
  * or protocol buffer serialization. You need to save the wallet whenever it changes, there is an auto-save feature
  * that simplifies this for you although you're still responsible for manually triggering a save when your app is about
  * to quit because the auto-save feature waits a moment before actually committing to disk to avoid IO thrashing when
  * the wallet is changing very fast (eg due to a block chain sync). See
- * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.peercoinj.wallet.WalletFiles.Listener)}
+ * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
  * for more information about this.</p>
  */
 public class Wallet implements Serializable, BlockChainListener, PeerFilterProvider {
@@ -455,7 +455,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     /**
      * <p>
      * Disables auto-saving, after it had been enabled with
-     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.peercoinj.wallet.WalletFiles.Listener)}
+     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
      * before. This method blocks until finished.
      * </p>
      */
@@ -682,8 +682,8 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             BigInteger valueSentFromMe = tx.getValueSentFromMe(this);
             if (log.isInfoEnabled()) {
                 log.info(String.format("Received a pending transaction %s that spends %s HTML5 from our own wallet," +
-                        " and sends us %s HTML5", tx.getHashAsString(), Utils.peercoinValueToFriendlyString(valueSentFromMe),
-                        Utils.peercoinValueToFriendlyString(valueSentToMe)));
+                        " and sends us %s HTML5", tx.getHashAsString(), Utils.htmlcoinValueToFriendlyString(valueSentFromMe),
+                        Utils.htmlcoinValueToFriendlyString(valueSentToMe)));
             }
             if (tx.getConfidence().getSource().equals(TransactionConfidence.Source.UNKNOWN)) {
                 log.warn("Wallet received transaction with an unknown source. Consider tagging it!");
@@ -866,7 +866,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         BigInteger valueDifference = valueSentToMe.subtract(valueSentFromMe);
 
         log.info("Received tx{} for {} HTML5: {} [{}] in block {}", sideChain ? " on a side chain" : "",
-                peercoinValueToFriendlyString(valueDifference), tx.getHashAsString(), relativityOffset,
+                htmlcoinValueToFriendlyString(valueDifference), tx.getHashAsString(), relativityOffset,
                 block != null ? block.getHeader().getHash() : "(unit test)");
 
         onWalletChangedSuppressions++;
@@ -945,7 +945,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         //    listeners.
         if (!insideReorg && bestChain) {
             BigInteger newBalance = getBalance();  // This is slow.
-            log.info("Balance is now: " + peercoinValueToFriendlyString(newBalance));
+            log.info("Balance is now: " + htmlcoinValueToFriendlyString(newBalance));
             if (!wasPending) {
                 int diff = valueDifference.compareTo(BigInteger.ZERO);
                 // We pick one callback based on the value difference, though a tx can of course both send and receive
@@ -1589,7 +1589,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
         /**
          * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-         * (its value is ignored and set to {@link com.matthewmitchell.peercoinj.core.Wallet#getBalance()} - the fees required
+         * (its value is ignored and set to {@link com.matthewmitchell.htmlcoinj.core.Wallet#getBalance()} - the fees required
          * for the transaction). Any additional outputs are removed.
          */
         public boolean emptyWallet = false;
@@ -1612,7 +1612,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
          * at least {@link Transaction#REFERENCE_DEFAULT_MIN_TX_FEE} if it is set, as default reference clients will
          * otherwise simply treat the transaction as if there were no fee at all.</p>
          *
-         * <p>Once {@link Wallet#completeTx(com.matthewmitchell.peercoinj.core.Wallet.SendRequest)} is called, this is set to the
+         * <p>Once {@link Wallet#completeTx(com.matthewmitchell.htmlcoinj.core.Wallet.SendRequest)} is called, this is set to the
          * value of the fee that was added.</p>
          *
          * <p>You might also consider adding a {@link SendRequest#feePerKb} to set the fee per kb of transaction size
@@ -1663,7 +1663,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         public KeyParameter aesKey = null;
 
         /**
-         * If not null, the {@link com.matthewmitchell.peercoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+         * If not null, the {@link com.matthewmitchell.htmlcoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
          * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
          * amount.
          */
@@ -1946,18 +1946,18 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             if (bestChangeOutput != null) {
                 req.tx.addOutput(bestChangeOutput);
                 totalOutput = totalOutput.add(bestChangeOutput.getValue());
-                log.info("  with {} coins change", peercoinValueToFriendlyString(bestChangeOutput.getValue()));
+                log.info("  with {} coins change", htmlcoinValueToFriendlyString(bestChangeOutput.getValue()));
             }
             final BigInteger calculatedFee = totalInput.subtract(totalOutput);
             if (calculatedFee.compareTo(BigInteger.ZERO) > 0) {
-                log.info("  with a fee of {}", peercoinValueToFriendlyString(calculatedFee));
+                log.info("  with a fee of {}", htmlcoinValueToFriendlyString(calculatedFee));
             }
 
             // Now sign the inputs, thus proving that we are entitled to redeem the connected outputs.
             req.tx.signInputs(Transaction.SigHash.ALL, this, req.aesKey);
 
             // Check size.
-            int size = req.tx.peercoinSerialize().length;
+            int size = req.tx.htmlcoinSerialize().length;
             if (size > Transaction.MAX_STANDARD_TX_SIZE) {
                 throw new IllegalArgumentException(
                         String.format("Transaction could not be created without exceeding max size: %d vs %d", size,
@@ -1984,7 +1984,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     private boolean adjustOutputDownwardsForFee(Transaction tx, CoinSelection coinSelection, BigInteger baseFee, BigInteger feePerKb) {
         TransactionOutput output = tx.getOutput(0);
         // Check if we need additional fee due to the transaction's size
-        int size = tx.peercoinSerialize().length;
+        int size = tx.htmlcoinSerialize().length;
         size += estimateBytesForSigning(coinSelection);
         BigInteger fee = baseFee.add(BigInteger.valueOf((size / 1000) + 1).multiply(feePerKb));
         output.setValue(output.getValue().subtract(fee));
@@ -2062,7 +2062,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given ECKey to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.peercoinj.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * If the key already exists in the wallet, does nothing and returns false.
      */
@@ -2072,7 +2072,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given keys to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.peercoinj.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * Returns the number of keys added, after duplicates are ignored. The onKeyAdded event will be called for each key
      * in the list that was not already present.
@@ -2382,7 +2382,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             BigInteger estimatedBalance = getBalance(BalanceType.ESTIMATED);
             BigInteger availableBalance = getBalance(BalanceType.AVAILABLE);
             builder.append(String.format("Wallet containing %s HTML5 (available: %s HTML5) in:%n",
-                    peercoinValueToPlainString(estimatedBalance), peercoinValueToPlainString(availableBalance)));
+                    htmlcoinValueToPlainString(estimatedBalance), htmlcoinValueToPlainString(availableBalance)));
             builder.append(String.format("  %d pending transactions%n", pending.size()));
             builder.append(String.format("  %d unspent transactions%n", unspent.size()));
             builder.append(String.format("  %d spent transactions%n", spent.size()));
@@ -2462,11 +2462,11 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         for (Transaction tx : txns) {
             try {
                 builder.append("Sends ");
-                builder.append(Utils.peercoinValueToFriendlyString(tx.getValueSentFromMe(this)));
+                builder.append(Utils.htmlcoinValueToFriendlyString(tx.getValueSentFromMe(this)));
                 builder.append(" and receives ");
-                builder.append(Utils.peercoinValueToFriendlyString(tx.getValueSentToMe(this)));
+                builder.append(Utils.htmlcoinValueToFriendlyString(tx.getValueSentToMe(this)));
                 builder.append(", total value ");
-                builder.append(Utils.peercoinValueToFriendlyString(tx.getValue(this)));
+                builder.append(Utils.htmlcoinValueToFriendlyString(tx.getValue(this)));
                 builder.append(".\n");
             } catch (ScriptException e) {
                 // Ignore and don't print this line.
@@ -2633,7 +2633,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             }
             checkState(isConsistent());
             final BigInteger balance = getBalance();
-            log.info("post-reorg balance is {}", Utils.peercoinValueToFriendlyString(balance));
+            log.info("post-reorg balance is {}", Utils.htmlcoinValueToFriendlyString(balance));
             // Inform event listeners that a re-org took place.
             queueOnReorganize();
             insideReorg = false;
@@ -2675,7 +2675,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Returns the earliest creation time of keys or watched scripts in this wallet, in seconds since the epoch, ie the min
-     * of {@link com.matthewmitchell.peercoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
+     * of {@link com.matthewmitchell.htmlcoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
      * not have that data (was created before key timestamping was implemented). <p>
      *     
      * This method is most often used in conjunction with {@link PeerGroup#setFastCatchupTimeSecs(long)} in order to
@@ -2786,7 +2786,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * Convenience wrapper around {@link Wallet#encrypt(com.matthewmitchell.peercoinj.crypto.KeyCrypter,
+     * Convenience wrapper around {@link Wallet#encrypt(com.matthewmitchell.htmlcoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which uses the default Scrypt key derivation algorithm and
      * parameters, derives a key from the given password and returns the created key.
      */
@@ -2801,7 +2801,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Encrypt the wallet using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.matthewmitchell.peercoinj.crypto.KeyCrypterScrypt}.
+     * {@link com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt}.
      *
      * @param keyCrypter The KeyCrypter that specifies how to encrypt/ decrypt a key
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to create from a password)
@@ -2824,7 +2824,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
                     // Check that the encrypted key can be successfully decrypted.
                     // This is done as it is a critical failure if the private key cannot be decrypted successfully
-                    // (all peercoin controlled by that private key is lost forever).
+                    // (all htmlcoin controlled by that private key is lost forever).
                     // For a correctly constructed keyCrypter the encryption should always be reversible so it is just being as cautious as possible.
                     if (!ECKey.encryptionIsReversible(key, encryptedKey, keyCrypter, aesKey)) {
                         // Abort encryption
@@ -2909,7 +2909,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.matthewmitchell.peercoinj.crypto.KeyCrypter,
+     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.matthewmitchell.htmlcoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which just derives the key afresh and uses the pre-set
      * keycrypter. The wallet must have been encrypted using one of the encrypt methods previously.</p>
      *
@@ -3146,7 +3146,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 try {
                     if (isTxOutputBloomFilterable(out)) {
                         TransactionOutPoint outPoint = new TransactionOutPoint(params, i, tx);
-                        filter.insert(outPoint.peercoinSerialize());
+                        filter.insert(outPoint.htmlcoinSerialize());
                     }
                 } catch (ScriptException e) {
                     throw new RuntimeException(e); // If it is ours, we parsed the script correctly, so this shouldn't happen
@@ -3214,7 +3214,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * money to fail! Finally please be aware that any listeners on the future will run either on the calling thread
      * if it completes immediately, or eventually on a background thread if the balance is not yet at the right
      * level. If you do something that means you know the balance should be sufficient to trigger the future,
-     * you can use {@link com.matthewmitchell.peercoinj.utils.Threading#waitForUserCode()} to block until the future had a
+     * you can use {@link com.matthewmitchell.htmlcoinj.utils.Threading#waitForUserCode()} to block until the future had a
      * chance to be updated.</p>
      */
     public ListenableFuture<BigInteger> getBalanceFuture(final BigInteger value, final BalanceType type) {
@@ -3521,7 +3521,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                     if (changeAddress == null)
                         changeAddress = getChangeAddress();
                     changeOutput = new TransactionOutput(params, req.tx, change, changeAddress);
-                    size += changeOutput.peercoinSerialize().length + VarInt.sizeOf(req.tx.getOutputs().size()) - VarInt.sizeOf(req.tx.getOutputs().size() - 1);
+                    size += changeOutput.htmlcoinSerialize().length + VarInt.sizeOf(req.tx.getOutputs().size()) - VarInt.sizeOf(req.tx.getOutputs().size() - 1);
                     additionalValueForNextCategory = null;
                 }
 
@@ -3534,7 +3534,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
                 // Estimate transaction size and loop again if we need more fee per kb. The serialized tx doesn't
                 // include things we haven't added yet like input signatures/scripts or the change output.
-                size += req.tx.peercoinSerialize().length;
+                size += req.tx.htmlcoinSerialize().length;
                 size += estimateBytesForSigning(selection);
                 if (size/1000 > lastCalculatedSize/1000 && req.feePerKb.compareTo(BigInteger.ZERO) > 0) {
                     lastCalculatedSize = size;
@@ -3566,7 +3566,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
             if (selection2 == null && selection1 == null) {
                 checkNotNull(valueMissing);
-                log.warn("Insufficient value in wallet for send: needed {} more", peercoinValueToFriendlyString(valueMissing));
+                log.warn("Insufficient value in wallet for send: needed {} more", htmlcoinValueToFriendlyString(valueMissing));
                 throw new InsufficientMoneyException(valueMissing);
             }
 
@@ -3634,7 +3634,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * re-organisation of the wallet contents on the block chain. For instance, in future the wallet may choose to
      * optimise itself to reduce fees or improve privacy.</p>
      */
-    public void setTransactionBroadcaster(@Nullable com.matthewmitchell.peercoinj.core.TransactionBroadcaster broadcaster) {
+    public void setTransactionBroadcaster(@Nullable com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster broadcaster) {
         Transaction[] toBroadcast = {};
         lock.lock();
         try {
@@ -3778,7 +3778,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             rekeyTx.setPurpose(Transaction.Purpose.KEY_ROTATION);
             rekeyTx.signInputs(Transaction.SigHash.ALL, this);
             // KeyTimeCoinSelector should never select enough inputs to push us oversize.
-            checkState(rekeyTx.peercoinSerialize().length < Transaction.MAX_STANDARD_TX_SIZE);
+            checkState(rekeyTx.htmlcoinSerialize().length < Transaction.MAX_STANDARD_TX_SIZE);
             commitTx(rekeyTx);
         } catch (VerificationException e) {
             throw new RuntimeException(e);  // Cannot happen.
@@ -3818,7 +3818,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Returns the wallet lock under which most operations happen. This is here to satisfy the
-     * {@link com.matthewmitchell.peercoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
+     * {@link com.matthewmitchell.htmlcoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
      * In particular, do <b>not</b> hold this lock if you're display a send confirm screen to the user or for any other
      * long length of time, as it may cause processing holdups elsewhere. Instead, for the "confirm payment screen"
      * use case you should complete a candidate transaction, present it to the user (e.g. for fee purposes) and then

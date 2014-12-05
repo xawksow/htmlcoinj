@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net.discovery;
+package com.matthewmitchell.htmlcoinj.net.discovery;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;

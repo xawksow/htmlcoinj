@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 
@@ -55,7 +55,7 @@ public class HTMLcoinSerializerTest {
     @Test
     public void testAddr() throws Exception {
         HTMLcoinSerializer bs = new HTMLcoinSerializer(MainNetParams.get());
-        // the actual data from https://en.peercoin.it/wiki/Protocol_specification#addr
+        // the actual data from https://en.htmlcoin.it/wiki/Protocol_specification#addr
         AddressMessage a = (AddressMessage)bs.deserialize(ByteBuffer.wrap(addrMessage));
         assertEquals(1, a.getAddresses().size());
         PeerAddress pa = a.getAddresses().get(0);

@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence;
-import com.matthewmitchell.peercoinj.core.TransactionOutput;
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence;
+import com.matthewmitchell.htmlcoinj.core.TransactionOutput;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
 
 import javax.annotation.Nullable;
 

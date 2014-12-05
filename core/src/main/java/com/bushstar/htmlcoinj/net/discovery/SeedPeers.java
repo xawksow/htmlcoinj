@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.peercoinj.net.discovery;
+package com.matthewmitchell.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
 
 import javax.annotation.Nullable;
 import java.net.InetAddress;

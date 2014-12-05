@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.payments;
+package com.matthewmitchell.htmlcoinj.protocols.payments;
 
 public class PaymentRequestException extends Exception {
     public PaymentRequestException(String msg) {

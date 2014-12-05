@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net.discovery;
+package com.matthewmitchell.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

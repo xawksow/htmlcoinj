@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.HashMultimap;
 import com.google.protobuf.ByteString;
@@ -226,8 +226,8 @@ public class StoredPaymentChannelClientStates implements WalletExtension {
                 checkState(channel.refund.getConfidence().getSource() == TransactionConfidence.Source.SELF);
                 final ClientState.StoredClientPaymentChannel.Builder value = ClientState.StoredClientPaymentChannel.newBuilder()
                         .setId(ByteString.copyFrom(channel.id.getBytes()))
-                        .setContractTransaction(ByteString.copyFrom(channel.contract.peercoinSerialize()))
-                        .setRefundTransaction(ByteString.copyFrom(channel.refund.peercoinSerialize()))
+                        .setContractTransaction(ByteString.copyFrom(channel.contract.htmlcoinSerialize()))
+                        .setRefundTransaction(ByteString.copyFrom(channel.refund.htmlcoinSerialize()))
                         .setMyKey(ByteString.copyFrom(channel.myKey.getPrivKeyBytes()))
                         .setValueToMe(channel.valueToMe.longValue())
                         .setRefundFees(channel.refundFees.longValue());

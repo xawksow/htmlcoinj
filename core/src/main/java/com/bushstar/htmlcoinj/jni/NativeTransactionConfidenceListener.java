@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.jni;
+package com.matthewmitchell.htmlcoinj.jni;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

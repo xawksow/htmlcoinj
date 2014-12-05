@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelClientConnection;
-import com.matthewmitchell.peercoinj.protocols.channels.StoredPaymentChannelClientStates;
-import com.matthewmitchell.peercoinj.protocols.channels.ValueOutOfRangeException;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
+import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
+import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelClientConnection;
+import com.matthewmitchell.htmlcoinj.protocols.channels.StoredPaymentChannelClientStates;
+import com.matthewmitchell.htmlcoinj.protocols.channels.ValueOutOfRangeException;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -34,7 +34,7 @@ import java.math.BigInteger;
 import java.net.InetSocketAddress;
 import java.util.concurrent.CountDownLatch;
 
-import static com.matthewmitchell.peercoinj.core.Utils.CENT;
+import static com.matthewmitchell.htmlcoinj.core.Utils.CENT;
 import static java.math.BigInteger.TEN;
 import static java.math.BigInteger.ZERO;
 
@@ -153,7 +153,7 @@ public class ExamplePaymentChannelClient {
         // ESTIMATED because we don't really need to wait for confirmation.
         ListenableFuture<BigInteger> balanceFuture = appKit.wallet().getBalanceFuture(amountPlusFee, Wallet.BalanceType.ESTIMATED);
         if (!balanceFuture.isDone()) {
-            System.out.println("Please send " + Utils.peercoinValueToFriendlyString(amountPlusFee) +
+            System.out.println("Please send " + Utils.htmlcoinValueToFriendlyString(amountPlusFee) +
                     " BTC to " + myKey.toAddress(params));
             Futures.getUnchecked(balanceFuture);
         }

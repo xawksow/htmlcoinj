@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.TransactionSignature;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.FutureCallback;

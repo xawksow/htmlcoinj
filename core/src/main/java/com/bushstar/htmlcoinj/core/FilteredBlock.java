@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -41,12 +41,12 @@ public class FilteredBlock extends Message {
         super(params, payloadBytes, 0);
     }
     
-    public void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         if (header.transactions == null)
-            header.peercoinSerializeToStream(stream);
+            header.htmlcoinSerializeToStream(stream);
         else
-            header.cloneAsHeader().peercoinSerializeToStream(stream);
-        merkleTree.peercoinSerializeToStream(stream);
+            header.cloneAsHeader().htmlcoinSerializeToStream(stream);
+        merkleTree.htmlcoinSerializeToStream(stream);
     }
 
     @Override

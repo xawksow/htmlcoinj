@@ -1,6 +1,6 @@
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.UnitTestParams;
+import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 

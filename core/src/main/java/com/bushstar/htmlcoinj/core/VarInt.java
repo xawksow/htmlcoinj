@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import com.google.common.primitives.UnsignedInteger;
 
-import static com.matthewmitchell.peercoinj.core.Utils.isLessThanUnsigned;
+import static com.matthewmitchell.htmlcoinj.core.Utils.isLessThanUnsigned;
 
 /**
  * A variable-length encoded integer using Satoshis encoding.

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.UnitTestParams;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
 import org.junit.Before;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
@@ -28,8 +28,8 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static com.matthewmitchell.peercoinj.utils.TestUtils.createFakeBlock;
-import static com.matthewmitchell.peercoinj.utils.TestUtils.createFakeTx;
+import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeBlock;
+import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 public class LazyParseByteCacheTest {
@@ -106,17 +106,17 @@ public class LazyParseByteCacheTest {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         bs.serialize(tx1, bos);
         tx1BytesWithHeader = bos.toByteArray();
-        tx1Bytes = tx1.peercoinSerialize();
+        tx1Bytes = tx1.htmlcoinSerialize();
         
         bos.reset();
         bs.serialize(tx2, bos);
         tx2BytesWithHeader = bos.toByteArray();
-        tx2Bytes = tx2.peercoinSerialize();
+        tx2Bytes = tx2.htmlcoinSerialize();
         
         bos.reset();
         bs.serialize(b1, bos);
         b1BytesWithHeader = bos.toByteArray();
-        b1Bytes = b1.peercoinSerialize();
+        b1Bytes = b1.htmlcoinSerialize();
     }
     
     @Test

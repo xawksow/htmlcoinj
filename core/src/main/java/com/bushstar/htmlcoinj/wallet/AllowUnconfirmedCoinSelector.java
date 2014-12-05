@@ -1,6 +1,6 @@
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

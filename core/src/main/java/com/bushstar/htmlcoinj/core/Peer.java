@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.utils.ListenerRegistration;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
@@ -47,8 +47,8 @@ import static com.google.common.base.Preconditions.checkState;
  * handles low-level message (de)serialization.</p>
  *
  * <p>Note that timeouts are handled by the extended
- * {@link com.matthewmitchell.peercoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
- * {@link com.matthewmitchell.peercoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
+ * {@link com.matthewmitchell.htmlcoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
+ * {@link com.matthewmitchell.htmlcoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
  * handshake completes.</p>
  */
 public class Peer extends PeerSocketHandler {
@@ -124,7 +124,7 @@ public class Peer extends PeerSocketHandler {
         Sha256Hash hash;
         SettableFuture future;
         // If the peer does not support the notfound message, we'll use ping/pong messages to simulate it. This is
-        // a nasty hack that relies on the fact that peercoin-qt is single threaded and processes messages in order.
+        // a nasty hack that relies on the fact that htmlcoin-qt is single threaded and processes messages in order.
         // The nonce field records which pong should clear this request as "not found".
         long nonce;
     }
@@ -148,9 +148,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.peercoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser)}
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.peercoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser, int)}.</p>
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -166,9 +166,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.peercoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser)}
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.peercoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser, int)}.</p>
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -197,9 +197,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.peercoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser)}
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.peercoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.peercoinj.net.StreamParser, int)}.</p>
+     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -386,7 +386,7 @@ public class Peer extends PeerSocketHandler {
         // Now it's our turn ...
         // Send an ACK message stating we accept the peers protocol version.
         sendMessage(new VersionAck());
-        // peercoinj is a client mode implementation. That means there's not much point in us talking to other client
+        // htmlcoinj is a client mode implementation. That means there's not much point in us talking to other client
         // mode nodes because we can't download the data from them we need to find/verify transactions. Some bogus
         // implementations claim to have a block chain in their services field but then report a height of zero, filter
         // them out here.
@@ -1112,7 +1112,7 @@ public class Peer extends PeerSocketHandler {
      * @param secondsSinceEpoch Time in seconds since the epoch or 0 to reset to always downloading block bodies.
      */
     public void setDownloadParameters(long secondsSinceEpoch, boolean useFilteredBlocks) {
-    	// For peercoin we cannot use filtered blocks until the protocol has been upgraded
+    	// For htmlcoin we cannot use filtered blocks until the protocol has been upgraded
         lock.lock();
         try {
             Preconditions.checkNotNull(blockChain);
@@ -1192,7 +1192,7 @@ public class Peer extends PeerSocketHandler {
         List<Sha256Hash> blockLocator = new ArrayList<Sha256Hash>(51);
         // For now we don't do the exponential thinning as suggested here:
         //
-        //   https://en.peercoin.it/wiki/Protocol_specification#getblocks
+        //   https://en.htmlcoin.it/wiki/Protocol_specification#getblocks
         //
         // This is because it requires scanning all the block chain headers, which is very slow. Instead we add the top
         // 50 block headers. If there is a re-org deeper than that, we'll end up downloading the entire chain. We
@@ -1311,7 +1311,7 @@ public class Peer extends PeerSocketHandler {
     /**
      * Sends the peer a ping message and returns a future that will be invoked when the pong is received back.
      * The future provides a number which is the number of milliseconds elapsed between the ping and the pong.
-     * Once the pong is received the value returned by {@link com.matthewmitchell.peercoinj.core.Peer#getLastPingTime()} is
+     * Once the pong is received the value returned by {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} is
      * updated.
      * @throws ProtocolException if the peer version is too low to support measurable pings.
      */
@@ -1330,7 +1330,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns the elapsed time of the last ping/pong cycle. If {@link com.matthewmitchell.peercoinj.core.Peer#ping()} has never
+     * Returns the elapsed time of the last ping/pong cycle. If {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}.
      */
     public long getLastPingTime() {
@@ -1345,7 +1345,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns a moving average of the last N ping/pong cycles. If {@link com.matthewmitchell.peercoinj.core.Peer#ping()} has never
+     * Returns a moving average of the last N ping/pong cycles. If {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}. The moving average
      * window is 5 buckets.
      */

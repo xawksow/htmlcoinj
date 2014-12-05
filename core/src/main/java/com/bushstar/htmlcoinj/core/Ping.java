@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -44,7 +44,7 @@ public class Ping extends Message {
         this.hasNonce = false;
     }
     
-    public void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         if (hasNonce)
             Utils.int64ToByteStreamLE(nonce, stream);
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net;
+package com.matthewmitchell.htmlcoinj.net;
 
 import com.google.common.util.concurrent.AbstractIdleService;
 
@@ -47,7 +47,7 @@ public class BlockingClientManager extends AbstractIdleService implements Client
 
     /**
      * Creates a blocking client manager that will obtain sockets from the given factory. Useful for customising how
-     * peercoinj connects to the P2P network.
+     * htmlcoinj connects to the P2P network.
      */
     public BlockingClientManager(SocketFactory socketFactory) {
         this.socketFactory = checkNotNull(socketFactory);

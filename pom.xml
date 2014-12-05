@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.matthewmitchell</groupId>
-  <artifactId>peercoinj-parent</artifactId>
+  <artifactId>htmlcoinj-parent</artifactId>
   <version>0.11.3</version>
   <packaging>pom</packaging>
 
@@ -20,14 +20,14 @@
   </parent>
 
   <scm>
-    <connection>scm:git:https://code.google.com/p/peercoinj/</connection>
-    <developerConnection>scm:git:https://code.google.com/p/peercoinj/</developerConnection>
-    <url>http://code.google.com/p/peercoinj/source/browse</url>
+    <connection>scm:git:https://code.google.com/p/htmlcoinj/</connection>
+    <developerConnection>scm:git:https://code.google.com/p/htmlcoinj/</developerConnection>
+    <url>http://code.google.com/p/htmlcoinj/source/browse</url>
   </scm>
 
-  <name>peercoinj Parent</name>
+  <name>htmlcoinj Parent</name>
   <description>Provides the common configuration for the HTMLcoinJ modules</description>
-  <url>http://code.google.com/p/peercoinj</url>
+  <url>http://code.google.com/p/htmlcoinj</url>
 
   <licenses>
     <license>
@@ -40,20 +40,20 @@
 
   <issueManagement>
     <system>Google Code</system>
-    <url>http://code.google.com/p/peercoinj/issues/list</url>
+    <url>http://code.google.com/p/htmlcoinj/issues/list</url>
   </issueManagement>
 
   <mailingLists>
     <mailingList>
-      <name>peercoinj Google Group</name>
-      <post>https://groups.google.com/forum/#!forum/peercoinj</post>
+      <name>htmlcoinj Google Group</name>
+      <post>https://groups.google.com/forum/#!forum/htmlcoinj</post>
     </mailingList>
   </mailingLists>
 
   <repositories>
     <repository>
-        <id>peercoinj-distribution</id>
-        <url>https://distribution.peercoinj.googlecode.com/git/releases</url>
+        <id>htmlcoinj-distribution</id>
+        <url>https://distribution.htmlcoinj.googlecode.com/git/releases</url>
     </repository>
   </repositories>
 
@@ -81,7 +81,7 @@
         <artifactId>slf4j-api</artifactId>
         <version>1.7.5</version>
       </dependency>
-      <!-- peercoinj consumers are expected to provide their own SLF4J adapters
+      <!-- htmlcoinj consumers are expected to provide their own SLF4J adapters
     such as logback, slf4j-log4j12, slf4j-jcl and so on
     see http://www.slf4j.org/faq.html -->
       <dependency>

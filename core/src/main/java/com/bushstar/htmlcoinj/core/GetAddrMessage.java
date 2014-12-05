@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 /**
  * Represents the "getaddr" P2P protocol message, which requests network {@link AddressMessage}s from a peer. Not to

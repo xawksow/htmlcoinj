@@ -1,4 +1,4 @@
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
 /**
  * <p>Exception to provide the following to {@link EncrypterDecrypterOpenSSL}:</p>

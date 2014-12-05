@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static com.matthewmitchell.peercoinj.core.Utils.*;
+import static com.matthewmitchell.htmlcoinj.core.Utils.*;
 import static org.junit.Assert.*;
 
 public class UtilsTest {
@@ -57,50 +57,50 @@ public class UtilsTest {
 
     @Test
     public void testFormatting() {
-        assertEquals("1.00", peercoinValueToFriendlyString(toNanoCoins(1, 0)));
-        assertEquals("1.23", peercoinValueToFriendlyString(toNanoCoins(1, 23)));
-        assertEquals("0.001", peercoinValueToFriendlyString(BigInteger.valueOf(COIN.longValue() / 1000)));
-        assertEquals("-1.23", peercoinValueToFriendlyString(toNanoCoins(1, 23).negate()));
+        assertEquals("1.00", htmlcoinValueToFriendlyString(toNanoCoins(1, 0)));
+        assertEquals("1.23", htmlcoinValueToFriendlyString(toNanoCoins(1, 23)));
+        assertEquals("0.001", htmlcoinValueToFriendlyString(BigInteger.valueOf(COIN.longValue() / 1000)));
+        assertEquals("-1.23", htmlcoinValueToFriendlyString(toNanoCoins(1, 23).negate()));
     }
     
     /**
-     * Test the peercoinValueToPlainString amount formatter
+     * Test the htmlcoinValueToPlainString amount formatter
      */
     @Test
     public void testHTMLcoinValueToPlainString() {
         // null argument check
         try {
-            peercoinValueToPlainString(null);
+            htmlcoinValueToPlainString(null);
             org.junit.Assert.fail("Expecting IllegalArgumentException");
         } catch (IllegalArgumentException e) {
             assertTrue(e.getMessage().contains("Value cannot be null"));
         }
 
-        assertEquals("0.0015", peercoinValueToPlainString(BigInteger.valueOf(150000)));
-        assertEquals("1.23", peercoinValueToPlainString(toNanoCoins("1.23")));
+        assertEquals("0.0015", htmlcoinValueToPlainString(BigInteger.valueOf(150000)));
+        assertEquals("1.23", htmlcoinValueToPlainString(toNanoCoins("1.23")));
 
-        assertEquals("0.1", peercoinValueToPlainString(toNanoCoins("0.1")));
-        assertEquals("1.1", peercoinValueToPlainString(toNanoCoins("1.1")));
-        assertEquals("21.12", peercoinValueToPlainString(toNanoCoins("21.12")));
-        assertEquals("321.123", peercoinValueToPlainString(toNanoCoins("321.123")));
-        assertEquals("4321.1234", peercoinValueToPlainString(toNanoCoins("4321.1234")));
-        assertEquals("54321.12345", peercoinValueToPlainString(toNanoCoins("54321.12345")));
-        assertEquals("654321.123456", peercoinValueToPlainString(toNanoCoins("654321.123456")));
-        assertEquals("7654321.1234567", peercoinValueToPlainString(toNanoCoins("7654321.1234567")));
+        assertEquals("0.1", htmlcoinValueToPlainString(toNanoCoins("0.1")));
+        assertEquals("1.1", htmlcoinValueToPlainString(toNanoCoins("1.1")));
+        assertEquals("21.12", htmlcoinValueToPlainString(toNanoCoins("21.12")));
+        assertEquals("321.123", htmlcoinValueToPlainString(toNanoCoins("321.123")));
+        assertEquals("4321.1234", htmlcoinValueToPlainString(toNanoCoins("4321.1234")));
+        assertEquals("54321.12345", htmlcoinValueToPlainString(toNanoCoins("54321.12345")));
+        assertEquals("654321.123456", htmlcoinValueToPlainString(toNanoCoins("654321.123456")));
+        assertEquals("7654321.1234567", htmlcoinValueToPlainString(toNanoCoins("7654321.1234567")));
         try {
-            assertEquals("87654321.12345678", peercoinValueToPlainString(toNanoCoins("87654321.12345678")));
+            assertEquals("87654321.12345678", htmlcoinValueToPlainString(toNanoCoins("87654321.12345678")));
             Assert.fail();  // More than MAX_MONEY
         } catch (Exception e) {}
 
         // check there are no trailing zeros
-        assertEquals("1", peercoinValueToPlainString(toNanoCoins("1.0")));
-        assertEquals("2", peercoinValueToPlainString(toNanoCoins("2.00")));
-        assertEquals("3", peercoinValueToPlainString(toNanoCoins("3.000")));
-        assertEquals("4", peercoinValueToPlainString(toNanoCoins("4.0000")));
-        assertEquals("5", peercoinValueToPlainString(toNanoCoins("5.00000")));
-        assertEquals("6", peercoinValueToPlainString(toNanoCoins("6.000000")));
-        assertEquals("7", peercoinValueToPlainString(toNanoCoins("7.0000000")));
-        assertEquals("8", peercoinValueToPlainString(toNanoCoins("8.00000000")));
+        assertEquals("1", htmlcoinValueToPlainString(toNanoCoins("1.0")));
+        assertEquals("2", htmlcoinValueToPlainString(toNanoCoins("2.00")));
+        assertEquals("3", htmlcoinValueToPlainString(toNanoCoins("3.000")));
+        assertEquals("4", htmlcoinValueToPlainString(toNanoCoins("4.0000")));
+        assertEquals("5", htmlcoinValueToPlainString(toNanoCoins("5.00000")));
+        assertEquals("6", htmlcoinValueToPlainString(toNanoCoins("6.000000")));
+        assertEquals("7", htmlcoinValueToPlainString(toNanoCoins("7.0000000")));
+        assertEquals("8", htmlcoinValueToPlainString(toNanoCoins("8.00000000")));
     }    
     
     @Test

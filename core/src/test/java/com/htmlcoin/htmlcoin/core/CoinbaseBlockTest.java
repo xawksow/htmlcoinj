@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.core.AbstractBlockChain.NewBlockType;
-import com.matthewmitchell.peercoinj.core.Wallet.BalanceType;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.core.AbstractBlockChain.NewBlockType;
+import com.matthewmitchell.htmlcoinj.core.Wallet.BalanceType;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

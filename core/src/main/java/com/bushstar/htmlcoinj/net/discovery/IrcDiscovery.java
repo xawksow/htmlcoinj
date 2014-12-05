@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net.discovery;
+package com.matthewmitchell.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Base58;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
+import com.matthewmitchell.htmlcoinj.core.Base58;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +49,7 @@ public class IrcDiscovery implements PeerDiscovery {
      * Finds a list of peers by connecting to an IRC network, joining a channel, decoding the nicks and then
      * disconnecting.
      *
-     * @param channel The IRC channel to join, either "#peercoin" or "#peercoinTEST3" for the production and test networks
+     * @param channel The IRC channel to join, either "#htmlcoin" or "#htmlcoinTEST3" for the production and test networks
      *                respectively.
      */
     public IrcDiscovery(String channel) {
@@ -61,7 +61,7 @@ public class IrcDiscovery implements PeerDiscovery {
      * disconnecting.
      *
      * @param server  Name or textual IP address of the IRC server to join.
-     * @param channel The IRC channel to join, either "#peercoin" or "#peercoinTEST3" for the production and test networks
+     * @param channel The IRC channel to join, either "#htmlcoin" or "#htmlcoinTEST3" for the production and test networks
      */
     public IrcDiscovery(String channel, String server, int port) {
         this.channel = channel;
@@ -121,7 +121,7 @@ public class IrcDiscovery implements PeerDiscovery {
             reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
 
             // Generate a random nick for the connection. This is chosen to be clearly identifiable as coming from
-            // peercoinj but not match the standard nick format, so full peers don't try and connect to us.
+            // htmlcoinj but not match the standard nick format, so full peers don't try and connect to us.
             String nickRnd = String.format("bcj%d", new Random().nextInt(Integer.MAX_VALUE));
             String command = "NICK " + nickRnd;
             logAndSend(command);

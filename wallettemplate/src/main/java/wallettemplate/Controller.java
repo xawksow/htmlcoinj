@@ -1,9 +1,9 @@
 package wallettemplate;
 
-import com.matthewmitchell.peercoinj.core.AbstractWalletEventListener;
-import com.matthewmitchell.peercoinj.core.DownloadListener;
-import com.matthewmitchell.peercoinj.core.Utils;
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.core.AbstractWalletEventListener;
+import com.matthewmitchell.htmlcoinj.core.DownloadListener;
+import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
 import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -18,7 +18,7 @@ import wallettemplate.controls.ClickableHTMLcoinAddress;
 import java.math.BigInteger;
 import java.util.Date;
 
-import static wallettemplate.Main.peercoin;
+import static wallettemplate.Main.htmlcoin;
 import static wallettemplate.utils.GuiUtils.checkGuiThread;
 
 /**
@@ -40,8 +40,8 @@ public class Controller {
     }
 
     public void onHTMLcoinSetup() {
-        peercoin.wallet().addEventListener(new BalanceUpdater());
-        addressControl.setAddress(peercoin.wallet().getKeys().get(0).toAddress(Main.params).toString());
+        htmlcoin.wallet().addEventListener(new BalanceUpdater());
+        addressControl.setAddress(htmlcoin.wallet().getKeys().get(0).toAddress(Main.params).toString());
         refreshBalanceLabel();
     }
 
@@ -94,7 +94,7 @@ public class Controller {
     }
 
     public void refreshBalanceLabel() {
-        final BigInteger amount = peercoin.wallet().getBalance(Wallet.BalanceType.ESTIMATED);
-        balance.setText(Utils.peercoinValueToFriendlyString(amount));
+        final BigInteger amount = htmlcoin.wallet().getBalance(Wallet.BalanceType.ESTIMATED);
+        balance.setText(Utils.htmlcoinValueToFriendlyString(amount));
     }
 }

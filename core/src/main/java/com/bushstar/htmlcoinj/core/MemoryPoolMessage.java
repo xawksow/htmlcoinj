@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -34,5 +34,5 @@ public class MemoryPoolMessage extends Message {
     protected void parseLite() throws ProtocolException {}
 
     @Override
-    void peercoinSerializeToStream(OutputStream stream) throws IOException {}
+    void htmlcoinSerializeToStream(OutputStream stream) throws IOException {}
 }

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
@@ -42,7 +42,7 @@ import static com.google.common.util.concurrent.Uninterruptibles.sleepUninterrup
 
 /**
  * A collection of various utility methods that are helpful for working with the HTMLcoin protocol.
- * To enable debug logging from the library, run with -Dpeercoinj.logging=true on your command line.
+ * To enable debug logging from the library, run with -Dhtmlcoinj.logging=true on your command line.
  */
 public class Utils {
     public static final BigInteger NEGATIVE_ONE = BigInteger.valueOf(-1);
@@ -332,7 +332,7 @@ public class Utils {
      * Returns the given value in nanocoins as a 0.12 type string. More digits after the decimal place will be used
      * if necessary, but two will always be present.
      */
-    public static String peercoinValueToFriendlyString(BigInteger value) {
+    public static String htmlcoinValueToFriendlyString(BigInteger value) {
         // TODO: This API is crap. This method should go away when we encapsulate money values.
         boolean negative = value.compareTo(BigInteger.ZERO) < 0;
         if (negative)
@@ -362,7 +362,7 @@ public class Utils {
      * @throws IllegalArgumentException
      *            If the input value is null
      */
-    public static String peercoinValueToPlainString(BigInteger value) {
+    public static String htmlcoinValueToPlainString(BigInteger value) {
         if (value == null) {
             throw new IllegalArgumentException("Value cannot be null");
         }

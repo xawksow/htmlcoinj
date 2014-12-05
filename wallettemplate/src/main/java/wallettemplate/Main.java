@@ -1,13 +1,13 @@
 package wallettemplate;
 
 import com.aquafx_project.AquaFx;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.RegTestParams;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.RegTestParams;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.base.Throwables;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -30,7 +30,7 @@ public class Main extends Application {
     public static String APP_NAME = "WalletTemplate";
 
     public static NetworkParameters params = MainNetParams.get();
-    public static WalletAppKit peercoin;
+    public static WalletAppKit htmlcoin;
     public static Main instance;
 
     private StackPane uiStack;
@@ -71,33 +71,33 @@ public class Main extends Application {
 
         // Make log output concise.
         BriefLogFormatter.init();
-        // Tell peercoinj to run event handlers on the JavaFX UI thread. This keeps things simple and means
+        // Tell htmlcoinj to run event handlers on the JavaFX UI thread. This keeps things simple and means
         // we cannot forget to switch threads when adding event handlers. Unfortunately, the DownloadListener
         // we give to the app kit is currently an exception and runs on a library thread. It'll get fixed in
         // a future version.
         Threading.USER_THREAD = Platform::runLater;
         // Create the app kit. It won't do any heavyweight initialization until after we start it.
-        peercoin = new WalletAppKit(params, new File("."), APP_NAME);
+        htmlcoin = new WalletAppKit(params, new File("."), APP_NAME);
         if (params == RegTestParams.get()) {
-            peercoin.connectToLocalHost();   // You should run a regtest mode peercoind locally.
+            htmlcoin.connectToLocalHost();   // You should run a regtest mode htmlcoind locally.
         } else if (params == MainNetParams.get()) {
             // Checkpoints are block headers that ship inside our app: for a new user, we pick the last header
             // in the checkpoints file and then download the rest from the network. It makes things much faster.
             // Checkpoint files are made using the BuildCheckpoints tool and usually we have to download the
             // last months worth or more (takes a few seconds).
-            peercoin.setCheckpoints(getClass().getResourceAsStream("checkpoints"));
+            htmlcoin.setCheckpoints(getClass().getResourceAsStream("checkpoints"));
         }
 
         // Now configure and start the appkit. This will take a second or two - we could show a temporary splash screen
         // or progress widget to keep the user engaged whilst we initialise, but we don't.
-        peercoin.setDownloadListener(controller.progressBarUpdater())
+        htmlcoin.setDownloadListener(controller.progressBarUpdater())
                .setBlockingStartup(false)
                .setUserAgent(APP_NAME, "1.0")
                .startAndWait();
         // Don't make the user wait for confirmations for now, as the intention is they're sending it their own money!
-        peercoin.wallet().allowSpendingUnconfirmedTransactions();
-        peercoin.peerGroup().setMaxConnections(11);
-        System.out.println(peercoin.wallet());
+        htmlcoin.wallet().allowSpendingUnconfirmedTransactions();
+        htmlcoin.peerGroup().setMaxConnections(11);
+        System.out.println(htmlcoin.wallet());
         controller.onHTMLcoinSetup();
         mainWindow.show();
     }
@@ -162,7 +162,7 @@ public class Main extends Application {
 
     @Override
     public void stop() throws Exception {
-        peercoin.stopAndWait();
+        htmlcoin.stopAndWait();
         super.stop();
     }
 

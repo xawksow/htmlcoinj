@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net.discovery;
+package com.matthewmitchell.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import net.jcip.annotations.GuardedBy;
 import org.slf4j.LoggerFactory;
@@ -94,7 +94,7 @@ public class PeerDBDiscovery implements PeerDiscovery {
         }
 
         synchronized void write(OutputStream s) throws IOException {
-            address.peercoinSerialize(s);
+            address.htmlcoinSerialize(s);
             Utils.int64ToByteStreamLE(vTimeLastHeard, s);
             Utils.int64ToByteStreamLE(lastConnected, s);
             Utils.int64ToByteStreamLE(triedSinceLastConnection, s);

@@ -1,8 +1,8 @@
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.core.Transaction.SigHash;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.core.Transaction.SigHash;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import java.io.ByteArrayOutputStream;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.*;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.*;
 
 /**
  * Represents a block which is sent to the tested application and which the application must either reject or accept,
@@ -111,7 +111,7 @@ public class FullBlockTestGenerator {
                         outStream.write((int) (params.getPacketMagic() >>> 16));
                         outStream.write((int) (params.getPacketMagic() >>> 8));
                         outStream.write((int) (params.getPacketMagic() >>> 0));
-                        byte[] block = ((BlockAndValidity)element).block.peercoinSerialize();
+                        byte[] block = ((BlockAndValidity)element).block.htmlcoinSerialize();
                         byte[] length = new byte[4];
                         Utils.uint32ToByteArrayBE(block.length, length, 0);
                         outStream.write(Utils.reverseBytes(length));
@@ -412,7 +412,7 @@ public class FullBlockTestGenerator {
         b24.solve();
         blocks.add(new BlockAndValidity(blockToHeightMap, b24, false, true, b23.getHash(), chainHeadHeight + 7, "b24"));
         
-        // Extend the b24 chain to make sure peercoind isn't accepting b24
+        // Extend the b24 chain to make sure htmlcoind isn't accepting b24
         Block b25 = createNextBlock(b24, chainHeadHeight + 8, out7, null);
         blocks.add(new BlockAndValidity(blockToHeightMap, b25, false, false, b23.getHash(), chainHeadHeight + 7, "b25"));
         
@@ -429,7 +429,7 @@ public class FullBlockTestGenerator {
         b26.solve();
         blocks.add(new BlockAndValidity(blockToHeightMap, b26, false, true, b23.getHash(), chainHeadHeight + 7, "b26"));
         
-        // Extend the b26 chain to make sure peercoind isn't accepting b26
+        // Extend the b26 chain to make sure htmlcoind isn't accepting b26
         Block b27 = createNextBlock(b26, chainHeadHeight + 8, out7, null);
         blocks.add(new BlockAndValidity(blockToHeightMap, b27, false, false, b23.getHash(), chainHeadHeight + 7, "b27"));
         
@@ -443,7 +443,7 @@ public class FullBlockTestGenerator {
         b28.solve();
         blocks.add(new BlockAndValidity(blockToHeightMap, b28, false, true, b23.getHash(), chainHeadHeight + 7, "b28"));
         
-        // Extend the b28 chain to make sure peercoind isn't accepting b28
+        // Extend the b28 chain to make sure htmlcoind isn't accepting b28
         Block b29 = createNextBlock(b28, chainHeadHeight + 8, out7, null);
         blocks.add(new BlockAndValidity(blockToHeightMap, b29, false, false, b23.getHash(), chainHeadHeight + 7, "b29"));
         
@@ -1057,7 +1057,7 @@ public class FullBlockTestGenerator {
         
         Block b56;
         try {
-            b56 = new Block(params, b57.peercoinSerialize());
+            b56 = new Block(params, b57.htmlcoinSerialize());
         } catch (ProtocolException e) {
             throw new RuntimeException(e); // Cannot happen.
         }
@@ -1182,14 +1182,14 @@ public class FullBlockTestGenerator {
             Preconditions.checkState(new VarInt(varIntBytes, 0).value == b64Created.getTransactions().size());
             
             for (Transaction transaction : b64Created.getTransactions())
-                transaction.peercoinSerialize(stream);
+                transaction.htmlcoinSerialize(stream);
             b64 = new Block(params, stream.toByteArray(), false, true, stream.size());
             
             // The following checks are checking to ensure block serialization functions in the way needed for this test
             // If they fail, it is likely not an indication of error, but an indication that this test needs rewritten
             Preconditions.checkState(stream.size() == b64Created.getMessageSize() + 8);
             Preconditions.checkState(stream.size() == b64.getMessageSize());
-            Preconditions.checkState(Arrays.equals(stream.toByteArray(), b64.peercoinSerialize()));
+            Preconditions.checkState(Arrays.equals(stream.toByteArray(), b64.htmlcoinSerialize()));
             Preconditions.checkState(b64.getOptimalEncodingMessageSize() == b64Created.getMessageSize());
         }
         blocks.add(new BlockAndValidity(blockToHeightMap, b64, true, false, b64.getHash(), chainHeadHeight + 19, "b64"));
@@ -1327,7 +1327,7 @@ public class FullBlockTestGenerator {
         }
         b72.solve();
         
-        Block b71 = new Block(params, b72.peercoinSerialize());
+        Block b71 = new Block(params, b72.htmlcoinSerialize());
         b71.addTransaction(b72.getTransactions().get(2));
         Preconditions.checkState(b71.getHash().equals(b72.getHash()));
         blocks.add(new BlockAndValidity(blockToHeightMap, b71, false, true, b69.getHash(), chainHeadHeight + 21, "b71"));

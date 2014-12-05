@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.jni;
+package com.matthewmitchell.htmlcoinj.jni;
 
-import com.matthewmitchell.peercoinj.core.*;
+import com.matthewmitchell.htmlcoinj.core.*;
 
 import java.util.List;
 

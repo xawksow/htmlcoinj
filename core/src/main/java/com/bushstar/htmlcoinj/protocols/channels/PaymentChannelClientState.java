@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.TransactionSignature;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.matthewmitchell.peercoinj.utils.Threading;
-import com.matthewmitchell.peercoinj.wallet.AllowUnconfirmedCoinSelector;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.wallet.AllowUnconfirmedCoinSelector;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
@@ -232,7 +232,7 @@ public class PaymentChannelClientState {
      * Creates the initial multisig contract and incomplete refund transaction which can be requested at the appropriate
      * time using {@link PaymentChannelClientState#getIncompleteRefundTransaction} and
      * {@link PaymentChannelClientState#getMultisigContract()}. The way the contract is crafted can be adjusted by
-     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.matthewmitchell.peercoinj.core.Wallet.SendRequest)}.
+     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.matthewmitchell.htmlcoinj.core.Wallet.SendRequest)}.
      * By default unconfirmed coins are allowed to be used, as for micropayments the risk should be relatively low.
      *
      * @throws ValueOutOfRangeException if the value being used is too small to be accepted by the network

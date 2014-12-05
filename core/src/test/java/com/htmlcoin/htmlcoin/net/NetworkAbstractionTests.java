@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net;
+package com.matthewmitchell.htmlcoinj.net;
 
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
-import org.peercoin.paymentchannel.Protos;
+import org.htmlcoin.paymentchannel.Protos;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -16,12 +16,12 @@
  * 
  */
 
-package com.matthewmitchell.peercoinj.uri;
+package com.matthewmitchell.htmlcoinj.uri;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Address;
+import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,8 +50,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * <p>The following input forms are accepted:</p>
  *
  * <ul>
- * <li>{@code peercoin:<address>}</li>
- * <li>{@code peercoin:<address>?<name1>=<value1>&<name2>=<value2>} with multiple
+ * <li>{@code htmlcoin:<address>}</li>
+ * <li>{@code htmlcoin:<address>?<name1>=<value1>&<name2>=<value2>} with multiple
  * additional name/value pairs</li>
  * </ul>
  *
@@ -130,13 +130,13 @@ public class HTMLcoinURI {
             throw new HTMLcoinURIParseException("Bad URI syntax", e);
         }
 
-        // URI is formed as  peercoin:<address>?<query parameters>
-        // blockchain.info generates URIs of non-BIP compliant form peercoin://address?....
+        // URI is formed as  htmlcoin:<address>?<query parameters>
+        // blockchain.info generates URIs of non-BIP compliant form htmlcoin://address?....
         // We support both until Ben fixes his code.
         
-        // Remove the peercoin scheme.
+        // Remove the htmlcoin scheme.
         // (Note: getSchemeSpecificPart() is not used as it unescapes the label and parse then fails.
-        // For instance with : peercoin:129mVqKUmJ9uwPxKJBnNdABbuaaNfho4Ha?amount=0.06&label=Tom%20%26%20Jerry
+        // For instance with : htmlcoin:129mVqKUmJ9uwPxKJBnNdABbuaaNfho4Ha?amount=0.06&label=Tom%20%26%20Jerry
         // the & (%26) in Tom and Jerry gets interpreted as a separator and the label then gets parsed
         // as 'Tom ' instead of 'Tom & Jerry')
         String schemeSpecificPart;
@@ -151,7 +151,7 @@ public class HTMLcoinURI {
         // Split off the address from the rest of the query parameters.
         String[] addressSplitTokens = schemeSpecificPart.split("\\?");
         if (addressSplitTokens.length == 0)
-            throw new HTMLcoinURIParseException("No data found after the peercoin: prefix");
+            throw new HTMLcoinURIParseException("No data found after the htmlcoin: prefix");
         String addressToken = addressSplitTokens[0];  // may be empty!
 
         String[] nameValuePairTokens;
@@ -340,7 +340,7 @@ public class HTMLcoinURI {
         
         if (amount != null) {
             builder.append(QUESTION_MARK_SEPARATOR).append(FIELD_AMOUNT).append("=");
-            builder.append(Utils.peercoinValueToPlainString(amount));
+            builder.append(Utils.htmlcoinValueToPlainString(amount));
             questionMarkHasBeenOutput = true;
         }
         

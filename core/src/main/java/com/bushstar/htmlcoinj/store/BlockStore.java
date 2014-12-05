@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.StoredBlock;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.StoredBlock;
 
 /**
  * An implementor of BlockStore saves StoredBlock objects to disk. Different implementations store them in
@@ -45,8 +45,8 @@ public interface BlockStore {
 
     /**
      * Returns the {@link StoredBlock} that represents the top of the chain of greatest total work. Note that this
-     * can be arbitrarily expensive, you probably should use {@link com.matthewmitchell.peercoinj.core.BlockChain#getChainHead()}
-     * or perhaps {@link com.matthewmitchell.peercoinj.core.BlockChain#getBestChainHeight()} which will run in constant time and
+     * can be arbitrarily expensive, you probably should use {@link com.matthewmitchell.htmlcoinj.core.BlockChain#getChainHead()}
+     * or perhaps {@link com.matthewmitchell.htmlcoinj.core.BlockChain#getBestChainHeight()} which will run in constant time and
      * not take any heavyweight locks.
      */
     StoredBlock getChainHead() throws BlockStoreException;

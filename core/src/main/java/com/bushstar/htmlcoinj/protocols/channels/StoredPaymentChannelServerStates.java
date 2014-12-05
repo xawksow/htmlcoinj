@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import net.jcip.annotations.GuardedBy;
@@ -156,8 +156,8 @@ public class StoredPaymentChannelServerStates implements WalletExtension {
                 ServerState.StoredServerPaymentChannel.Builder channelBuilder = ServerState.StoredServerPaymentChannel.newBuilder()
                         .setBestValueToMe(channel.bestValueToMe.longValue())
                         .setRefundTransactionUnlockTimeSecs(channel.refundTransactionUnlockTimeSecs)
-                        .setContractTransaction(ByteString.copyFrom(channel.contract.peercoinSerialize()))
-                        .setClientOutput(ByteString.copyFrom(channel.clientOutput.peercoinSerialize()))
+                        .setContractTransaction(ByteString.copyFrom(channel.contract.htmlcoinSerialize()))
+                        .setClientOutput(ByteString.copyFrom(channel.clientOutput.htmlcoinSerialize()))
                         .setMyKey(ByteString.copyFrom(channel.myKey.getPrivKeyBytes()));
                 if (channel.bestValueSignature != null)
                     channelBuilder.setBestValueSignature(ByteString.copyFrom(channel.bestValueSignature));

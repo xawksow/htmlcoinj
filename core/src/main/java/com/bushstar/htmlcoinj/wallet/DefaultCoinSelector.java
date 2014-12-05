@@ -1,16 +1,16 @@
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence;
-import com.matthewmitchell.peercoinj.core.TransactionOutput;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence;
+import com.matthewmitchell.htmlcoinj.core.TransactionOutput;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.math.BigInteger;
 import java.util.*;
 
 /**
- * This class implements a {@link com.matthewmitchell.peercoinj.wallet.CoinSelector} which attempts to get the highest priority
+ * This class implements a {@link com.matthewmitchell.htmlcoinj.wallet.CoinSelector} which attempts to get the highest priority
  * possible. This means that the transaction is the most likely to get confirmed. Note that this means we may end up
  * "spending" more priority than would be required to get the transaction we are creating confirmed.
  */

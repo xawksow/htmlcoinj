@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.*;
 import java.math.BigInteger;
@@ -139,7 +139,7 @@ public class StoredTransactionOutput implements Serializable {
     }
 
     public String toString() {
-        return String.format("Stored TxOut of %s (%s:%d)", Utils.peercoinValueToFriendlyString(value), hash.toString(), index);
+        return String.format("Stored TxOut of %s (%s:%d)", Utils.htmlcoinValueToFriendlyString(value), hash.toString(), index);
     }
 
     public int hashCode() {

@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
 /**
  * Parent class for header only messages that don't have a payload.
- * Currently this includes getaddr, ping, verack as well as the special peercoinj class UnknownMessage
+ * Currently this includes getaddr, ping, verack as well as the special htmlcoinj class UnknownMessage
  *
  * @author git
  */
@@ -42,7 +42,7 @@ public abstract class EmptyMessage extends Message {
     }
 
     @Override
-    final protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    final protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
     }
 
     @Override
@@ -74,10 +74,10 @@ public abstract class EmptyMessage extends Message {
     }
 
     /* (non-Javadoc)
-      * @see Message#peercoinSerialize()
+      * @see Message#htmlcoinSerialize()
       */
     @Override
-    public byte[] peercoinSerialize() {
+    public byte[] htmlcoinSerialize() {
         return new byte[0];
     }
 

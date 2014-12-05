@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.script;
+package com.matthewmitchell.htmlcoinj.script;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  * Various constants that define the assembly-like scripting language that forms part of the HTMLcoin protocol.
- * See {@link com.matthewmitchell.peercoinj.script.Script} for details. Also provides a method to convert them to a string.
+ * See {@link com.matthewmitchell.htmlcoinj.script.Script} for details. Also provides a method to convert them to a string.
  */
 public class ScriptOpCodes {
     // push value

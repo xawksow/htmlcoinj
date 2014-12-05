@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.utils;
+package com.matthewmitchell.htmlcoinj.utils;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -139,8 +139,8 @@ public class TestUtils {
         doubleSpends.t2.addOutput(o2);
 
         try {
-            doubleSpends.t1 = new Transaction(params, doubleSpends.t1.peercoinSerialize());
-            doubleSpends.t2 = new Transaction(params, doubleSpends.t2.peercoinSerialize());
+            doubleSpends.t1 = new Transaction(params, doubleSpends.t1.htmlcoinSerialize());
+            doubleSpends.t2 = new Transaction(params, doubleSpends.t2.htmlcoinSerialize());
         } catch (ProtocolException e) {
             throw new RuntimeException(e);
         }

@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

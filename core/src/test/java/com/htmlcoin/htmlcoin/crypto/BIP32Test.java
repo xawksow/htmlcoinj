@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.Base58;
-import com.matthewmitchell.peercoinj.crypto.ChildNumber;
-import com.matthewmitchell.peercoinj.crypto.DeterministicHierarchy;
-import com.matthewmitchell.peercoinj.crypto.DeterministicKey;
-import com.matthewmitchell.peercoinj.crypto.HDKeyDerivation;
+import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
+import com.matthewmitchell.htmlcoinj.core.Base58;
+import com.matthewmitchell.htmlcoinj.crypto.ChildNumber;
+import com.matthewmitchell.htmlcoinj.crypto.DeterministicHierarchy;
+import com.matthewmitchell.htmlcoinj.crypto.DeterministicKey;
+import com.matthewmitchell.htmlcoinj.crypto.HDKeyDerivation;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;

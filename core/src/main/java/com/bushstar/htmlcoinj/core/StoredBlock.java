@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
 
 import java.io.*;
 import java.math.BigInteger;

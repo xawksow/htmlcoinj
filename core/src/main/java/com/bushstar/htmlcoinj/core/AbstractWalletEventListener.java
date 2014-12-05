@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

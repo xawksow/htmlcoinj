@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
 /**
  * Exceptions thrown by the MnemonicCode module.

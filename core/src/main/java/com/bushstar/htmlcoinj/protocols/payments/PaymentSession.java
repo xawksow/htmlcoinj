@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.payments;
+package com.matthewmitchell.htmlcoinj.protocols.payments;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.matthewmitchell.peercoinj.uri.HTMLcoinURI;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
@@ -29,7 +29,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
-import org.peercoin.protocols.payments.Protos;
+import org.htmlcoin.protocols.payments.Protos;
 import org.spongycastle.asn1.ASN1String;
 import org.spongycastle.asn1.x500.AttributeTypeAndValue;
 import org.spongycastle.asn1.x500.RDN;
@@ -68,7 +68,7 @@ import java.util.concurrent.Callable;
  *
  * Call sendPayment with a list of transactions that will be broadcast. A {@link Protos.Payment} message will be sent to
  * the merchant if a payment url is provided in the PaymentRequest.
- * NOTE: sendPayment does NOT broadcast the transactions to the peercoin network.
+ * NOTE: sendPayment does NOT broadcast the transactions to the htmlcoin network.
  *
  * sendPayment returns a ListenableFuture that will be notified when a {@link Protos.PaymentACK} is received from the
  * merchant. Typically a wallet will show the message to the user as a confirmation message that the payment is now
@@ -187,7 +187,7 @@ public class PaymentSession {
             @Override
             public PaymentSession call() throws Exception {
                 HttpURLConnection connection = (HttpURLConnection)uri.toURL().openConnection();
-                connection.setRequestProperty("Accept", "application/peercoin-paymentrequest");
+                connection.setRequestProperty("Accept", "application/htmlcoin-paymentrequest");
                 connection.setUseCaches(false);
                 Protos.PaymentRequest paymentRequest = Protos.PaymentRequest.parseFrom(connection.getInputStream());
                 return new PaymentSession(paymentRequest, verifyPki, trustStorePath);
@@ -258,7 +258,7 @@ public class PaymentSession {
     }
 
     /**
-     * Returns the total amount of peercoins requested.
+     * Returns the total amount of htmlcoins requested.
      */
     public BigInteger getValue() {
         return totalValue;
@@ -301,7 +301,7 @@ public class PaymentSession {
     /**
      * Generates a Payment message and sends the payment to the merchant who sent the PaymentRequest.
      * Provide transactions built by the wallet.
-     * NOTE: This does not broadcast the transactions to the peercoin network, it merely sends a Payment message to the
+     * NOTE: This does not broadcast the transactions to the htmlcoin network, it merely sends a Payment message to the
      * merchant confirming the payment.
      * Returns an object wrapping PaymentACK once received.
      * If the PaymentRequest did not specify a payment_url, returns null and does nothing.
@@ -354,7 +354,7 @@ public class PaymentSession {
         for (Transaction txn : txns) {
             txn.verify();
             ByteArrayOutputStream o = new ByteArrayOutputStream();
-            txn.peercoinSerialize(o);
+            txn.htmlcoinSerialize(o);
             payment.addTransactions(ByteString.copyFrom(o.toByteArray()));
         }
         return payment.build();
@@ -367,8 +367,8 @@ public class PaymentSession {
             public Ack call() throws Exception {
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
-                connection.setRequestProperty("Content-Type", "application/peercoin-payment");
-                connection.setRequestProperty("Accept", "application/peercoin-paymentack");
+                connection.setRequestProperty("Content-Type", "application/htmlcoin-payment");
+                connection.setRequestProperty("Accept", "application/htmlcoin-paymentack");
                 connection.setRequestProperty("Content-Length", Integer.toString(payment.getSerializedSize()));
                 connection.setUseCaches(false);
                 connection.setDoInput(true);

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net;
+package com.matthewmitchell.htmlcoinj.net;
 
-import com.matthewmitchell.peercoinj.core.Message;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.Message;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.base.Throwables;
 import org.slf4j.LoggerFactory;
 

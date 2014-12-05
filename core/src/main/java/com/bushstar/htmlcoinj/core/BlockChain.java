@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +38,8 @@ public class BlockChain extends AbstractBlockChain {
      * one from scratch, or you can deserialize a saved wallet from disk using {@link Wallet#loadFromFile(java.io.File)}
      * </p>
      *
-     * <p>For the store, you should use {@link com.matthewmitchell.peercoinj.store.SPVBlockStore} or you could also try a
-     * {@link com.matthewmitchell.peercoinj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
+     * <p>For the store, you should use {@link com.matthewmitchell.htmlcoinj.store.SPVBlockStore} or you could also try a
+     * {@link com.matthewmitchell.htmlcoinj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
      * disk serialization (this is rare).</p>
      */
     public BlockChain(NetworkParameters params, Wallet wallet, BlockStore blockStore, ValidHashStore validHashStore) throws BlockStoreException {

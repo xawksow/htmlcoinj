@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net;
+package com.matthewmitchell.htmlcoinj.net;
 
-import com.matthewmitchell.peercoinj.core.Utils;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

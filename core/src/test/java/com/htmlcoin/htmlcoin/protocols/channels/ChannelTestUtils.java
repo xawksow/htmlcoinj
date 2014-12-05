@@ -1,10 +1,10 @@
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.peercoinj.core.Utils;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import org.peercoin.paymentchannel.Protos;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
+import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
+import org.htmlcoin.paymentchannel.Protos;
 
 import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;

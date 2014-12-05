@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.kits;
+package com.matthewmitchell.htmlcoinj.kits;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.SPVBlockStore;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
-import com.matthewmitchell.peercoinj.store.WalletProtobufSerializer;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.store.SPVBlockStore;
+import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
+import com.matthewmitchell.htmlcoinj.store.WalletProtobufSerializer;
 import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -38,7 +38,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
- * <p>Utility class that wraps the boilerplate needed to set up a new SPV peercoinj app. Instantiate it with a directory
+ * <p>Utility class that wraps the boilerplate needed to set up a new SPV htmlcoinj app. Instantiate it with a directory
  * and file prefix, optionally configure a few things, then use start or startAndWait. The object will construct and
  * configure a {@link BlockChain}, {@link SPVBlockStore}, {@link Wallet} and {@link PeerGroup}. Depending on the value
  * of the blockingStartup property, startup will be considered complete once the block chain has fully synchronized,
@@ -50,8 +50,8 @@ import static com.google.common.base.Preconditions.checkState;
  * access the objects this class creates until startup is complete.</p>
  *
  * <p>The asynchronous design of this class may seem puzzling (just use {@link #startAndWait()} if you don't want that).
- * It is to make it easier to fit peercoinj into GUI apps, which require a high degree of responsiveness on their main
- * thread which handles all the animation and user interaction. Even when blockingStart is false, initializing peercoinj
+ * It is to make it easier to fit htmlcoinj into GUI apps, which require a high degree of responsiveness on their main
+ * thread which handles all the animation and user interaction. Even when blockingStart is false, initializing htmlcoinj
  * means doing potentially blocking file IO, generating keys and other potentially intensive operations. By running it
  * on a background thread, there's no risk of accidentally causing UI lag.</p>
  *
@@ -127,7 +127,7 @@ public class WalletAppKit extends AbstractIdleService {
 
     /**
      * If set, the file is expected to contain a checkpoints file calculated with BuildCheckpoints. It makes initial
-     * block sync faster for new users - please refer to the documentation on the peercoinj website for further details.
+     * block sync faster for new users - please refer to the documentation on the htmlcoinj website for further details.
      */
     public WalletAppKit setCheckpoints(InputStream checkpoints) {
         this.checkpoints = checkNotNull(checkpoints);

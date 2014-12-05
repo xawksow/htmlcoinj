@@ -1,6 +1,6 @@
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.TransactionOutput;
+import com.matthewmitchell.htmlcoinj.core.TransactionOutput;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.AbstractPeerEventListener;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Peer;
-import com.matthewmitchell.peercoinj.core.PeerGroup;
-import com.matthewmitchell.peercoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.AbstractPeerEventListener;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Peer;
+import com.matthewmitchell.htmlcoinj.core.PeerGroup;
+import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;

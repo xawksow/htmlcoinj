@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -41,10 +41,10 @@ import org.spongycastle.util.encoders.Hex;
 import com.google.common.base.Objects;
 import com.google.common.io.Files;
 import com.google.common.primitives.Bytes;
-import com.matthewmitchell.peercoinj.core.AbstractBlockChain;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.StoredBlock;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.AbstractBlockChain;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.StoredBlock;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 
 public class ValidHashStore {
 	
@@ -57,7 +57,7 @@ public class ValidHashStore {
 	
 	static {
 		try {
-			VALID_HASHES_URL = new URL("https://peercoinexplorer.info/chain/HTMLcoin/q/getvalidhashes");
+			VALID_HASHES_URL = new URL("https://htmlcoinexplorer.info/chain/HTMLcoin/q/getvalidhashes");
 		} catch (final MalformedURLException x) {
 			throw new RuntimeException(x); // cannot happen
 		}

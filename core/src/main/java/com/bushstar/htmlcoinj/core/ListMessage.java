@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -112,7 +112,7 @@ public abstract class ListMessage extends Message {
     }
 
     @Override
-    public void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         stream.write(new VarInt(items.size()).encode());
         for (InventoryItem i : items) {
             // Write out the type code.

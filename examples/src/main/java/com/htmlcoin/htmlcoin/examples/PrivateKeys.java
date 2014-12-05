@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
 
 import java.math.BigInteger;
 import java.net.InetAddress;
@@ -26,7 +26,7 @@ import java.net.InetAddress;
 /**
  * This example shows how to solve the challenge Hal posted here:<p>
  *
- * <a href="http://www.peercoin.org/smf/index.php?topic=3638.0">http://www.peercoin.org/smf/index.php?topic=3638
+ * <a href="http://www.htmlcoin.org/smf/index.php?topic=3638.0">http://www.htmlcoin.org/smf/index.php?topic=3638
  * .0</a><p>
  *
  * in which a private key with some coins associated with it is published. The goal is to import the private key,
@@ -67,7 +67,7 @@ public class PrivateKeys {
             peerGroup.stop();
 
             // And take them!
-            System.out.println("Claiming " + Utils.peercoinValueToFriendlyString(wallet.getBalance()) + " coins");
+            System.out.println("Claiming " + Utils.htmlcoinValueToFriendlyString(wallet.getBalance()) + " coins");
             wallet.sendCoins(peerGroup, destination, wallet.getBalance());
             // Wait a few seconds to let the packets flush out to the network (ugly).
             Thread.sleep(5000);

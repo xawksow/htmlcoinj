@@ -1,8 +1,8 @@
 package wallettemplate.controls;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.AddressFormatException;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.Address;
+import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

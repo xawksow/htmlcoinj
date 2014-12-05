@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.RegTestParams;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
+import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.RegTestParams;
+import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -69,7 +69,7 @@ public class ForwardingService {
 
         if (params == RegTestParams.get()) {
             // Regression test mode is designed for testing and development only, so there's no public network for it.
-            // If you pick this mode, you're expected to be running a local "peercoind -regtest" instance.
+            // If you pick this mode, you're expected to be running a local "htmlcoind -regtest" instance.
             kit.connectToLocalHost();
         }
 
@@ -80,11 +80,11 @@ public class ForwardingService {
         kit.wallet().addEventListener(new AbstractWalletEventListener() {
             @Override
             public void onCoinsReceived(Wallet w, Transaction tx, BigInteger prevBalance, BigInteger newBalance) {
-                // Runs in the dedicated "user thread" (see peercoinj docs for more info on this).
+                // Runs in the dedicated "user thread" (see htmlcoinj docs for more info on this).
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 BigInteger value = tx.getValueSentToMe(w);
-                System.out.println("Received tx for " + Utils.peercoinValueToFriendlyString(value) + ": " + tx);
+                System.out.println("Received tx for " + Utils.htmlcoinValueToFriendlyString(value) + ": " + tx);
                 System.out.println("Transaction will be forwarded after it confirms.");
                 // Wait until it's made it into the block chain (may run immediately if it's already there).
                 //
@@ -120,7 +120,7 @@ public class ForwardingService {
     private static void forwardCoins(Transaction tx) {
         try {
             BigInteger value = tx.getValueSentToMe(kit.wallet());
-            System.out.println("Forwarding " + Utils.peercoinValueToFriendlyString(value) + " BTC");
+            System.out.println("Forwarding " + Utils.htmlcoinValueToFriendlyString(value) + " BTC");
             // Now send the coins back! Send with a small fee attached to ensure rapid confirmation.
             final BigInteger amountToSend = value.subtract(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE);
             final Wallet.SendResult sendResult = kit.wallet().sendCoins(kit.peerGroup(), forwardingAddress, amountToSend);

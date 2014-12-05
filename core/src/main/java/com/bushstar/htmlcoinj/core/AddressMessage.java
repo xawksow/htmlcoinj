@@ -1,4 +1,4 @@
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -85,15 +85,15 @@ public class AddressMessage extends Message {
     }
 
     /* (non-Javadoc)
-      * @see Message#peercoinSerializeToStream(java.io.OutputStream)
+      * @see Message#htmlcoinSerializeToStream(java.io.OutputStream)
       */
     @Override
-    void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         if (addresses == null)
             return;
         stream.write(new VarInt(addresses.size()).encode());
         for (PeerAddress addr : addresses) {
-            addr.peercoinSerialize(stream);
+            addr.htmlcoinSerialize(stream);
         }
     }
 

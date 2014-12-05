@@ -1,11 +1,11 @@
-package com.matthewmitchell.peercoinj.tools;
+package com.matthewmitchell.htmlcoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -31,7 +31,7 @@ public class BuildCheckpoints {
         // Sorted map of UNIX time of block to StoredBlock object.
         final TreeMap<Integer, StoredBlock> checkpoints = new TreeMap<Integer, StoredBlock>();
 
-        // Configure peercoinj to fetch only headers, not save them to disk, connect to a local fully synced/validated
+        // Configure htmlcoinj to fetch only headers, not save them to disk, connect to a local fully synced/validated
         // node and to save block headers that are on interval boundaries, as long as they are <1 month old.
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);

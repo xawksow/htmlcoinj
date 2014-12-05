@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.net;
+package com.matthewmitchell.htmlcoinj.net;
 
 import org.slf4j.LoggerFactory;
 

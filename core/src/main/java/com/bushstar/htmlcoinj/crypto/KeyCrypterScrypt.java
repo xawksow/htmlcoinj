@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
 import com.google.protobuf.ByteString;
 import com.lambdaworks.crypto.SCrypt;
-import org.peercoinj.wallet.Protos;
-import org.peercoinj.wallet.Protos.ScryptParameters;
-import org.peercoinj.wallet.Protos.Wallet.EncryptionType;
+import org.htmlcoinj.wallet.Protos;
+import org.htmlcoinj.wallet.Protos.ScryptParameters;
+import org.htmlcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.BufferedBlockCipher;

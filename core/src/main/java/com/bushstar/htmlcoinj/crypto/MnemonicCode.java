@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
 import com.google.common.base.Joiner;
 import org.spongycastle.util.encoders.Hex;
 

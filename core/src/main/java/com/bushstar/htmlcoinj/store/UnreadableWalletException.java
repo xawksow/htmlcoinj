@@ -1,4 +1,4 @@
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
 /**
  * Thrown by the {@link WalletProtobufSerializer} when the serialized protocol buffer is either corrupted,

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -147,7 +147,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
     }
 
     @Override
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         checkNotNull(scriptBytes);
         Utils.int64ToByteStreamLE(getValue().longValue(), stream);
         // TODO: Move script serialization into the Script class, where it belongs.
@@ -190,7 +190,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
      * so we call them "dust outputs" and they're made non standard. The choice of one third is somewhat arbitrary and
      * may change in future.</p>
      *
-     * <p>You probably should use {@link com.matthewmitchell.peercoinj.core.TransactionOutput#getMinNonDustValue()} which uses
+     * <p>You probably should use {@link com.matthewmitchell.htmlcoinj.core.TransactionOutput#getMinNonDustValue()} which uses
      * a safe fee-per-kb by default.</p>
      *
      * @param feePerKbRequired The fee required per kilobyte. Note that this is the same as the reference client's -minrelaytxfee * 3
@@ -202,7 +202,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
         // formula is wrong for anything that's not a pay-to-address output, unfortunately, we must follow the reference
         // clients wrongness in order to ensure we're considered standard. A better formula would either estimate the
         // size of data needed to satisfy all different script types, or just hard code 33 below.
-        final BigInteger size = BigInteger.valueOf(this.peercoinSerialize().length + 148);
+        final BigInteger size = BigInteger.valueOf(this.htmlcoinSerialize().length + 148);
         BigInteger[] nonDustAndRemainder = feePerKbRequired.multiply(size).divideAndRemainder(BigInteger.valueOf(1000));
         return nonDustAndRemainder[1].equals(BigInteger.ZERO) ? nonDustAndRemainder[0] : nonDustAndRemainder[0].add(BigInteger.ONE);
     }
@@ -304,7 +304,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
         try {
             Script script = getScriptPubKey();
             StringBuilder buf = new StringBuilder("TxOut of ");
-            buf.append(Utils.peercoinValueToFriendlyString(value));
+            buf.append(Utils.htmlcoinValueToFriendlyString(value));
             if (script.isSentToAddress() || script.isPayToScriptHash())
                 buf.append(" to ").append(script.getToAddress(params));
             else if (script.isSentToRawPubKey())

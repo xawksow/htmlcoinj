@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core.utils;
+package com.matthewmitchell.htmlcoinj.core.utils;
 
-import com.matthewmitchell.peercoinj.core.Utils;
-import com.matthewmitchell.peercoinj.utils.ExponentialBackoff;
+import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.utils.ExponentialBackoff;
 
 import org.junit.Before;
 import org.junit.Test;

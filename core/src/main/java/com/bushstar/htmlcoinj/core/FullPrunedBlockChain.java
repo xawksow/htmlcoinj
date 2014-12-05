@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.FullPrunedBlockStore;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.store.FullPrunedBlockStore;
+import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

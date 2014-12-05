@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 /**
  * <p>An object implementing this interface can be added to a {@link Wallet} and provide arbitrary byte arrays that will

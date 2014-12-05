@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.utils;
+package com.matthewmitchell.htmlcoinj.utils;
 
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

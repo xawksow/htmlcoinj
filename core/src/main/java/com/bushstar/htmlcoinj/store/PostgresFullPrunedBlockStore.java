@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.script.Script;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,8 +31,8 @@ import java.util.*;
 
 /**
  * <p>A full pruned block store using the Postgres database engine. As an added bonus an address index is calculated,
- * so you can use {@link #calculateBalanceForAddress(com.matthewmitchell.peercoinj.core.Address)} to quickly look up
- * the quantity of peercoins controlled by that address.</p>
+ * so you can use {@link #calculateBalanceForAddress(com.matthewmitchell.htmlcoinj.core.Address)} to quickly look up
+ * the quantity of htmlcoins controlled by that address.</p>
  */
 public class PostgresFullPrunedBlockStore implements FullPrunedBlockStore {
     private static final Logger log = LoggerFactory.getLogger(PostgresFullPrunedBlockStore.class);
@@ -414,7 +414,7 @@ public class PostgresFullPrunedBlockStore implements FullPrunedBlockStore {
                 bos.write((int) (0xFF & (numTxn >> 16)));
                 bos.write((int) (0xFF & (numTxn >> 24)));
                 for (Transaction tx : undoableBlock.getTransactions())
-                    tx.peercoinSerialize(bos);
+                    tx.htmlcoinSerialize(bos);
                 transactions = bos.toByteArray();
             }
             bos.close();
@@ -437,7 +437,7 @@ public class PostgresFullPrunedBlockStore implements FullPrunedBlockStore {
                 findS.close();
 
                 // Postgres insert-or-updates are very complex (and finnicky).  This level of transaction isolation
-                // seems to work for peercoinj
+                // seems to work for htmlcoinj
                 PreparedStatement s =
                         conn.get().prepareStatement("UPDATE undoableBlocks SET txOutChanges=?, transactions=?"
                                 + " WHERE hash = ?");

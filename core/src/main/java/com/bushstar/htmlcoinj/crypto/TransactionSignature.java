@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.VerificationException;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.VerificationException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 
 /**
- * A TransactionSignature wraps an {@link com.matthewmitchell.peercoinj.core.ECKey.ECDSASignature} and adds methods for handling
+ * A TransactionSignature wraps an {@link com.matthewmitchell.htmlcoinj.core.ECKey.ECDSASignature} and adds methods for handling
  * the additional SIGHASH mode byte that is used.
  */
 public class TransactionSignature extends ECKey.ECDSASignature {
@@ -76,7 +76,7 @@ public class TransactionSignature extends ECKey.ECDSASignature {
      * not relayed by default.
      */
     public static boolean isEncodingCanonical(byte[] signature) {
-        // See reference client's IsCanonicalSignature, https://peercointalk.org/index.php?topic=8392.msg127623#msg127623
+        // See reference client's IsCanonicalSignature, https://htmlcointalk.org/index.php?topic=8392.msg127623#msg127623
         // A canonical signature exists of: <30> <total len> <02> <len R> <R> <02> <len S> <S> <hashtype>
         // Where R and S are not negative (their first byte has its highest bit not set), and not
         // excessively padded (do not start with a 0 byte, unless an otherwise negative number follows,

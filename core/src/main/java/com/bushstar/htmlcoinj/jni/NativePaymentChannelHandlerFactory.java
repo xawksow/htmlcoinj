@@ -1,7 +1,7 @@
-package com.matthewmitchell.peercoinj.jni;
+package com.matthewmitchell.htmlcoinj.jni;
 
-import com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelServerListener;
-import com.matthewmitchell.peercoinj.protocols.channels.ServerConnectionEventHandler;
+import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelServerListener;
+import com.matthewmitchell.htmlcoinj.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 import java.net.SocketAddress;

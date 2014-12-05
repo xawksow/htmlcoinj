@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.protobuf.ByteString;
 import net.jcip.annotations.GuardedBy;
-import org.peercoin.paymentchannel.Protos;
+import org.htmlcoin.paymentchannel.Protos;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
@@ -146,7 +146,7 @@ public class PaymentChannelServer {
      *                               rejected by clients, and a value too low will require excessive channel reopening
      *                               and may cause fees to be require to settle the channel. A reasonable value depends
      *                               entirely on the expected maximum for the channel, and should likely be somewhere
-     *                               between a few bitcents and a peercoin.
+     *                               between a few bitcents and a htmlcoin.
      * @param conn A callback listener which represents the connection to the client (forwards messages we generate to
      *             the client and will close the connection on request)
      */
@@ -427,7 +427,7 @@ public class PaymentChannelServer {
                 if (result != null) {
                     // Result can be null on various error paths, like if we never actually opened
                     // properly and so on.
-                    msg.getSettlementBuilder().setTx(ByteString.copyFrom(result.peercoinSerialize()));
+                    msg.getSettlementBuilder().setTx(ByteString.copyFrom(result.htmlcoinSerialize()));
                     log.info("Sending CLOSE back with broadcast settlement tx.");
                 } else {
                     log.info("Sending CLOSE back without broadcast settlement tx.");

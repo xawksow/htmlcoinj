@@ -15,23 +15,23 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.crypto.EncryptedPrivateKey;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypter;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterScrypt;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.wallet.WalletTransaction;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.matthewmitchell.htmlcoinj.crypto.EncryptedPrivateKey;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypter;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.wallet.WalletTransaction;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.TextFormat;
 import com.google.protobuf.WireFormat;
 
-import org.peercoinj.wallet.Protos;
-import org.peercoinj.wallet.Protos.Wallet.EncryptionType;
+import org.htmlcoinj.wallet.Protos;
+import org.htmlcoinj.wallet.Protos.Wallet.EncryptionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,7 +55,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * a data interchange format developed by Google with an efficient binary representation, a type safe specification
  * language and compilers that generate code to work with those data structures for many languages. Protocol buffers
  * can have their format evolved over time: conceptually they represent data using (tag, length, value) tuples. The
- * format is defined by the <tt>peercoin.proto</tt> file in the peercoinj source distribution.<p>
+ * format is defined by the <tt>htmlcoin.proto</tt> file in the htmlcoinj source distribution.<p>
  *
  * This class is used through its static methods. The most common operations are writeWallet and readWallet, which do
  * the obvious operations on Output/InputStreams. You can use a {@link java.io.ByteArrayInputStream} and equivalent
@@ -582,7 +582,7 @@ public class WalletProtobufSerializer {
         txMap.put(txProto.getHash(), tx);
     }
 
-    private WalletTransaction connectTransactionOutputs(org.peercoinj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
+    private WalletTransaction connectTransactionOutputs(org.htmlcoinj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
         Transaction tx = txMap.get(txProto.getHash());
         final WalletTransaction.Pool pool;
         switch (txProto.getPool()) {

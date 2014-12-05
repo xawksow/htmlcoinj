@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.utils;
+package com.matthewmitchell.htmlcoinj.utils;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.UnitTestParams;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
+import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import static com.matthewmitchell.peercoinj.utils.TestUtils.createFakeBlock;
-import static com.matthewmitchell.peercoinj.utils.TestUtils.createFakeTx;
+import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeBlock;
+import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

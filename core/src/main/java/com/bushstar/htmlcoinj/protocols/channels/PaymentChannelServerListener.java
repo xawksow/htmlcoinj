@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.peercoinj.core.Wallet;
-import com.matthewmitchell.peercoinj.net.NioServer;
-import com.matthewmitchell.peercoinj.net.ProtobufParser;
-import com.matthewmitchell.peercoinj.net.StreamParserFactory;
-import org.peercoin.paymentchannel.Protos;
+import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.net.NioServer;
+import com.matthewmitchell.htmlcoinj.net.ProtobufParser;
+import com.matthewmitchell.htmlcoinj.net.StreamParserFactory;
+import org.htmlcoin.paymentchannel.Protos;
 
 import javax.annotation.Nullable;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.matthewmitchell.peercoinj.uri;
+package com.matthewmitchell.htmlcoinj.uri;
 
 /**
  * <p>Exception to provide the following to {@link org.multibit.qrcode.HTMLcoinURI}:</p>

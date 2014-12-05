@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 
@@ -28,11 +28,11 @@ public class PeerAddressTest
 {
     @Test
     public void testPeerAddressRoundtrip() throws Exception {
-        // copied verbatim from https://en.peercoin.it/wiki/Protocol_specification#Network_address
+        // copied verbatim from https://en.htmlcoin.it/wiki/Protocol_specification#Network_address
         String fromSpec = "010000000000000000000000000000000000ffff0a000001208d";
         PeerAddress pa = new PeerAddress(MainNetParams.get(),
                 Hex.decode(fromSpec), 0, 0);
-        String reserialized = Utils.bytesToHexString(pa.peercoinSerialize());
+        String reserialized = Utils.bytesToHexString(pa.htmlcoinSerialize());
         assertEquals(reserialized,fromSpec );
     }
 
@@ -40,6 +40,6 @@ public class PeerAddressTest
     public void testHTMLcoinSerialize() throws Exception {
         PeerAddress pa = new PeerAddress(InetAddress.getByName(null), 8333, 0);
         assertEquals("000000000000000000000000000000000000ffff7f000001208d",
-                Utils.bytesToHexString(pa.peercoinSerialize()));
+                Utils.bytesToHexString(pa.htmlcoinSerialize()));
     }
 }

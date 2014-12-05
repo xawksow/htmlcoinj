@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.script;
+package com.matthewmitchell.htmlcoinj.script;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.TransactionSignature;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,8 +34,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.*;
-import static com.matthewmitchell.peercoinj.core.Utils.bytesToHexString;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.*;
+import static com.matthewmitchell.htmlcoinj.core.Utils.bytesToHexString;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
 
@@ -44,7 +44,7 @@ import static com.google.common.base.Preconditions.checkState;
 /**
  * <p>Programs embedded inside transactions that control redemption of payments.</p>
  *
- * <p>HTMLcoin transactions don't specify what they do directly. Instead <a href="https://en.peercoin.it/wiki/Script">a
+ * <p>HTMLcoin transactions don't specify what they do directly. Instead <a href="https://en.htmlcoin.it/wiki/Script">a
  * small binary stack language</a> is used to define programs that when evaluated return whether the transaction
  * "accepts" or rejects the other transactions connected to it.</p>
  *
@@ -474,7 +474,7 @@ public class Script {
      * correctly are considered valid, but won't be mined upon, so they'll be rapidly re-orgd out of the chain. This
      * logic is defined by <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0016.mediawiki">BIP 16</a>.</p>
      *
-     * <p>peercoinj does not support creation of P2SH transactions today. The goal of P2SH is to allow short addresses
+     * <p>htmlcoinj does not support creation of P2SH transactions today. The goal of P2SH is to allow short addresses
      * even for complex scripts (eg, multi-sig outputs) so they are convenient to work with in things like QRcodes or
      * with copy/paste, and also to minimize the size of the unspent output set (which improves performance of the
      * HTMLcoin system).</p>
@@ -1222,7 +1222,7 @@ public class Script {
         // Clone the transaction because executing the script involves editing it, and if we die, we'll leave
         // the tx half broken (also it's not so thread safe to work on it directly.
         try {
-            txContainingThis = new Transaction(txContainingThis.getParams(), txContainingThis.peercoinSerialize());
+            txContainingThis = new Transaction(txContainingThis.getParams(), txContainingThis.htmlcoinSerialize());
         } catch (ProtocolException e) {
             throw new RuntimeException(e);   // Should not happen unless we were given a totally broken transaction.
         }

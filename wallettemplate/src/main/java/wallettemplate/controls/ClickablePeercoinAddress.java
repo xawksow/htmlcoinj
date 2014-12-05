@@ -1,6 +1,6 @@
 package wallettemplate.controls;
 
-import com.matthewmitchell.peercoinj.uri.HTMLcoinURI;
+import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
 import de.jensd.fx.fontawesome.AwesomeDude;
 import de.jensd.fx.fontawesome.AwesomeIcon;
 import javafx.beans.property.StringProperty;
@@ -36,7 +36,7 @@ import java.net.URI;
 //
 // From the java directory:
 //
-// javac -cp $HOME/.m2/repository/net/glxn/qrgen/1.3/qrgen-1.3.jar:$HOME/.m2/repository/de/jensd/fontawesomefx/8.0.0/fontawesomefx-8.0.0.jar:../../../target/classes:../../../../core/target/peercoinj-0.11-SNAPSHOT.jar -d ../../../target/classes/ -source 1.7 -target 1.7 wallettemplate/controls/ClickableHTMLcoinAddress.java
+// javac -cp $HOME/.m2/repository/net/glxn/qrgen/1.3/qrgen-1.3.jar:$HOME/.m2/repository/de/jensd/fontawesomefx/8.0.0/fontawesomefx-8.0.0.jar:../../../target/classes:../../../../core/target/htmlcoinj-0.11-SNAPSHOT.jar -d ../../../target/classes/ -source 1.7 -target 1.7 wallettemplate/controls/ClickableHTMLcoinAddress.java
 
 
 /**
@@ -52,7 +52,7 @@ public class ClickableHTMLcoinAddress extends AnchorPane {
 
     public ClickableHTMLcoinAddress() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("peercoin_address.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("htmlcoin_address.fxml"));
             loader.setRoot(this);
             loader.setController(this);
             // The following line is supposed to help Scene Builder, although it doesn't seem to be needed for me.

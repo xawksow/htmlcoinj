@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.utils;
+package com.matthewmitchell.htmlcoinj.utils;
 
-import com.matthewmitchell.peercoinj.core.Block;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.ProtocolException;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Block;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.ProtocolException;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -53,11 +53,11 @@ public class BlockFileLoader implements Iterable<Block>, Iterator<Block> {
         String defaultDataDir;
         String OS = System.getProperty("os.name").toLowerCase();
         if (OS.indexOf("win") >= 0) {
-            defaultDataDir = System.getenv("APPDATA") + "\\.peercoin\\blocks\\";
+            defaultDataDir = System.getenv("APPDATA") + "\\.htmlcoin\\blocks\\";
         } else if (OS.indexOf("mac") >= 0 || (OS.indexOf("darwin") >= 0)) {
             defaultDataDir = System.getProperty("user.home") + "/Library/Application Support/HTMLcoin/blocks/";
         } else {
-            defaultDataDir = System.getProperty("user.home") + "/.peercoin/blocks/";
+            defaultDataDir = System.getProperty("user.home") + "/.htmlcoin/blocks/";
         }
         
         List<File> list = new LinkedList<File>();

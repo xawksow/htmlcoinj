@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.store;
+package com.matthewmitchell.htmlcoinj.store;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.StoredBlock;
-import com.matthewmitchell.peercoinj.params.UnitTestParams;
+import com.matthewmitchell.htmlcoinj.core.Address;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.matthewmitchell.htmlcoinj.core.StoredBlock;
+import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

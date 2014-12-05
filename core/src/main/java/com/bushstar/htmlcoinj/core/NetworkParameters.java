@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.params.*;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptOpCodes;
+import com.matthewmitchell.htmlcoinj.params.*;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptOpCodes;
 import com.google.common.base.Objects;
 
 import org.spongycastle.util.encoders.Hex;
@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkState;
-import static com.matthewmitchell.peercoinj.core.Utils.COIN;
+import static com.matthewmitchell.htmlcoinj.core.Utils.COIN;
 
 /**
  * <p>NetworkParameters contains the data needed for working with an instantiation of a HTMLcoin chain.</p>
@@ -54,9 +54,9 @@ public abstract class NetworkParameters implements Serializable {
     public static final byte[] SATOSHI_KEY = Hex.decode("04a0a849dd49b113d3179a332dd77715c43be4d0076e2f19e66de23dd707e56630f792f298dfd209bf042bb3561f4af6983f3d81e439737ab0bf7f898fecd21aab");
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String ID_MAINNET = "org.peercoin.production";
+    public static final String ID_MAINNET = "org.htmlcoin.production";
     /** Unit test network. */
-    public static final String ID_UNITTESTNET = "com.matthewmitchell.peercoinj.unittest";
+    public static final String ID_UNITTESTNET = "com.matthewmitchell.htmlcoinj.unittest";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -243,7 +243,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * First byte of a base58 encoded address. See {@link com.matthewmitchell.peercoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
+     * First byte of a base58 encoded address. See {@link com.matthewmitchell.htmlcoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
      * is the one used for "normal" addresses. Other types of address may be encountered with version codes found in
      * the acceptableAddressCodes array.
      */
@@ -258,7 +258,7 @@ public abstract class NetworkParameters implements Serializable {
         return p2shHeader;
     }
 
-    /** First byte of a base58 encoded dumped private key. See {@link com.matthewmitchell.peercoinj.core.DumpedPrivateKey}. */
+    /** First byte of a base58 encoded dumped private key. See {@link com.matthewmitchell.htmlcoinj.core.DumpedPrivateKey}. */
     public int getDumpedPrivateKeyHeader() {
         return dumpedPrivateKeyHeader;
     }
@@ -299,7 +299,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * The key used to sign {@link com.matthewmitchell.peercoinj.core.AlertMessage}s. You can use {@link com.matthewmitchell.peercoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
+     * The key used to sign {@link com.matthewmitchell.htmlcoinj.core.AlertMessage}s. You can use {@link com.matthewmitchell.htmlcoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
      * signatures using it.
      */
     public byte[] getAlertSigningKey() {

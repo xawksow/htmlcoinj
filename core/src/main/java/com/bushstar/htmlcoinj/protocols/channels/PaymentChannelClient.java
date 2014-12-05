@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.protocols.channels;
+package com.matthewmitchell.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
 import net.jcip.annotations.GuardedBy;
-import org.peercoin.paymentchannel.Protos;
+import org.htmlcoin.paymentchannel.Protos;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
@@ -190,7 +190,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
 
         Protos.ProvideRefund.Builder provideRefundBuilder = Protos.ProvideRefund.newBuilder()
                 .setMultisigKey(ByteString.copyFrom(myKey.getPubKey()))
-                .setTx(ByteString.copyFrom(state.getIncompleteRefundTransaction().peercoinSerialize()));
+                .setTx(ByteString.copyFrom(state.getIncompleteRefundTransaction().htmlcoinSerialize()));
 
         conn.sendToServer(Protos.TwoWayChannelMessage.newBuilder()
                 .setProvideRefund(provideRefundBuilder)
@@ -212,7 +212,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
         state.storeChannelInWallet(serverId);
 
         Protos.ProvideContract.Builder contractMsg = Protos.ProvideContract.newBuilder()
-                .setTx(ByteString.copyFrom(state.getMultisigContract().peercoinSerialize()));
+                .setTx(ByteString.copyFrom(state.getMultisigContract().htmlcoinSerialize()));
         try {
             // Make an initial payment of the dust limit, and put it into the message as well. The size of the
             // server-requested dust limit was already sanity checked by this point.
@@ -360,7 +360,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
      * intending to reopen the channel later. There is likely little reason to use this in a stateless protocol.</p>
      *
      * <p>Note that this <b>MUST</b> still be called even after either
-     * {@link ClientConnection#destroyConnection(com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
+     * {@link ClientConnection#destroyConnection(com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
      * {@link PaymentChannelClient#settle()} is called, to actually handle the connection close logic.</p>
      */
     @Override

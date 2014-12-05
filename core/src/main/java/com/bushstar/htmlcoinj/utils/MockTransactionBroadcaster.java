@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.utils;
+package com.matthewmitchell.htmlcoinj.utils;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
-import com.matthewmitchell.peercoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.peercoinj.core.VerificationException;
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
+import com.matthewmitchell.htmlcoinj.core.VerificationException;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.SettableFuture;

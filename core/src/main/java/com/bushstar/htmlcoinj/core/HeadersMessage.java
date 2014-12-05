@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,13 +48,13 @@ public class HeadersMessage extends Message {
     }
 
     @Override
-    public void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         stream.write(new VarInt(blockHeaders.size()).encode());
         for (Block header : blockHeaders) {
             if (header.transactions == null)
-                header.peercoinSerializeToStream(stream);
+                header.htmlcoinSerializeToStream(stream);
             else
-                header.cloneAsHeader().peercoinSerializeToStream(stream);
+                header.cloneAsHeader().htmlcoinSerializeToStream(stream);
             stream.write(0);
         }
     }

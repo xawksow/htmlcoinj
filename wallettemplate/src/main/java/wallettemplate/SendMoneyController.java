@@ -1,6 +1,6 @@
 package wallettemplate;
 
-import com.matthewmitchell.peercoinj.core.*;
+import com.matthewmitchell.htmlcoinj.core.*;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import javafx.application.Platform;
@@ -36,7 +36,7 @@ public class SendMoneyController {
         try {
             Address destination = new Address(Main.params, address.getText());
             Wallet.SendRequest req = Wallet.SendRequest.emptyWallet(destination);
-            sendResult = Main.peercoin.wallet().sendCoins(req);
+            sendResult = Main.htmlcoin.wallet().sendCoins(req);
             Futures.addCallback(sendResult.broadcastComplete, new FutureCallback<Transaction>() {
                 @Override
                 public void onSuccess(Transaction result) {

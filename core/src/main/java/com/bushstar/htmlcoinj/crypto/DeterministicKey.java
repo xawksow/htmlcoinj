@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.Base58;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.core.Utils;
+import com.matthewmitchell.htmlcoinj.core.Base58;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.Utils;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;

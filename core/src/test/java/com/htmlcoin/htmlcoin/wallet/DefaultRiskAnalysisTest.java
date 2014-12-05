@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
 import java.math.BigInteger;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;

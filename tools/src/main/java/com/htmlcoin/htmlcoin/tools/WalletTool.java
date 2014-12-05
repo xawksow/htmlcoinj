@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.tools;
+package com.matthewmitchell.htmlcoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.peercoinj.net.discovery.PeerDiscovery;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.RegTestParams;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentRequestException;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentSession;
-import com.matthewmitchell.peercoinj.store.*;
-import com.matthewmitchell.peercoinj.uri.HTMLcoinURI;
-import com.matthewmitchell.peercoinj.uri.HTMLcoinURIParseException;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
+import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
+import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscovery;
+import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.matthewmitchell.htmlcoinj.params.RegTestParams;
+import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
+import com.matthewmitchell.htmlcoinj.protocols.payments.PaymentRequestException;
+import com.matthewmitchell.htmlcoinj.protocols.payments.PaymentSession;
+import com.matthewmitchell.htmlcoinj.store.*;
+import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
+import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURIParseException;
+import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;
@@ -37,7 +37,7 @@ import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
-import org.peercoinj.wallet.Protos;
+import org.htmlcoinj.wallet.Protos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.encoders.Hex;
@@ -78,7 +78,7 @@ public class WalletTool {
     private static PeerDiscovery discovery;
     private static ValidationMode mode;
     private static String password;
-    private static org.peercoin.protocols.payments.Protos.PaymentRequest paymentRequest;
+    private static org.htmlcoin.protocols.payments.Protos.PaymentRequest paymentRequest;
 
     public static class Condition {
         public enum Type {
@@ -470,12 +470,12 @@ public class WalletTool {
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InsufficientMoneyException e) {
-            System.err.println("Insufficient funds: have " + Utils.peercoinValueToFriendlyString(wallet.getBalance()));
+            System.err.println("Insufficient funds: have " + Utils.htmlcoinValueToFriendlyString(wallet.getBalance()));
         }
     }
 
     private static void sendPaymentRequest(String location, boolean verifyPki) {
-        if (location.startsWith("http") || location.startsWith("peercoin")) {
+        if (location.startsWith("http") || location.startsWith("htmlcoin")) {
             try {
                 ListenableFuture<PaymentSession> future;
                 if (location.startsWith("http")) {
@@ -495,7 +495,7 @@ public class WalletTool {
                 System.err.println("Error creating payment session " + e.getMessage());
                 System.exit(1);
             } catch (HTMLcoinURIParseException e) {
-                System.err.println("Invalid peercoin uri: " + e.getMessage());
+                System.err.println("Invalid htmlcoin uri: " + e.getMessage());
                 System.exit(1);
             } catch (InterruptedException e) {
                 // Ignore.
@@ -513,7 +513,7 @@ public class WalletTool {
                 System.exit(1);
             }
             try {
-                paymentRequest = org.peercoin.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
+                paymentRequest = org.htmlcoin.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
             } catch(IOException e) {
                 System.err.println("Failed to parse payment request from file " + e.getMessage());
                 System.exit(1);
@@ -581,7 +581,7 @@ public class WalletTool {
         } catch (InterruptedException e1) {
             // Ignore.
         } catch (InsufficientMoneyException e) {
-            System.err.println("Insufficient funds: have " + Utils.peercoinValueToFriendlyString(wallet.getBalance()));
+            System.err.println("Insufficient funds: have " + Utils.htmlcoinValueToFriendlyString(wallet.getBalance()));
         } catch (BlockStoreException e) {
             throw new RuntimeException(e);
         }
@@ -645,7 +645,7 @@ public class WalletTool {
                         saveWallet(walletFile);
                         BigInteger balance = wallet.getBalance(Wallet.BalanceType.ESTIMATED);
                         if (condition.matchHTMLcoins(balance)) {
-                            System.out.println(Utils.peercoinValueToFriendlyString(balance));
+                            System.out.println(Utils.htmlcoinValueToFriendlyString(balance));
                             latch.countDown();
                         }
                     }

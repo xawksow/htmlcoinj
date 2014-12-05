@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.script;
+package com.matthewmitchell.htmlcoinj.script;
 
-import com.matthewmitchell.peercoinj.core.Address;
-import com.matthewmitchell.peercoinj.core.ECKey;
-import com.matthewmitchell.peercoinj.crypto.TransactionSignature;
+import com.matthewmitchell.htmlcoinj.core.Address;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.matthewmitchell.peercoinj.script.ScriptOpCodes.*;
+import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link com.matthewmitchell.peercoinj.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link com.matthewmitchell.htmlcoinj.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {

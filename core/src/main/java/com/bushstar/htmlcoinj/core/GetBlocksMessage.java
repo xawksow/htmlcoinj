@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -82,7 +82,7 @@ public class GetBlocksMessage extends Message {
         return b.toString();
     }
 
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         // Version, for some reason.
         Utils.uint32ToByteStreamLE(NetworkParameters.PROTOCOL_VERSION, stream);
         // Then a vector of block hashes. This is actually a "block locator", a set of block

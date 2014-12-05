@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 
 import org.slf4j.Logger;
@@ -28,18 +28,18 @@ import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.matthewmitchell.peercoinj.core.Utils.*;
+import static com.matthewmitchell.htmlcoinj.core.Utils.*;
 
 /**
  * <p>Methods to serialize and de-serialize messages to the HTMLcoin network format as defined in
- * <a href="https://en.peercoin.it/wiki/Protocol_specification">the protocol specification</a>.</p>
+ * <a href="https://en.htmlcoin.it/wiki/Protocol_specification">the protocol specification</a>.</p>
  *
  * <p>To be able to serialize and deserialize new Message subclasses the following criteria needs to be met.</p>
  *
  * <ul>
  * <li>The proper Class instance needs to be mapped to its message name in the names variable below</li>
  * <li>There needs to be a constructor matching: NetworkParameters params, byte[] payload</li>
- * <li>Message.peercoinSerializeToStream() needs to be properly subclassed</li>
+ * <li>Message.htmlcoinSerializeToStream() needs to be properly subclassed</li>
  * </ul>
  */
 public class HTMLcoinSerializer {
@@ -126,7 +126,7 @@ public class HTMLcoinSerializer {
         if (name == null) {
             throw new Error("HTMLcoinSerializer doesn't currently know how to serialize " + message.getClass());
         }
-        serialize(name, message.peercoinSerialize(), out);
+        serialize(name, message.htmlcoinSerialize(), out);
     }
 
     /**

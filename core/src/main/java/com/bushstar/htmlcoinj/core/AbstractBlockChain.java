@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.BlockStoreException;
-import com.matthewmitchell.peercoinj.store.ValidHashStore;
-import com.matthewmitchell.peercoinj.utils.ListenerRegistration;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.store.BlockStore;
+import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
+import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -49,7 +49,7 @@ import static com.google.common.base.Preconditions.*;
  * <p>An AbstractBlockChain implementation must be connected to a {@link BlockStore} implementation. The chain object
  * by itself doesn't store any data, that's delegated to the store. Which store you use is a decision best made by
  * reading the getting started guide, but briefly, fully validating block chains need fully validating stores. In
- * the lightweight SPV mode, a {@link com.matthewmitchell.peercoinj.store.SPVBlockStore} is the right choice.</p>
+ * the lightweight SPV mode, a {@link com.matthewmitchell.htmlcoinj.store.SPVBlockStore} is the right choice.</p>
  *
  * <p>This class implements an abstract class which makes it simple to create a BlockChain that does/doesn't do full
  * verification.  It verifies headers and is implements most of what is required to implement SPV mode, but
@@ -58,7 +58,7 @@ import static com.google.common.base.Preconditions.*;
  * <p>There are two subclasses of AbstractBlockChain that are useful: {@link BlockChain}, which is the simplest
  * class and implements <i>simplified payment verification</i>. This is a lightweight and efficient mode that does
  * not verify the contents of blocks, just their headers. A {@link FullPrunedBlockChain} paired with a
- * {@link com.matthewmitchell.peercoinj.store.H2FullPrunedBlockStore} implements full verification, which is equivalent to the
+ * {@link com.matthewmitchell.htmlcoinj.store.H2FullPrunedBlockStore} implements full verification, which is equivalent to the
  * original Satoshi client. To learn more about the alternative security models, please consult the articles on the
  * website.</p>
  *
@@ -752,7 +752,7 @@ public abstract class AbstractBlockChain {
                 if (listener.isTransactionRelevant(tx)) {
                     falsePositives.remove(tx.getHash());
                     if (clone)
-                        tx = new Transaction(tx.params, tx.peercoinSerialize());
+                        tx = new Transaction(tx.params, tx.htmlcoinSerialize());
                     listener.receiveFromBlock(tx, block, blockType, relativityOffset++);
                 }
             } catch (ScriptException e) {
@@ -826,7 +826,7 @@ public abstract class AbstractBlockChain {
         // and then leaving, making it too hard to mine a block. On non-difficulty transition points, easy
         // blocks are allowed if there has been a span of 20 minutes without one.
         final long timeDelta = next.getTimeSeconds() - prev.getTimeSeconds();
-        // There is an integer underflow bug in peercoin-qt that means mindiff blocks are accepted when time
+        // There is an integer underflow bug in htmlcoin-qt that means mindiff blocks are accepted when time
         // goes backwards.
         if (timeDelta >= 0 && timeDelta <= NetworkParameters.TARGET_SPACING * 2) {
             // Walk backwards until we find a block that doesn't have the easiest proof of work, then check

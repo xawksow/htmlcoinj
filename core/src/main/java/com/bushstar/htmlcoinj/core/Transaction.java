@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.peercoinj.crypto.TransactionSignature;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.matthewmitchell.peercoinj.script.ScriptOpCodes;
+import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.matthewmitchell.htmlcoinj.script.ScriptOpCodes;
 import com.google.common.collect.ImmutableMap;
 
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.matthewmitchell.peercoinj.core.Utils.*;
+import static com.matthewmitchell.htmlcoinj.core.Utils.*;
 import static com.google.common.base.Preconditions.*;
 
 /**
@@ -75,7 +75,7 @@ public class Transaction extends ChildMessage implements Serializable {
      */
     public static final BigInteger MIN_NONDUST_OUTPUT = BigInteger.valueOf(10000);
 
-    // These are serialized in both peercoin and java serialization.
+    // These are serialized in both htmlcoin and java serialization.
     private long version;
     private long time;
     private ArrayList<TransactionInput> inputs;
@@ -194,7 +194,7 @@ public class Transaction extends ChildMessage implements Serializable {
      */
     public Sha256Hash getHash() {
         if (hash == null) {
-            byte[] bits = peercoinSerialize();
+            byte[] bits = htmlcoinSerialize();
             hash = new Sha256Hash(reverseBytes(doubleDigest(bits)));
         }
         return hash;
@@ -648,7 +648,7 @@ public class Transaction extends ChildMessage implements Serializable {
                 Script scriptPubKey = out.getScriptPubKey();
                 s.append(scriptPubKey);
                 s.append(" ");
-                s.append(peercoinValueToFriendlyString(out.getValue()));
+                s.append(htmlcoinValueToFriendlyString(out.getValue()));
                 s.append(" HTML5");
                 if (!out.isAvailableForSpending()) {
                     s.append(" Spent");
@@ -676,7 +676,7 @@ public class Transaction extends ChildMessage implements Serializable {
         }
         inputs.clear();
         // You wanted to reserialize, right?
-        this.length = this.peercoinSerialize().length;
+        this.length = this.htmlcoinSerialize().length;
     }
 
     /**
@@ -725,7 +725,7 @@ public class Transaction extends ChildMessage implements Serializable {
     }
 
     /**
-     * Same as {@link #addSignedInput(TransactionOutPoint, com.matthewmitchell.peercoinj.script.Script, ECKey, com.matthewmitchell.peercoinj.core.Transaction.SigHash, boolean)}
+     * Same as {@link #addSignedInput(TransactionOutPoint, com.matthewmitchell.htmlcoinj.script.Script, ECKey, com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
      * but defaults to {@link SigHash#ALL} and "false" for the anyoneCanPay flag. This is normally what you want.
      */
     public TransactionInput addSignedInput(TransactionOutPoint prevOut, Script scriptPubKey, ECKey sigKey) throws ScriptException {
@@ -743,7 +743,7 @@ public class Transaction extends ChildMessage implements Serializable {
         }
         outputs.clear();
         // You wanted to reserialize, right?
-        this.length = this.peercoinSerialize().length;
+        this.length = this.htmlcoinSerialize().length;
     }
 
     /**
@@ -885,7 +885,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.peercoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash, org.spongycastle.crypto.params.KeyParameter)} and then returning
      * a new {@link TransactionSignature}.
      *
@@ -906,7 +906,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.peercoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}.
      *
      * @param inputIndex Which input to calculate the signature for, as an index.
@@ -966,7 +966,7 @@ public class Transaction extends ChildMessage implements Serializable {
         // The SIGHASH flags are used in the design of contracts, please see this page for a further understanding of
         // the purposes of the code in this method:
         //
-        //   https://en.peercoin.it/wiki/Contracts
+        //   https://en.htmlcoin.it/wiki/Contracts
 
         try {
             // Store all the input scripts and clear them in preparation for signing. If we're signing a fresh
@@ -1045,7 +1045,7 @@ public class Transaction extends ChildMessage implements Serializable {
             }
 
             ByteArrayOutputStream bos = new UnsafeByteArrayOutputStream(length == UNKNOWN_LENGTH ? 256 : length + 4);
-            peercoinSerialize(bos);
+            htmlcoinSerialize(bos);
             // We also have to write a hash type (sigHashType is actually an unsigned char)
             uint32ToByteStreamLE(0x000000ff & sigHashType, bos);
             // Note that this is NOT reversed to ensure it will be signed correctly. If it were to be printed out
@@ -1067,15 +1067,15 @@ public class Transaction extends ChildMessage implements Serializable {
     }
 
     @Override
-    protected void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    protected void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         uint32ToByteStreamLE(version, stream);
         uint32ToByteStreamLE(time, stream);
         stream.write(new VarInt(inputs.size()).encode());
         for (TransactionInput in : inputs)
-            in.peercoinSerialize(stream);
+            in.htmlcoinSerialize(stream);
         stream.write(new VarInt(outputs.size()).encode());
         for (TransactionOutput out : outputs)
-            out.peercoinSerialize(stream);
+            out.htmlcoinSerialize(stream);
         uint32ToByteStreamLE(lockTime, stream);
     }
 
@@ -1232,7 +1232,7 @@ public class Transaction extends ChildMessage implements Serializable {
     /**
      * <p>Returns true if this transaction is considered finalized and can be placed in a block. Non-finalized
      * transactions won't be included by miners and can be replaced with newer versions using sequence numbers.
-     * This is useful in certain types of <a href="http://en.peercoin.it/wiki/Contracts">contracts</a>, such as
+     * This is useful in certain types of <a href="http://en.htmlcoin.it/wiki/Contracts">contracts</a>, such as
      * micropayment channels.</p>
      *
      * <p>Note that currently the replacement feature is disabled in the Satoshi client and will need to be

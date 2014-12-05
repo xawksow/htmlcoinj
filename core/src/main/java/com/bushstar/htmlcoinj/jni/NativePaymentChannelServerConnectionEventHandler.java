@@ -1,8 +1,8 @@
-package com.matthewmitchell.peercoinj.jni;
+package com.matthewmitchell.htmlcoinj.jni;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.protocols.channels.PaymentChannelCloseException;
-import com.matthewmitchell.peercoinj.protocols.channels.ServerConnectionEventHandler;
+import com.matthewmitchell.htmlcoinj.core.*;
+import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException;
+import com.matthewmitchell.htmlcoinj.protocols.channels.ServerConnectionEventHandler;
 
 import java.math.BigInteger;
 

@@ -15,17 +15,17 @@
  */
 
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
-import com.matthewmitchell.peercoinj.net.ClientConnectionManager;
-import com.matthewmitchell.peercoinj.net.FilterMerger;
-import com.matthewmitchell.peercoinj.net.NioClientManager;
-import com.matthewmitchell.peercoinj.net.discovery.PeerDiscovery;
-import com.matthewmitchell.peercoinj.net.discovery.PeerDiscoveryException;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.utils.ExponentialBackoff;
-import com.matthewmitchell.peercoinj.utils.ListenerRegistration;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import com.matthewmitchell.htmlcoinj.net.ClientConnectionManager;
+import com.matthewmitchell.htmlcoinj.net.FilterMerger;
+import com.matthewmitchell.htmlcoinj.net.NioClientManager;
+import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscovery;
+import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscoveryException;
+import com.matthewmitchell.htmlcoinj.script.Script;
+import com.matthewmitchell.htmlcoinj.utils.ExponentialBackoff;
+import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
+import com.matthewmitchell.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
@@ -910,7 +910,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * 
      * @param address destination IP and port.
      * @return The newly created Peer object or null if the peer could not be connected.
-     *         Use {@link com.matthewmitchell.peercoinj.core.Peer#getConnectionOpenFuture()} if you
+     *         Use {@link com.matthewmitchell.htmlcoinj.core.Peer#getConnectionOpenFuture()} if you
      *         want a future which completes when the connection is open.
      */
     @Nullable
@@ -1265,7 +1265,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns a future that is triggered when the number of connected peers is equal to the given number of connected
-     * peers. By using this with {@link com.matthewmitchell.peercoinj.core.PeerGroup#getMaxConnections()} you can wait until the
+     * peers. By using this with {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMaxConnections()} you can wait until the
      * network is fully online. To block immediately, just call get() on the result.
      *
      * @param numPeers How many peers to wait for.
@@ -1297,7 +1297,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * enough, {@link PeerGroup#broadcastTransaction(Transaction)} will wait until the minimum number is reached so
      * propagation across the network can be observed. If no value has been set using
      * {@link PeerGroup#setMinBroadcastConnections(int)} a default of half of whatever
-     * {@link com.matthewmitchell.peercoinj.core.PeerGroup#getMaxConnections()} returns is used.
+     * {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMaxConnections()} returns is used.
      */
     public int getMinBroadcastConnections() {
         lock.lock();
@@ -1316,7 +1316,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
     }
 
     /**
-     * See {@link com.matthewmitchell.peercoinj.core.PeerGroup#getMinBroadcastConnections()}.
+     * See {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMinBroadcastConnections()}.
      */
     public void setMinBroadcastConnections(int value) {
         lock.lock();
@@ -1398,7 +1398,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.matthewmitchell.peercoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to 5000.
      */
     public long getPingIntervalMsec() {
@@ -1412,10 +1412,10 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Sets the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.matthewmitchell.peercoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to {@link PeerGroup#DEFAULT_PING_INTERVAL_MSEC}.
      * Setting the value to be <= 0 disables pinging entirely, although you can still request one yourself
-     * using {@link com.matthewmitchell.peercoinj.core.Peer#ping()}.
+     * using {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()}.
      */
     public void setPingIntervalMsec(long pingIntervalMsec) {
         lock.lock();

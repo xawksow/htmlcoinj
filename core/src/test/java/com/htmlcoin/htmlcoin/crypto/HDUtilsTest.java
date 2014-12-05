@@ -1,6 +1,6 @@
-package com.matthewmitchell.peercoinj.crypto;
+package com.matthewmitchell.htmlcoinj.crypto;
 
-import com.matthewmitchell.peercoinj.core.ECKey;
+import com.matthewmitchell.htmlcoinj.core.ECKey;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

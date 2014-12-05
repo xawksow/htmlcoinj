@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -43,7 +43,7 @@ public class Pong extends Message {
         length = 8;
     }
     
-    public void peercoinSerializeToStream(OutputStream stream) throws IOException {
+    public void htmlcoinSerializeToStream(OutputStream stream) throws IOException {
         Utils.int64ToByteStreamLE(nonce, stream);
     }
     

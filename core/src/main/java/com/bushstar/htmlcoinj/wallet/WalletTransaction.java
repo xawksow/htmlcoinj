@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.wallet;
+package com.matthewmitchell.htmlcoinj.wallet;
 
-import com.matthewmitchell.peercoinj.core.Transaction;
+import com.matthewmitchell.htmlcoinj.core.Transaction;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Stores data about a transaction that is only relevant to the {@link com.matthewmitchell.peercoinj.core.Wallet} class.
+ * Stores data about a transaction that is only relevant to the {@link com.matthewmitchell.htmlcoinj.core.Wallet} class.
  */
 public class WalletTransaction {
     public enum Pool {

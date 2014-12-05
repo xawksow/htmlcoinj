@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.matthewmitchell.htmlcoinj.examples;
 
-import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.htmlcoinj.core.Wallet;
 
 import java.io.File;
 

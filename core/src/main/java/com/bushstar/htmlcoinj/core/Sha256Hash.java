@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.core;
+package com.matthewmitchell.htmlcoinj.core;
 
 import com.google.common.io.ByteStreams;
 import org.spongycastle.util.encoders.Hex;
