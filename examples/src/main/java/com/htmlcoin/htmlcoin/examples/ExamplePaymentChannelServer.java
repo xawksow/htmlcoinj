@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
-import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
-import com.matthewmitchell.htmlcoinj.protocols.channels.*;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.kits.WalletAppKit;
+import com.bushstar.htmlcoinj.params.TestNet3Params;
+import com.bushstar.htmlcoinj.protocols.channels.*;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;

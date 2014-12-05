@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
 /**
  * A general interface which declares the ability to broadcast transactions. This is implemented
- * by {@link com.matthewmitchell.htmlcoinj.core.PeerGroup}.
+ * by {@link com.bushstar.htmlcoinj.core.PeerGroup}.
  */
 public interface TransactionBroadcaster {
     /** Broadcast the given transaction on the network */

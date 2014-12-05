@@ -21,7 +21,7 @@
  * 
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

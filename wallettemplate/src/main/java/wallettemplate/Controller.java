@@ -1,9 +1,9 @@
 package wallettemplate;
 
-import com.matthewmitchell.htmlcoinj.core.AbstractWalletEventListener;
-import com.matthewmitchell.htmlcoinj.core.DownloadListener;
-import com.matthewmitchell.htmlcoinj.core.Utils;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.AbstractWalletEventListener;
+import com.bushstar.htmlcoinj.core.DownloadListener;
+import com.bushstar.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.Wallet;
 import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

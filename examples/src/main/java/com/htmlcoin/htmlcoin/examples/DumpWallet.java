@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.Wallet;
 
 import java.io.File;
 

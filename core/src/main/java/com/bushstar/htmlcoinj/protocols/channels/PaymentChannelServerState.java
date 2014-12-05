@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.crypto.TransactionSignature;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.FutureCallback;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -190,7 +190,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
      * so we call them "dust outputs" and they're made non standard. The choice of one third is somewhat arbitrary and
      * may change in future.</p>
      *
-     * <p>You probably should use {@link com.matthewmitchell.htmlcoinj.core.TransactionOutput#getMinNonDustValue()} which uses
+     * <p>You probably should use {@link com.bushstar.htmlcoinj.core.TransactionOutput#getMinNonDustValue()} which uses
      * a safe fee-per-kb by default.</p>
      *
      * @param feePerKbRequired The fee required per kilobyte. Note that this is the same as the reference client's -minrelaytxfee * 3

@@ -1,6 +1,6 @@
 package wallettemplate;
 
-import com.matthewmitchell.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.*;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import javafx.application.Platform;

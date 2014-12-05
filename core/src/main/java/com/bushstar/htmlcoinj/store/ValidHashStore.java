@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -41,10 +41,10 @@ import org.spongycastle.util.encoders.Hex;
 import com.google.common.base.Objects;
 import com.google.common.io.Files;
 import com.google.common.primitives.Bytes;
-import com.matthewmitchell.htmlcoinj.core.AbstractBlockChain;
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.core.StoredBlock;
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.AbstractBlockChain;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.StoredBlock;
+import com.bushstar.htmlcoinj.core.Utils;
 
 public class ValidHashStore {
 	

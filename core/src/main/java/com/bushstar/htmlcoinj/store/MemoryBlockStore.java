@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
-import com.matthewmitchell.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Keeps {@link com.matthewmitchell.htmlcoinj.core.StoredBlock}s in memory. Used primarily for unit testing.
+ * Keeps {@link com.bushstar.htmlcoinj.core.StoredBlock}s in memory. Used primarily for unit testing.
  */
 public class MemoryBlockStore implements BlockStore {
     private LinkedHashMap<Sha256Hash, StoredBlock> blockMap = new LinkedHashMap<Sha256Hash, StoredBlock>() {

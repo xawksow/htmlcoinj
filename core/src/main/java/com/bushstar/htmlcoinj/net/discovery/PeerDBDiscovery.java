@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import net.jcip.annotations.GuardedBy;
 import org.slf4j.LoggerFactory;

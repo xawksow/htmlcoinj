@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
-import com.matthewmitchell.htmlcoinj.script.ScriptOpCodes;
+import com.bushstar.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.bushstar.htmlcoinj.crypto.TransactionSignature;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.script.ScriptOpCodes;
 import com.google.common.collect.ImmutableMap;
 
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.*;
+import static com.bushstar.htmlcoinj.core.Utils.*;
 import static com.google.common.base.Preconditions.*;
 
 /**
@@ -725,7 +725,7 @@ public class Transaction extends ChildMessage implements Serializable {
     }
 
     /**
-     * Same as {@link #addSignedInput(TransactionOutPoint, com.matthewmitchell.htmlcoinj.script.Script, ECKey, com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
+     * Same as {@link #addSignedInput(TransactionOutPoint, com.bushstar.htmlcoinj.script.Script, ECKey, com.bushstar.htmlcoinj.core.Transaction.SigHash, boolean)}
      * but defaults to {@link SigHash#ALL} and "false" for the anyoneCanPay flag. This is normally what you want.
      */
     public TransactionInput addSignedInput(TransactionOutPoint prevOut, Script scriptPubKey, ECKey sigKey) throws ScriptException {
@@ -885,7 +885,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.bushstar.htmlcoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash, org.spongycastle.crypto.params.KeyParameter)} and then returning
      * a new {@link TransactionSignature}.
      *
@@ -906,7 +906,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.matthewmitchell.htmlcoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.bushstar.htmlcoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}.
      *
      * @param inputIndex Which input to calculate the signature for, as an index.

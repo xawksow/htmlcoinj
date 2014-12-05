@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import com.google.common.io.ByteStreams;
 import org.spongycastle.util.encoders.Hex;

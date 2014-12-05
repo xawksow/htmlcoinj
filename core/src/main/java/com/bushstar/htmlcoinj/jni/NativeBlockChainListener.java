@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.jni;
+package com.bushstar.htmlcoinj.jni;
 
-import com.matthewmitchell.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.*;
 
 import java.util.List;
 

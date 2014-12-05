@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.utils;
+package com.bushstar.htmlcoinj.utils;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.store.BlockStore;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.store.BlockStore;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

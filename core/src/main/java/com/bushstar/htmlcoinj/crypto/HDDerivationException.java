@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
 public class HDDerivationException extends RuntimeException {
     public HDDerivationException(String message) {

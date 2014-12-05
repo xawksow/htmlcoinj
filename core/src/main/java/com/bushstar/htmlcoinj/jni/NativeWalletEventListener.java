@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.jni;
+package com.bushstar.htmlcoinj.jni;
 
-import com.matthewmitchell.htmlcoinj.core.ECKey;
-import com.matthewmitchell.htmlcoinj.core.Transaction;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
-import com.matthewmitchell.htmlcoinj.core.WalletEventListener;
-import com.matthewmitchell.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.core.ECKey;
+import com.bushstar.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.WalletEventListener;
+import com.bushstar.htmlcoinj.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.MainNetParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 

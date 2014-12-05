@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.utils;
+package com.bushstar.htmlcoinj.utils;
 
-import com.matthewmitchell.htmlcoinj.core.Transaction;
-import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.htmlcoinj.core.VerificationException;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.TransactionBroadcaster;
+import com.bushstar.htmlcoinj.core.VerificationException;
+import com.bushstar.htmlcoinj.core.Wallet;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.SettableFuture;

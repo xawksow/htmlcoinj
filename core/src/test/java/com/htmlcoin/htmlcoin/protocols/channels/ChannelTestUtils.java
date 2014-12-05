@@ -1,9 +1,9 @@
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.htmlcoinj.core.Utils;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.TransactionBroadcaster;
+import com.bushstar.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.Wallet;
 import org.htmlcoin.paymentchannel.Protos;
 
 import java.math.BigInteger;

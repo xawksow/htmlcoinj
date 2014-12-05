@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.kits;
+package com.bushstar.htmlcoinj.kits;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
-import com.matthewmitchell.htmlcoinj.store.SPVBlockStore;
-import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
-import com.matthewmitchell.htmlcoinj.store.WalletProtobufSerializer;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.net.discovery.DnsDiscovery;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.store.SPVBlockStore;
+import com.bushstar.htmlcoinj.store.ValidHashStore;
+import com.bushstar.htmlcoinj.store.WalletProtobufSerializer;
 import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

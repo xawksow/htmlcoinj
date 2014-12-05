@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.MainNetParams;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,8 +25,8 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.uint32ToByteStreamLE;
-import static com.matthewmitchell.htmlcoinj.core.Utils.uint64ToByteStreamLE;
+import static com.bushstar.htmlcoinj.core.Utils.uint32ToByteStreamLE;
+import static com.bushstar.htmlcoinj.core.Utils.uint64ToByteStreamLE;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**

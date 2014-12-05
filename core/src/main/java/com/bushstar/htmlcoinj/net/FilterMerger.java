@@ -1,7 +1,7 @@
-package com.matthewmitchell.htmlcoinj.net;
+package com.bushstar.htmlcoinj.net;
 
-import com.matthewmitchell.htmlcoinj.core.BloomFilter;
-import com.matthewmitchell.htmlcoinj.core.PeerFilterProvider;
+import com.bushstar.htmlcoinj.core.BloomFilter;
+import com.bushstar.htmlcoinj.core.PeerFilterProvider;
 import com.google.common.collect.ImmutableList;
 
 import java.util.LinkedList;
@@ -10,9 +10,9 @@ import java.util.concurrent.locks.Lock;
 // This code is unit tested by the PeerGroup tests.
 
 /**
- * <p>A reusable object that will calculate, given a list of {@link com.matthewmitchell.htmlcoinj.core.PeerFilterProvider}s, a merged
- * {@link com.matthewmitchell.htmlcoinj.core.BloomFilter} and earliest key time for all of them.
- * Used by the {@link com.matthewmitchell.htmlcoinj.core.PeerGroup} class internally.</p>
+ * <p>A reusable object that will calculate, given a list of {@link com.bushstar.htmlcoinj.core.PeerFilterProvider}s, a merged
+ * {@link com.bushstar.htmlcoinj.core.BloomFilter} and earliest key time for all of them.
+ * Used by the {@link com.bushstar.htmlcoinj.core.PeerGroup} class internally.</p>
  *
  * <p>Thread safety: this class tracks the element count of the last filter it calculated and so must be synchronised
  * externally or used from only one thread. It will acquire a lock on each filter in turn before performing the

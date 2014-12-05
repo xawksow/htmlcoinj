@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;

@@ -15,17 +15,17 @@
  */
 
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.net.ClientConnectionManager;
-import com.matthewmitchell.htmlcoinj.net.FilterMerger;
-import com.matthewmitchell.htmlcoinj.net.NioClientManager;
-import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscovery;
-import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscoveryException;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.utils.ExponentialBackoff;
-import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.net.ClientConnectionManager;
+import com.bushstar.htmlcoinj.net.FilterMerger;
+import com.bushstar.htmlcoinj.net.NioClientManager;
+import com.bushstar.htmlcoinj.net.discovery.PeerDiscovery;
+import com.bushstar.htmlcoinj.net.discovery.PeerDiscoveryException;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.utils.ExponentialBackoff;
+import com.bushstar.htmlcoinj.utils.ListenerRegistration;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
@@ -409,7 +409,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * Sets the {@link VersionMessage} that will be announced on newly created connections. A version message is
      * primarily interesting because it lets you customize the "subVer" field which is used a bit like the User-Agent
      * field from HTTP. It means your client tells the other side what it is, see
-     * <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0014.mediawiki">BIP 14</a>.
+     * <a href="https://github.com.bushstar/bips/blob/master/bip-0014.mediawiki">BIP 14</a>.
      *
      * The VersionMessage you provide is copied and the best chain height/time filled in for each new connection,
      * therefore you don't have to worry about setting that. The provided object is really more of a template.
@@ -910,7 +910,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * 
      * @param address destination IP and port.
      * @return The newly created Peer object or null if the peer could not be connected.
-     *         Use {@link com.matthewmitchell.htmlcoinj.core.Peer#getConnectionOpenFuture()} if you
+     *         Use {@link com.bushstar.htmlcoinj.core.Peer#getConnectionOpenFuture()} if you
      *         want a future which completes when the connection is open.
      */
     @Nullable
@@ -1265,7 +1265,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns a future that is triggered when the number of connected peers is equal to the given number of connected
-     * peers. By using this with {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMaxConnections()} you can wait until the
+     * peers. By using this with {@link com.bushstar.htmlcoinj.core.PeerGroup#getMaxConnections()} you can wait until the
      * network is fully online. To block immediately, just call get() on the result.
      *
      * @param numPeers How many peers to wait for.
@@ -1297,7 +1297,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * enough, {@link PeerGroup#broadcastTransaction(Transaction)} will wait until the minimum number is reached so
      * propagation across the network can be observed. If no value has been set using
      * {@link PeerGroup#setMinBroadcastConnections(int)} a default of half of whatever
-     * {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMaxConnections()} returns is used.
+     * {@link com.bushstar.htmlcoinj.core.PeerGroup#getMaxConnections()} returns is used.
      */
     public int getMinBroadcastConnections() {
         lock.lock();
@@ -1316,7 +1316,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
     }
 
     /**
-     * See {@link com.matthewmitchell.htmlcoinj.core.PeerGroup#getMinBroadcastConnections()}.
+     * See {@link com.bushstar.htmlcoinj.core.PeerGroup#getMinBroadcastConnections()}.
      */
     public void setMinBroadcastConnections(int value) {
         lock.lock();
@@ -1398,7 +1398,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.bushstar.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to 5000.
      */
     public long getPingIntervalMsec() {
@@ -1412,10 +1412,10 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Sets the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.bushstar.htmlcoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to {@link PeerGroup#DEFAULT_PING_INTERVAL_MSEC}.
      * Setting the value to be <= 0 disables pinging entirely, although you can still request one yourself
-     * using {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()}.
+     * using {@link com.bushstar.htmlcoinj.core.Peer#ping()}.
      */
     public void setPingIntervalMsec(long pingIntervalMsec) {
         lock.lock();

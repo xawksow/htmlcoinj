@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

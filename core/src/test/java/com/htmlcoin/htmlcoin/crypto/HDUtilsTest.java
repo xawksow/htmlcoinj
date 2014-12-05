@@ -1,6 +1,6 @@
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.bushstar.htmlcoinj.core.ECKey;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

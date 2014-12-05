@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.ECKey;
+import com.bushstar.htmlcoinj.core.ECKey;
 import com.google.common.collect.ImmutableList;
 import org.spongycastle.crypto.digests.SHA512Digest;
 import org.spongycastle.crypto.macs.HMac;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.script.Script;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +34,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public class KeyTimeCoinSelector implements CoinSelector {
     private static final Logger log = LoggerFactory.getLogger(KeyTimeCoinSelector.class);
 
-    /** A number of inputs chosen to avoid hitting {@link com.matthewmitchell.htmlcoinj.core.Transaction.MAX_STANDARD_TX_SIZE} */
+    /** A number of inputs chosen to avoid hitting {@link com.bushstar.htmlcoinj.core.Transaction.MAX_STANDARD_TX_SIZE} */
     public static final int MAX_SIMULTANEOUS_INPUTS = 600;
 
     private final long unixTimeSeconds;

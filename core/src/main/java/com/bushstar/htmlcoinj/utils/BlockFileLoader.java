@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.utils;
+package com.bushstar.htmlcoinj.utils;
 
-import com.matthewmitchell.htmlcoinj.core.Block;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.ProtocolException;
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.Block;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.ProtocolException;
+import com.bushstar.htmlcoinj.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;

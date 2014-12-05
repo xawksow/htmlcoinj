@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.tools;
+package com.bushstar.htmlcoinj.tools;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscovery;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.params.RegTestParams;
-import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
-import com.matthewmitchell.htmlcoinj.protocols.payments.PaymentRequestException;
-import com.matthewmitchell.htmlcoinj.protocols.payments.PaymentSession;
-import com.matthewmitchell.htmlcoinj.store.*;
-import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
-import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURIParseException;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.crypto.KeyCrypterException;
+import com.bushstar.htmlcoinj.net.discovery.DnsDiscovery;
+import com.bushstar.htmlcoinj.net.discovery.PeerDiscovery;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.RegTestParams;
+import com.bushstar.htmlcoinj.params.TestNet3Params;
+import com.bushstar.htmlcoinj.protocols.payments.PaymentRequestException;
+import com.bushstar.htmlcoinj.protocols.payments.PaymentSession;
+import com.bushstar.htmlcoinj.store.*;
+import com.bushstar.htmlcoinj.uri.HTMLcoinURI;
+import com.bushstar.htmlcoinj.uri.HTMLcoinURIParseException;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;

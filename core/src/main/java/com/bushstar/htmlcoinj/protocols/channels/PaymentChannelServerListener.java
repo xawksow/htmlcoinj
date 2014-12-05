@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
-import com.matthewmitchell.htmlcoinj.net.NioServer;
-import com.matthewmitchell.htmlcoinj.net.ProtobufParser;
-import com.matthewmitchell.htmlcoinj.net.StreamParserFactory;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.TransactionBroadcaster;
+import com.bushstar.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.net.NioServer;
+import com.bushstar.htmlcoinj.net.ProtobufParser;
+import com.bushstar.htmlcoinj.net.StreamParserFactory;
 import org.htmlcoin.paymentchannel.Protos;
 
 import javax.annotation.Nullable;

@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypter;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
-import com.matthewmitchell.htmlcoinj.script.ScriptChunk;
-import com.matthewmitchell.htmlcoinj.store.UnreadableWalletException;
-import com.matthewmitchell.htmlcoinj.store.WalletProtobufSerializer;
-import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
-import com.matthewmitchell.htmlcoinj.wallet.*;
-import com.matthewmitchell.htmlcoinj.wallet.WalletTransaction.Pool;
+import com.bushstar.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.bushstar.htmlcoinj.crypto.KeyCrypter;
+import com.bushstar.htmlcoinj.crypto.KeyCrypterException;
+import com.bushstar.htmlcoinj.crypto.KeyCrypterScrypt;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.script.ScriptChunk;
+import com.bushstar.htmlcoinj.store.UnreadableWalletException;
+import com.bushstar.htmlcoinj.store.WalletProtobufSerializer;
+import com.bushstar.htmlcoinj.utils.ListenerRegistration;
+import com.bushstar.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.wallet.*;
+import com.bushstar.htmlcoinj.wallet.WalletTransaction.Pool;
 import com.google.common.collect.*;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.Longs;
@@ -54,8 +54,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.htmlcoinValueToFriendlyString;
-import static com.matthewmitchell.htmlcoinj.core.Utils.htmlcoinValueToPlainString;
+import static com.bushstar.htmlcoinj.core.Utils.htmlcoinValueToFriendlyString;
+import static com.bushstar.htmlcoinj.core.Utils.htmlcoinValueToPlainString;
 import static com.google.common.base.Preconditions.*;
 
 // To do list:
@@ -95,7 +95,7 @@ import static com.google.common.base.Preconditions.*;
  * that simplifies this for you although you're still responsible for manually triggering a save when your app is about
  * to quit because the auto-save feature waits a moment before actually committing to disk to avoid IO thrashing when
  * the wallet is changing very fast (eg due to a block chain sync). See
- * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
+ * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.bushstar.htmlcoinj.wallet.WalletFiles.Listener)}
  * for more information about this.</p>
  */
 public class Wallet implements Serializable, BlockChainListener, PeerFilterProvider {
@@ -455,7 +455,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     /**
      * <p>
      * Disables auto-saving, after it had been enabled with
-     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
+     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.bushstar.htmlcoinj.wallet.WalletFiles.Listener)}
      * before. This method blocks until finished.
      * </p>
      */
@@ -1589,7 +1589,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
         /**
          * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-         * (its value is ignored and set to {@link com.matthewmitchell.htmlcoinj.core.Wallet#getBalance()} - the fees required
+         * (its value is ignored and set to {@link com.bushstar.htmlcoinj.core.Wallet#getBalance()} - the fees required
          * for the transaction). Any additional outputs are removed.
          */
         public boolean emptyWallet = false;
@@ -1612,7 +1612,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
          * at least {@link Transaction#REFERENCE_DEFAULT_MIN_TX_FEE} if it is set, as default reference clients will
          * otherwise simply treat the transaction as if there were no fee at all.</p>
          *
-         * <p>Once {@link Wallet#completeTx(com.matthewmitchell.htmlcoinj.core.Wallet.SendRequest)} is called, this is set to the
+         * <p>Once {@link Wallet#completeTx(com.bushstar.htmlcoinj.core.Wallet.SendRequest)} is called, this is set to the
          * value of the fee that was added.</p>
          *
          * <p>You might also consider adding a {@link SendRequest#feePerKb} to set the fee per kb of transaction size
@@ -1663,7 +1663,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         public KeyParameter aesKey = null;
 
         /**
-         * If not null, the {@link com.matthewmitchell.htmlcoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+         * If not null, the {@link com.bushstar.htmlcoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
          * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
          * amount.
          */
@@ -2062,7 +2062,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given ECKey to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.bushstar.htmlcoinj.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * If the key already exists in the wallet, does nothing and returns false.
      */
@@ -2072,7 +2072,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given keys to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.matthewmitchell.htmlcoinj.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.bushstar.htmlcoinj.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * Returns the number of keys added, after duplicates are ignored. The onKeyAdded event will be called for each key
      * in the list that was not already present.
@@ -2675,7 +2675,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Returns the earliest creation time of keys or watched scripts in this wallet, in seconds since the epoch, ie the min
-     * of {@link com.matthewmitchell.htmlcoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
+     * of {@link com.bushstar.htmlcoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
      * not have that data (was created before key timestamping was implemented). <p>
      *     
      * This method is most often used in conjunction with {@link PeerGroup#setFastCatchupTimeSecs(long)} in order to
@@ -2786,7 +2786,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * Convenience wrapper around {@link Wallet#encrypt(com.matthewmitchell.htmlcoinj.crypto.KeyCrypter,
+     * Convenience wrapper around {@link Wallet#encrypt(com.bushstar.htmlcoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which uses the default Scrypt key derivation algorithm and
      * parameters, derives a key from the given password and returns the created key.
      */
@@ -2801,7 +2801,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Encrypt the wallet using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt}.
+     * {@link com.bushstar.htmlcoinj.crypto.KeyCrypterScrypt}.
      *
      * @param keyCrypter The KeyCrypter that specifies how to encrypt/ decrypt a key
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to create from a password)
@@ -2909,7 +2909,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.matthewmitchell.htmlcoinj.crypto.KeyCrypter,
+     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.bushstar.htmlcoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which just derives the key afresh and uses the pre-set
      * keycrypter. The wallet must have been encrypted using one of the encrypt methods previously.</p>
      *
@@ -3214,7 +3214,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * money to fail! Finally please be aware that any listeners on the future will run either on the calling thread
      * if it completes immediately, or eventually on a background thread if the balance is not yet at the right
      * level. If you do something that means you know the balance should be sufficient to trigger the future,
-     * you can use {@link com.matthewmitchell.htmlcoinj.utils.Threading#waitForUserCode()} to block until the future had a
+     * you can use {@link com.bushstar.htmlcoinj.utils.Threading#waitForUserCode()} to block until the future had a
      * chance to be updated.</p>
      */
     public ListenableFuture<BigInteger> getBalanceFuture(final BigInteger value, final BalanceType type) {
@@ -3634,7 +3634,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * re-organisation of the wallet contents on the block chain. For instance, in future the wallet may choose to
      * optimise itself to reduce fees or improve privacy.</p>
      */
-    public void setTransactionBroadcaster(@Nullable com.matthewmitchell.htmlcoinj.core.TransactionBroadcaster broadcaster) {
+    public void setTransactionBroadcaster(@Nullable com.bushstar.htmlcoinj.core.TransactionBroadcaster broadcaster) {
         Transaction[] toBroadcast = {};
         lock.lock();
         try {
@@ -3818,7 +3818,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Returns the wallet lock under which most operations happen. This is here to satisfy the
-     * {@link com.matthewmitchell.htmlcoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
+     * {@link com.bushstar.htmlcoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
      * In particular, do <b>not</b> hold this lock if you're display a send confirm screen to the user or for any other
      * long length of time, as it may cause processing holdups elsewhere. Instead, for the "confirm payment screen"
      * use case you should complete a candidate transaction, present it to the user (e.g. for fee purposes) and then

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
 import com.google.common.base.Joiner;
 import org.spongycastle.util.encoders.Hex;
 
@@ -32,7 +32,7 @@ import java.util.List;
 
 /**
  * A MnemonicCode object may be used to convert between binary seed values and
- * lists of words per <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0039.mediawiki">the BIP 39
+ * lists of words per <a href="https://github.com.bushstar/bips/blob/master/bip-0039.mediawiki">the BIP 39
  * specification</a>
  */
 

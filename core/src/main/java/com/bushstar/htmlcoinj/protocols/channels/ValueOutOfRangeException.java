@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
 /**
  * Used when a given value is either too large too afford or too small for the network to accept.

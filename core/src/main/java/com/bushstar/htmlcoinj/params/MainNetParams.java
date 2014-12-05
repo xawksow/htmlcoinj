@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.params;
+package com.bushstar.htmlcoinj.params;
 
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.Utils;
 
 import static com.google.common.base.Preconditions.checkState;
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.core.StoredBlock;
-import com.matthewmitchell.htmlcoinj.core.StoredTransactionOutput;
-import com.matthewmitchell.htmlcoinj.core.StoredUndoableBlock;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.core.StoredBlock;
+import com.bushstar.htmlcoinj.core.StoredTransactionOutput;
+import com.bushstar.htmlcoinj.core.StoredUndoableBlock;
 
 /**
  * <p>An implementor of FullPrunedBlockStore saves StoredBlock objects to some storage mechanism.</p>

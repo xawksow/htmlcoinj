@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;

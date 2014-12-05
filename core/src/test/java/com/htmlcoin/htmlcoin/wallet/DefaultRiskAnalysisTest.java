@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
 import java.math.BigInteger;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.params.MainNetParams;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;

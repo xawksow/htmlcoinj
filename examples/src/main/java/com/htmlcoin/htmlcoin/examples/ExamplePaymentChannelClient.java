@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
-import com.matthewmitchell.htmlcoinj.params.TestNet3Params;
-import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelClientConnection;
-import com.matthewmitchell.htmlcoinj.protocols.channels.StoredPaymentChannelClientStates;
-import com.matthewmitchell.htmlcoinj.protocols.channels.ValueOutOfRangeException;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.kits.WalletAppKit;
+import com.bushstar.htmlcoinj.params.TestNet3Params;
+import com.bushstar.htmlcoinj.protocols.channels.PaymentChannelClientConnection;
+import com.bushstar.htmlcoinj.protocols.channels.StoredPaymentChannelClientStates;
+import com.bushstar.htmlcoinj.protocols.channels.ValueOutOfRangeException;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -34,7 +34,7 @@ import java.math.BigInteger;
 import java.net.InetSocketAddress;
 import java.util.concurrent.CountDownLatch;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.CENT;
+import static com.bushstar.htmlcoinj.core.Utils.CENT;
 import static java.math.BigInteger.TEN;
 import static java.math.BigInteger.ZERO;
 

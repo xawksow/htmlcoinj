@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.store.BlockStore;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.store.BlockStore;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
 
 import java.io.*;
 import java.math.BigInteger;

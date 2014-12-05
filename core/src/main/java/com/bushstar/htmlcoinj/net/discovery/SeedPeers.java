@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
 
 import javax.annotation.Nullable;
 import java.net.InetAddress;

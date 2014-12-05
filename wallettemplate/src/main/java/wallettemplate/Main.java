@@ -1,13 +1,13 @@
 package wallettemplate;
 
 import com.aquafx_project.AquaFx;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.kits.WalletAppKit;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.params.RegTestParams;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.kits.WalletAppKit;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.RegTestParams;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.base.Throwables;
 import javafx.application.Application;
 import javafx.application.Platform;

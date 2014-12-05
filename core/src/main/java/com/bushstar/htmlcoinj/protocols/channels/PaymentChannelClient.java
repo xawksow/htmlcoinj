@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -360,7 +360,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
      * intending to reopen the channel later. There is likely little reason to use this in a stateless protocol.</p>
      *
      * <p>Note that this <b>MUST</b> still be called even after either
-     * {@link ClientConnection#destroyConnection(com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
+     * {@link ClientConnection#destroyConnection(com.bushstar.htmlcoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
      * {@link PaymentChannelClient#settle()} is called, to actually handle the connection close logic.</p>
      */
     @Override

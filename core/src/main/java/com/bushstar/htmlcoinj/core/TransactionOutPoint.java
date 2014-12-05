@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.Script;
 
 import javax.annotation.Nullable;
 import java.io.IOException;

@@ -1,7 +1,7 @@
-package com.matthewmitchell.htmlcoinj.jni;
+package com.bushstar.htmlcoinj.jni;
 
-import com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelServerListener;
-import com.matthewmitchell.htmlcoinj.protocols.channels.ServerConnectionEventHandler;
+import com.bushstar.htmlcoinj.protocols.channels.PaymentChannelServerListener;
+import com.bushstar.htmlcoinj.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 import java.net.SocketAddress;

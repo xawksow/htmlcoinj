@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.htmlcoinj.utils.TestUtils;
+import com.bushstar.htmlcoinj.params.UnitTestParams;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 

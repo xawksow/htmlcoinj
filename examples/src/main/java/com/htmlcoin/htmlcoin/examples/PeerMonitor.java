@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.AbstractPeerEventListener;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.Peer;
-import com.matthewmitchell.htmlcoinj.core.PeerGroup;
-import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.AbstractPeerEventListener;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Peer;
+import com.bushstar.htmlcoinj.core.PeerGroup;
+import com.bushstar.htmlcoinj.net.discovery.DnsDiscovery;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

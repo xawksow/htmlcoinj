@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.Transaction;
-import com.matthewmitchell.htmlcoinj.core.TransactionConfidence;
-import com.matthewmitchell.htmlcoinj.core.TransactionOutput;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.TransactionConfidence;
+import com.bushstar.htmlcoinj.core.TransactionOutput;
+import com.bushstar.htmlcoinj.core.Wallet;
 
 import javax.annotation.Nullable;
 

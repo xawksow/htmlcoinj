@@ -1,6 +1,6 @@
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

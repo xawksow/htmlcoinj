@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.Transaction;
-import com.matthewmitchell.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.Wallet;
 
 import java.util.List;
 

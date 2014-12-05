@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.payments;
+package com.bushstar.htmlcoinj.protocols.payments;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
-import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.uri.HTMLcoinURI;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
@@ -76,7 +76,7 @@ import java.util.concurrent.Callable;
  *
  * @author Kevin Greene
  * @author Andreas Schildbach
- * @see <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0070.mediawiki">BIP 0070</a>
+ * @see <a href="https://github.com.bushstar/bips/blob/master/bip-0070.mediawiki">BIP 0070</a>
  */
 public class PaymentSession {
     private static ListeningExecutorService executor = Threading.THREAD_POOL;

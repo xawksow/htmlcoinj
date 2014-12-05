@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net;
+package com.bushstar.htmlcoinj.net;
 
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
 import org.htmlcoin.paymentchannel.Protos;

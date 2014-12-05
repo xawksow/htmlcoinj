@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.*;
+import static com.bushstar.htmlcoinj.core.Utils.*;
 import static org.junit.Assert.*;
 
 public class UtilsTest {

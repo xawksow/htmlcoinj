@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.script;
+package com.bushstar.htmlcoinj.script;
 
-import com.matthewmitchell.htmlcoinj.core.Address;
-import com.matthewmitchell.htmlcoinj.core.ECKey;
-import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.bushstar.htmlcoinj.core.Address;
+import com.bushstar.htmlcoinj.core.ECKey;
+import com.bushstar.htmlcoinj.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.*;
+import static com.bushstar.htmlcoinj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link com.matthewmitchell.htmlcoinj.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link com.bushstar.htmlcoinj.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {
@@ -139,7 +139,7 @@ public class ScriptBuilder {
 
     /**
      * Creates a scriptPubKey that sends to the given script hash. Read
-     * <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0016.mediawiki">BIP 16</a> to learn more about this
+     * <a href="https://github.com.bushstar/bips/blob/master/bip-0016.mediawiki">BIP 16</a> to learn more about this
      * kind of script.
      */
     public static Script createP2SHOutputScript(byte[] hash) {

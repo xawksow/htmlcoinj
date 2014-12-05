@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net;
+package com.bushstar.htmlcoinj.net;
 
 import java.io.IOException;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.jni;
+package com.bushstar.htmlcoinj.jni;
 
 import com.google.common.util.concurrent.FutureCallback;
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
-import com.matthewmitchell.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.*;
 
 import javax.annotation.Nullable;
 import java.math.BigInteger;
@@ -79,7 +79,7 @@ public class StoredServerChannel {
     }
 
     /**
-     * If a handler is connected, call its {@link com.matthewmitchell.htmlcoinj.protocols.channels.PaymentChannelServer#close()}
+     * If a handler is connected, call its {@link com.bushstar.htmlcoinj.protocols.channels.PaymentChannelServer#close()}
      * method thus disconnecting the TCP connection.
      */
     synchronized void closeConnectedHandler() {

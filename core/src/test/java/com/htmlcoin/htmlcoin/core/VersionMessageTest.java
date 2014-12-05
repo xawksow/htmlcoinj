@@ -1,6 +1,6 @@
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
+import com.bushstar.htmlcoinj.params.UnitTestParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 

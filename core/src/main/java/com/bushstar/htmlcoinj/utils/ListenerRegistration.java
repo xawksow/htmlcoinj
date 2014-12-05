@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.utils;
+package com.bushstar.htmlcoinj.utils;
 
 import java.util.List;
 import java.util.concurrent.Executor;

@@ -1,6 +1,6 @@
 package wallettemplate.controls;
 
-import com.matthewmitchell.htmlcoinj.uri.HTMLcoinURI;
+import com.bushstar.htmlcoinj.uri.HTMLcoinURI;
 import de.jensd.fx.fontawesome.AwesomeDude;
 import de.jensd.fx.fontawesome.AwesomeIcon;
 import javafx.beans.property.StringProperty;

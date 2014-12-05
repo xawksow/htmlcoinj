@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.*;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptOpCodes;
+import com.bushstar.htmlcoinj.params.*;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptOpCodes;
 import com.google.common.base.Objects;
 
 import org.spongycastle.util.encoders.Hex;
@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkState;
-import static com.matthewmitchell.htmlcoinj.core.Utils.COIN;
+import static com.bushstar.htmlcoinj.core.Utils.COIN;
 
 /**
  * <p>NetworkParameters contains the data needed for working with an instantiation of a HTMLcoin chain.</p>
@@ -56,7 +56,7 @@ public abstract class NetworkParameters implements Serializable {
     /** The string returned by getId() for the main, production network where people trade things. */
     public static final String ID_MAINNET = "org.htmlcoin.production";
     /** Unit test network. */
-    public static final String ID_UNITTESTNET = "com.matthewmitchell.htmlcoinj.unittest";
+    public static final String ID_UNITTESTNET = "com.bushstar.htmlcoinj.unittest";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -243,7 +243,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * First byte of a base58 encoded address. See {@link com.matthewmitchell.htmlcoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
+     * First byte of a base58 encoded address. See {@link com.bushstar.htmlcoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
      * is the one used for "normal" addresses. Other types of address may be encountered with version codes found in
      * the acceptableAddressCodes array.
      */
@@ -258,7 +258,7 @@ public abstract class NetworkParameters implements Serializable {
         return p2shHeader;
     }
 
-    /** First byte of a base58 encoded dumped private key. See {@link com.matthewmitchell.htmlcoinj.core.DumpedPrivateKey}. */
+    /** First byte of a base58 encoded dumped private key. See {@link com.bushstar.htmlcoinj.core.DumpedPrivateKey}. */
     public int getDumpedPrivateKeyHeader() {
         return dumpedPrivateKeyHeader;
     }
@@ -299,7 +299,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * The key used to sign {@link com.matthewmitchell.htmlcoinj.core.AlertMessage}s. You can use {@link com.matthewmitchell.htmlcoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
+     * The key used to sign {@link com.bushstar.htmlcoinj.core.AlertMessage}s. You can use {@link com.bushstar.htmlcoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
      * signatures using it.
      */
     public byte[] getAlertSigningKey() {

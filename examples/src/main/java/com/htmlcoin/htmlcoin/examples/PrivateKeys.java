@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.store.MemoryBlockStore;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

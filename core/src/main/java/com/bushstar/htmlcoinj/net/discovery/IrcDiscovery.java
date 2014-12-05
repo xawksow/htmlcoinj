@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
-import com.matthewmitchell.htmlcoinj.core.Base58;
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.AddressFormatException;
+import com.bushstar.htmlcoinj.core.Base58;
+import com.bushstar.htmlcoinj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

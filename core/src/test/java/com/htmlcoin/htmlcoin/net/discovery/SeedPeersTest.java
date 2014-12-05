@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.MainNetParams;
 import org.junit.Test;
 
 import java.net.InetSocketAddress;

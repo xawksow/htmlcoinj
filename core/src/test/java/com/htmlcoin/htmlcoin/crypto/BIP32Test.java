@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
-import com.matthewmitchell.htmlcoinj.core.Base58;
-import com.matthewmitchell.htmlcoinj.crypto.ChildNumber;
-import com.matthewmitchell.htmlcoinj.crypto.DeterministicHierarchy;
-import com.matthewmitchell.htmlcoinj.crypto.DeterministicKey;
-import com.matthewmitchell.htmlcoinj.crypto.HDKeyDerivation;
+import com.bushstar.htmlcoinj.core.AddressFormatException;
+import com.bushstar.htmlcoinj.core.Base58;
+import com.bushstar.htmlcoinj.crypto.ChildNumber;
+import com.bushstar.htmlcoinj.crypto.DeterministicHierarchy;
+import com.bushstar.htmlcoinj.crypto.DeterministicKey;
+import com.bushstar.htmlcoinj.crypto.HDKeyDerivation;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * A test with test vectors as per BIP 32 spec: https://github.com.matthewmitchell/bips/blob/master/bip-0032.mediawiki#Test_Vectors
+ * A test with test vectors as per BIP 32 spec: https://github.com.bushstar/bips/blob/master/bip-0032.mediawiki#Test_Vectors
  */
 public class BIP32Test {
     private static final Logger log = LoggerFactory.getLogger(BIP32Test.class);

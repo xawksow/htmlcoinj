@@ -1,4 +1,4 @@
-package com.matthewmitchell.htmlcoinj.uri;
+package com.bushstar.htmlcoinj.uri;
 
 /**
  * <p>Exception to provide the following to {@link HTMLcoinURI}:</p>

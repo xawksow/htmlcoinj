@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core.utils;
+package com.bushstar.htmlcoinj.core.utils;
 
-import com.matthewmitchell.htmlcoinj.core.Utils;
-import com.matthewmitchell.htmlcoinj.utils.ExponentialBackoff;
+import com.bushstar.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.utils.ExponentialBackoff;
 
 import org.junit.Before;
 import org.junit.Test;

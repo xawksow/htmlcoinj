@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.utils;
+package com.bushstar.htmlcoinj.utils;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
-import com.matthewmitchell.htmlcoinj.store.BlockStore;
-import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
-import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.params.UnitTestParams;
+import com.bushstar.htmlcoinj.store.BlockStore;
+import com.bushstar.htmlcoinj.store.MemoryBlockStore;
+import com.bushstar.htmlcoinj.store.ValidHashStore;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeBlock;
-import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeTx;
+import static com.bushstar.htmlcoinj.utils.TestUtils.createFakeBlock;
+import static com.bushstar.htmlcoinj.utils.TestUtils.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

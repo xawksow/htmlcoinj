@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.Utils;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import com.google.protobuf.ByteString;
 
 import org.htmlcoinj.wallet.Protos;

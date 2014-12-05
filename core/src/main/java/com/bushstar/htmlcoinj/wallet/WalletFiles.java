@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.Wallet;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.core.Wallet;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

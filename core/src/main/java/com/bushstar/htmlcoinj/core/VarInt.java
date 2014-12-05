@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import com.google.common.primitives.UnsignedInteger;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.isLessThanUnsigned;
+import static com.bushstar.htmlcoinj.core.Utils.isLessThanUnsigned;
 
 /**
  * A variable-length encoded integer using Satoshis encoding.

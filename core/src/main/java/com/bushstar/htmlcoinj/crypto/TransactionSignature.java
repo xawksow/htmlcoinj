@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.crypto;
+package com.bushstar.htmlcoinj.crypto;
 
-import com.matthewmitchell.htmlcoinj.core.ECKey;
-import com.matthewmitchell.htmlcoinj.core.Transaction;
-import com.matthewmitchell.htmlcoinj.core.VerificationException;
+import com.bushstar.htmlcoinj.core.ECKey;
+import com.bushstar.htmlcoinj.core.Transaction;
+import com.bushstar.htmlcoinj.core.VerificationException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 
 /**
- * A TransactionSignature wraps an {@link com.matthewmitchell.htmlcoinj.core.ECKey.ECDSASignature} and adds methods for handling
+ * A TransactionSignature wraps an {@link com.bushstar.htmlcoinj.core.ECKey.ECDSASignature} and adds methods for handling
  * the additional SIGHASH mode byte that is used.
  */
 public class TransactionSignature extends ECKey.ECDSASignature {

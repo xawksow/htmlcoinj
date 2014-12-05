@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.matthewmitchell.htmlcoinj.core.Utils.*;
+import static com.bushstar.htmlcoinj.core.Utils.*;
 
 /**
  * <p>Methods to serialize and de-serialize messages to the HTMLcoin network format as defined in

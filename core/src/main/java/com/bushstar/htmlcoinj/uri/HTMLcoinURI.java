@@ -16,12 +16,12 @@
  * 
  */
 
-package com.matthewmitchell.htmlcoinj.uri;
+package com.bushstar.htmlcoinj.uri;
 
-import com.matthewmitchell.htmlcoinj.core.Address;
-import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.Utils;
+import com.bushstar.htmlcoinj.core.Address;
+import com.bushstar.htmlcoinj.core.AddressFormatException;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -74,7 +74,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * @author Andreas Schildbach (initial code)
  * @author Jim Burton (enhancements for MultiBit)
  * @author Gary Rowe (BIP21 support)
- * @see <a href="https://github.com.matthewmitchell/bips/blob/master/bip-0021.mediawiki">BIP 0021</a>
+ * @see <a href="https://github.com.bushstar/bips/blob/master/bip-0021.mediawiki">BIP 0021</a>
  */
 public class HTMLcoinURI {
     /**

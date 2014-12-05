@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.params;
+package com.bushstar.htmlcoinj.params;
 
-import com.matthewmitchell.htmlcoinj.core.Block;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Block;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
 
 import java.math.BigInteger;
 
 /**
  * Network parameters used by the htmlcoinj unit tests (and potentially your own). This lets you solve a block using
- * {@link com.matthewmitchell.htmlcoinj.core.Block#solve()} by setting difficulty to the easiest possible.
+ * {@link com.bushstar.htmlcoinj.core.Block#solve()} by setting difficulty to the easiest possible.
  */
 public class UnitTestParams extends NetworkParameters {
     public UnitTestParams() {

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
-import com.matthewmitchell.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.*;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;

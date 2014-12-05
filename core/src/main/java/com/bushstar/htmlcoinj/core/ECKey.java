@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.crypto.EncryptedPrivateKey;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypter;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.htmlcoinj.crypto.TransactionSignature;
+import com.bushstar.htmlcoinj.crypto.EncryptedPrivateKey;
+import com.bushstar.htmlcoinj.crypto.KeyCrypter;
+import com.bushstar.htmlcoinj.crypto.KeyCrypterException;
+import com.bushstar.htmlcoinj.crypto.TransactionSignature;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import org.htmlcoin.NativeSecp256k1;
@@ -407,7 +407,7 @@ public class ECKey implements Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the HTMLcoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.matthewmitchell.htmlcoinj.core.ECKey.ECDSASignature#toASN1()}
+     * usually encoded using DER format, so you want {@link com.bushstar.htmlcoinj.core.ECKey.ECDSASignature#toASN1()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do
      * further EC maths on them.
      * @throws KeyCrypterException if this ECKey doesn't have a private part.
@@ -426,7 +426,7 @@ public class ECKey implements Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the HTMLcoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.matthewmitchell.htmlcoinj.core.ECKey.ECDSASignature#encodeToDER()}
+     * usually encoded using DER format, so you want {@link com.bushstar.htmlcoinj.core.ECKey.ECDSASignature#encodeToDER()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do further
      * EC maths on them.
      *
@@ -777,7 +777,7 @@ public class ECKey implements Serializable {
 
     /**
      * Exports the private key in the form used by the Satoshi client "dumpprivkey" and "importprivkey" commands. Use
-     * the {@link com.matthewmitchell.htmlcoinj.core.DumpedPrivateKey#toString()} method to get the string.
+     * the {@link com.bushstar.htmlcoinj.core.DumpedPrivateKey#toString()} method to get the string.
      *
      * @param params The network this key is intended for use on.
      * @return Private key bytes as a {@link DumpedPrivateKey}.

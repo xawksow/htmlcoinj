@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 /**
  * Represents the "getdata" P2P network message, which requests the contents of blocks or transactions given their

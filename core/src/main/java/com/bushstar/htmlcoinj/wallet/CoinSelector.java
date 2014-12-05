@@ -1,6 +1,6 @@
-package com.matthewmitchell.htmlcoinj.wallet;
+package com.bushstar.htmlcoinj.wallet;
 
-import com.matthewmitchell.htmlcoinj.core.TransactionOutput;
+import com.bushstar.htmlcoinj.core.TransactionOutput;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

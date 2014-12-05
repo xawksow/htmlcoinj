@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.script.Script;
 
 import javax.annotation.Nullable;
 
@@ -105,7 +105,7 @@ public class Address extends VersionedChecksummedBytes {
 
     /*
      * Returns true if this address is a Pay-To-Script-Hash (P2SH) address.
-     * See also https://github.com.matthewmitchell/bips/blob/master/bip-0013.mediawiki: Address Format for pay-to-script-hash
+     * See also https://github.com.bushstar/bips/blob/master/bip-0013.mediawiki: Address Format for pay-to-script-hash
      */
     public boolean isP2SHAddress() {
         final NetworkParameters parameters = getParameters();

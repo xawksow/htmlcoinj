@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.script.Script;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import java.util.*;
 
 /**
  * <p>A full pruned block store using the Postgres database engine. As an added bonus an address index is calculated,
- * so you can use {@link #calculateBalanceForAddress(com.matthewmitchell.htmlcoinj.core.Address)} to quickly look up
+ * so you can use {@link #calculateBalanceForAddress(com.bushstar.htmlcoinj.core.Address)} to quickly look up
  * the quantity of htmlcoins controlled by that address.</p>
  */
 public class PostgresFullPrunedBlockStore implements FullPrunedBlockStore {

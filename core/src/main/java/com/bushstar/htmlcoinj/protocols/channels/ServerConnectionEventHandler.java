@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.protocols.channels;
+package com.bushstar.htmlcoinj.protocols.channels;
 
 import java.math.BigInteger;
 
-import com.matthewmitchell.htmlcoinj.core.Sha256Hash;
-import com.matthewmitchell.htmlcoinj.net.ProtobufParser;
+import com.bushstar.htmlcoinj.core.Sha256Hash;
+import com.bushstar.htmlcoinj.net.ProtobufParser;
 import org.htmlcoin.paymentchannel.Protos;
 
 import javax.annotation.Nullable;
@@ -41,8 +41,8 @@ public abstract class ServerConnectionEventHandler {
      * <p>Note that this does <i>NOT</i> actually broadcast the most recent payment transaction, which will be triggered
      * automatically when the channel times out by the {@link StoredPaymentChannelServerStates}, or manually by calling
      * {@link StoredPaymentChannelServerStates#closeChannel(StoredServerChannel)} with the channel returned by
-     * {@link StoredPaymentChannelServerStates#getChannel(com.matthewmitchell.htmlcoinj.core.Sha256Hash)} with the id provided in
-     * {@link ServerConnectionEventHandler#channelOpen(com.matthewmitchell.htmlcoinj.core.Sha256Hash)}</p>
+     * {@link StoredPaymentChannelServerStates#getChannel(com.bushstar.htmlcoinj.core.Sha256Hash)} with the id provided in
+     * {@link ServerConnectionEventHandler#channelOpen(com.bushstar.htmlcoinj.core.Sha256Hash)}</p>
      */
     protected final synchronized void closeChannel() {
         if (connectionChannel == null)

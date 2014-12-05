@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.net.discovery;
+package com.bushstar.htmlcoinj.net.discovery;
 
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

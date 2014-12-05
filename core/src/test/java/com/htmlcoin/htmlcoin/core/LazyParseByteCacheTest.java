@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.params.UnitTestParams;
-import com.matthewmitchell.htmlcoinj.store.BlockStore;
-import com.matthewmitchell.htmlcoinj.store.MemoryBlockStore;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.params.UnitTestParams;
+import com.bushstar.htmlcoinj.store.BlockStore;
+import com.bushstar.htmlcoinj.store.MemoryBlockStore;
 import org.junit.Before;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
@@ -28,8 +28,8 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeBlock;
-import static com.matthewmitchell.htmlcoinj.utils.TestUtils.createFakeTx;
+import static com.bushstar.htmlcoinj.utils.TestUtils.createFakeBlock;
+import static com.bushstar.htmlcoinj.utils.TestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 public class LazyParseByteCacheTest {

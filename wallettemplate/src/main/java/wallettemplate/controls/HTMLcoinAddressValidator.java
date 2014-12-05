@@ -1,8 +1,8 @@
 package wallettemplate.controls;
 
-import com.matthewmitchell.htmlcoinj.core.Address;
-import com.matthewmitchell.htmlcoinj.core.AddressFormatException;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Address;
+import com.bushstar.htmlcoinj.core.AddressFormatException;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

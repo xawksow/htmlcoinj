@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.store;
+package com.bushstar.htmlcoinj.store;
 
-import com.matthewmitchell.htmlcoinj.core.*;
-import com.matthewmitchell.htmlcoinj.core.TransactionConfidence.ConfidenceType;
-import com.matthewmitchell.htmlcoinj.crypto.EncryptedPrivateKey;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypter;
-import com.matthewmitchell.htmlcoinj.crypto.KeyCrypterScrypt;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.wallet.WalletTransaction;
+import com.bushstar.htmlcoinj.core.*;
+import com.bushstar.htmlcoinj.core.TransactionConfidence.ConfidenceType;
+import com.bushstar.htmlcoinj.crypto.EncryptedPrivateKey;
+import com.bushstar.htmlcoinj.crypto.KeyCrypter;
+import com.bushstar.htmlcoinj.crypto.KeyCrypterScrypt;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.wallet.WalletTransaction;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedInputStream;

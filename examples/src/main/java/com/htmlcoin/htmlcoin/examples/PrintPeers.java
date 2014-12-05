@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.examples;
+package com.bushstar.htmlcoinj.examples;
 
-import com.matthewmitchell.htmlcoinj.core.AbstractPeerEventListener;
-import com.matthewmitchell.htmlcoinj.core.NetworkParameters;
-import com.matthewmitchell.htmlcoinj.core.Peer;
-import com.matthewmitchell.htmlcoinj.core.PeerAddress;
-import com.matthewmitchell.htmlcoinj.core.VersionMessage;
-import com.matthewmitchell.htmlcoinj.net.discovery.DnsDiscovery;
-import com.matthewmitchell.htmlcoinj.net.discovery.PeerDiscoveryException;
-import com.matthewmitchell.htmlcoinj.net.NioClientManager;
-import com.matthewmitchell.htmlcoinj.params.MainNetParams;
-import com.matthewmitchell.htmlcoinj.utils.BriefLogFormatter;
+import com.bushstar.htmlcoinj.core.AbstractPeerEventListener;
+import com.bushstar.htmlcoinj.core.NetworkParameters;
+import com.bushstar.htmlcoinj.core.Peer;
+import com.bushstar.htmlcoinj.core.PeerAddress;
+import com.bushstar.htmlcoinj.core.VersionMessage;
+import com.bushstar.htmlcoinj.net.discovery.DnsDiscovery;
+import com.bushstar.htmlcoinj.net.discovery.PeerDiscoveryException;
+import com.bushstar.htmlcoinj.net.NioClientManager;
+import com.bushstar.htmlcoinj.params.MainNetParams;
+import com.bushstar.htmlcoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

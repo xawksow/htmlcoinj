@@ -1,4 +1,4 @@
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import com.google.common.util.concurrent.SettableFuture;
 

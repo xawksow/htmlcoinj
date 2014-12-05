@@ -1,8 +1,8 @@
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.core.Transaction.SigHash;
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.script.ScriptBuilder;
+import com.bushstar.htmlcoinj.core.Transaction.SigHash;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import java.io.ByteArrayOutputStream;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static com.matthewmitchell.htmlcoinj.script.ScriptOpCodes.*;
+import static com.bushstar.htmlcoinj.script.ScriptOpCodes.*;
 
 /**
  * Represents a block which is sent to the tested application and which the application must either reject or accept,

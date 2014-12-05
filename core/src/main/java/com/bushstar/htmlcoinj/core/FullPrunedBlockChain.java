@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.script.Script;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
-import com.matthewmitchell.htmlcoinj.store.FullPrunedBlockStore;
-import com.matthewmitchell.htmlcoinj.store.ValidHashStore;
+import com.bushstar.htmlcoinj.script.Script;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.store.FullPrunedBlockStore;
+import com.bushstar.htmlcoinj.store.ValidHashStore;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -166,7 +166,7 @@ public class FullPrunedBlockChain extends AbstractBlockChain {
             if (!params.isCheckpoint(height)) {
                 // BIP30 violator blocks are ones that contain a duplicated transaction. They are all in the
                 // checkpoints list and we therefore only check non-checkpoints for duplicated transactions here. See the
-                // BIP30 document for more details on this: https://github.com.matthewmitchell/bips/blob/master/bip-0030.mediawiki
+                // BIP30 document for more details on this: https://github.com.bushstar/bips/blob/master/bip-0030.mediawiki
                 for (Transaction tx : block.transactions) {
                     Sha256Hash hash = tx.getHash();
                     // If we already have unspent outputs for this hash, we saw the tx already. Either the block is

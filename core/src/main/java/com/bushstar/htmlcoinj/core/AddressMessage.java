@@ -1,4 +1,4 @@
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;

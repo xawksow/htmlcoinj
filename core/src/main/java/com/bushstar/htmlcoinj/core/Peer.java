@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.htmlcoinj.core;
+package com.bushstar.htmlcoinj.core;
 
-import com.matthewmitchell.htmlcoinj.store.BlockStore;
-import com.matthewmitchell.htmlcoinj.store.BlockStoreException;
-import com.matthewmitchell.htmlcoinj.utils.ListenerRegistration;
-import com.matthewmitchell.htmlcoinj.utils.Threading;
+import com.bushstar.htmlcoinj.store.BlockStore;
+import com.bushstar.htmlcoinj.store.BlockStoreException;
+import com.bushstar.htmlcoinj.utils.ListenerRegistration;
+import com.bushstar.htmlcoinj.utils.Threading;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
@@ -47,8 +47,8 @@ import static com.google.common.base.Preconditions.checkState;
  * handles low-level message (de)serialization.</p>
  *
  * <p>Note that timeouts are handled by the extended
- * {@link com.matthewmitchell.htmlcoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
- * {@link com.matthewmitchell.htmlcoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
+ * {@link com.bushstar.htmlcoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
+ * {@link com.bushstar.htmlcoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
  * handshake completes.</p>
  */
 public class Peer extends PeerSocketHandler {
@@ -148,9 +148,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
+     * {@link com.bushstar.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
+     * {@link com.bushstar.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -166,9 +166,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
+     * {@link com.bushstar.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
+     * {@link com.bushstar.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -197,9 +197,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser)}
+     * {@link com.bushstar.htmlcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser)}
      * or
-     * {@link com.matthewmitchell.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.matthewmitchell.htmlcoinj.net.StreamParser, int)}.</p>
+     * {@link com.bushstar.htmlcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.bushstar.htmlcoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -1311,7 +1311,7 @@ public class Peer extends PeerSocketHandler {
     /**
      * Sends the peer a ping message and returns a future that will be invoked when the pong is received back.
      * The future provides a number which is the number of milliseconds elapsed between the ping and the pong.
-     * Once the pong is received the value returned by {@link com.matthewmitchell.htmlcoinj.core.Peer#getLastPingTime()} is
+     * Once the pong is received the value returned by {@link com.bushstar.htmlcoinj.core.Peer#getLastPingTime()} is
      * updated.
      * @throws ProtocolException if the peer version is too low to support measurable pings.
      */
@@ -1330,7 +1330,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns the elapsed time of the last ping/pong cycle. If {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()} has never
+     * Returns the elapsed time of the last ping/pong cycle. If {@link com.bushstar.htmlcoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}.
      */
     public long getLastPingTime() {
@@ -1345,7 +1345,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns a moving average of the last N ping/pong cycles. If {@link com.matthewmitchell.htmlcoinj.core.Peer#ping()} has never
+     * Returns a moving average of the last N ping/pong cycles. If {@link com.bushstar.htmlcoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}. The moving average
      * window is 5 buckets.
      */
