@@ -98,7 +98,7 @@ public class Main extends Application {
         peercoin.wallet().allowSpendingUnconfirmedTransactions();
         peercoin.peerGroup().setMaxConnections(11);
         System.out.println(peercoin.wallet());
-        controller.onPeercoinSetup();
+        controller.onHTMLcoinSetup();
         mainWindow.show();
     }
 

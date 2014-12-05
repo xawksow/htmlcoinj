@@ -28,7 +28,7 @@
     <artifactId>peercoinj</artifactId>
 
     <name>peercoinj</name>
-    <description>A Java Peercoin library</description>
+    <description>A Java HTMLcoin library</description>
 
     <packaging>jar</packaging>
 
@@ -125,7 +125,7 @@
                 </executions>
             </plugin>
 
-            <!-- Verify the dependency chain: see https://github.com/gary-rowe/PeercoinjEnforcerRules for
+            <!-- Verify the dependency chain: see https://github.com/gary-rowe/HTMLcoinjEnforcerRules for
                more information on this.
             -->
             <plugin>

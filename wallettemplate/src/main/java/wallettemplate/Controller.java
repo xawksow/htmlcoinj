@@ -13,7 +13,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-import wallettemplate.controls.ClickablePeercoinAddress;
+import wallettemplate.controls.ClickableHTMLcoinAddress;
 
 import java.math.BigInteger;
 import java.util.Date;
@@ -31,7 +31,7 @@ public class Controller {
     public HBox controlsBox;
     public Label balance;
     public Button sendMoneyOutBtn;
-    public ClickablePeercoinAddress addressControl;
+    public ClickableHTMLcoinAddress addressControl;
 
     // Called by FXMLLoader.
     public void initialize() {
@@ -39,7 +39,7 @@ public class Controller {
         addressControl.setOpacity(0.0);
     }
 
-    public void onPeercoinSetup() {
+    public void onHTMLcoinSetup() {
         peercoin.wallet().addEventListener(new BalanceUpdater());
         addressControl.setAddress(peercoin.wallet().getKeys().get(0).toAddress(Main.params).toString());
         refreshBalanceLabel();

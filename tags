@@ -13,7 +13,7 @@ ALLOWED_TIME_DRIFT	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.j
 ALPHABET	core/src/main/java/com/matthewmitchell/peercoinj/core/Base58.java	/^    public static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz".toCharArray();$/;"	f	class:Base58
 ALREADY_SPENT	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionInput.java	/^        ALREADY_SPENT,$/;"	e	enum:TransactionInput.ConnectionResult	file:
 AMOUNT_FIELD_NUMBER	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    public static final int AMOUNT_FIELD_NUMBER = 1;$/;"	f	class:Protos.Output
-AMPERSAND_SEPARATOR	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private static final String AMPERSAND_SEPARATOR = "&";$/;"	f	class:PeercoinURI	file:
+AMPERSAND_SEPARATOR	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private static final String AMPERSAND_SEPARATOR = "&";$/;"	f	class:HTMLcoinURI	file:
 APPEARED_AT_HEIGHT_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int APPEARED_AT_HEIGHT_FIELD_NUMBER = 2;$/;"	f	class:Protos.TransactionConfidence
 APP_NAME	wallettemplate/src/main/java/wallettemplate/Main.java	/^    public static String APP_NAME = "WalletTemplate";$/;"	f	class:Main
 AVAILABLE	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^        AVAILABLE,$/;"	e	enum:Wallet.BalanceType	file:
@@ -239,7 +239,7 @@ CLOSE_VALUE	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^      p
 CLOSING	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelServerState.java	/^        CLOSING,$/;"	e	enum:PaymentChannelServerState.State	file:
 CODE_FIELD_NUMBER	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    public static final int CODE_FIELD_NUMBER = 1;$/;"	f	class:Protos.Error
 COIN	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static final BigInteger COIN = new BigInteger("1000000", 10);$/;"	f	class:Utils
-COMMAND_LEN	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private static final int COMMAND_LEN = 12;$/;"	f	class:PeercoinSerializer	file:
+COMMAND_LEN	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private static final int COMMAND_LEN = 12;$/;"	f	class:HTMLcoinSerializer	file:
 COMPACT_SERIALIZED_SIZE	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredBlock.java	/^    public static final int COMPACT_SERIALIZED_SIZE = Block.HEADER_SIZE + CHAIN_WORK_BYTES + 4;  \/\/ for height$/;"	f	class:StoredBlock
 CONFIDENCE_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int CONFIDENCE_FIELD_NUMBER = 9;$/;"	f	class:Protos.Transaction
 CONFIRMATIONS_FOR_DELETE	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelClientState.java	/^    private static final int CONFIRMATIONS_FOR_DELETE = 3;$/;"	f	class:PaymentChannelClientState	file:
@@ -281,8 +281,8 @@ ChildMessage	core/src/main/java/com/matthewmitchell/peercoinj/core/ChildMessage.
 ChildNumber	core/src/main/java/com/matthewmitchell/peercoinj/crypto/ChildNumber.java	/^    public ChildNumber(int childNumber, boolean isPrivate) {$/;"	m	class:ChildNumber
 ChildNumber	core/src/main/java/com/matthewmitchell/peercoinj/crypto/ChildNumber.java	/^    public ChildNumber(int i) {$/;"	m	class:ChildNumber
 ChildNumber	core/src/main/java/com/matthewmitchell/peercoinj/crypto/ChildNumber.java	/^public class ChildNumber {$/;"	c
-ClickablePeercoinAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    public ClickablePeercoinAddress() {$/;"	m	class:ClickablePeercoinAddress
-ClickablePeercoinAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^public class ClickablePeercoinAddress extends AnchorPane {$/;"	c
+ClickableHTMLcoinAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    public ClickableHTMLcoinAddress() {$/;"	m	class:ClickableHTMLcoinAddress
+ClickableHTMLcoinAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^public class ClickableHTMLcoinAddress extends AnchorPane {$/;"	c
 ClientConnection	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/IPaymentChannelClient.java	/^    interface ClientConnection {$/;"	i	interface:IPaymentChannelClient
 ClientConnectionManager	core/src/main/java/com/matthewmitchell/peercoinj/net/ClientConnectionManager.java	/^public interface ClientConnectionManager extends Service {$/;"	i
 ClientState	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/ClientState.java	/^  private ClientState() {}$/;"	m	class:ClientState	file:
@@ -368,7 +368,7 @@ ECKey	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^public 
 EMPTY_ARRAY	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionInput.java	/^    public static final byte[] EMPTY_ARRAY = new byte[0];$/;"	f	class:TransactionInput
 EMPTY_BYTES	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    static final byte[] EMPTY_BYTES = new byte[32];$/;"	f	class:Block
 EMPTY_BYTES	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredBlock.java	/^    public static final byte[] EMPTY_BYTES = new byte[CHAIN_WORK_BYTES];$/;"	f	class:StoredBlock
-ENCODED_SPACE_CHARACTER	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private static final String ENCODED_SPACE_CHARACTER = "%20";$/;"	f	class:PeercoinURI	file:
+ENCODED_SPACE_CHARACTER	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private static final String ENCODED_SPACE_CHARACTER = "%20";$/;"	f	class:HTMLcoinURI	file:
 ENCRYPTED_PRIVATE_KEY_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int ENCRYPTED_PRIVATE_KEY_FIELD_NUMBER = 2;$/;"	f	class:Protos.EncryptedPrivateKey
 ENCRYPTED_PRIVATE_KEY_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int ENCRYPTED_PRIVATE_KEY_FIELD_NUMBER = 6;$/;"	f	class:Protos.Key
 ENCRYPTED_SCRYPT_AES	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      ENCRYPTED_SCRYPT_AES(1, 2),$/;"	e	enum:Protos.Key.Type	file:
@@ -433,11 +433,11 @@ ExtensionOrBuilder	core/src/main/java/org/peercoinj/wallet/Protos.java	/^  publi
 F	core/src/main/java/com/matthewmitchell/peercoinj/crypto/PBKDF2SHA512.java	/^    private static byte[] F(String P, String S, int c, int i) throws Exception {$/;"	m	class:PBKDF2SHA512	file:
 FACTORY	core/src/main/java/com/matthewmitchell/peercoinj/wallet/DefaultRiskAnalysis.java	/^    public static Analyzer FACTORY = new Analyzer();$/;"	f	class:DefaultRiskAnalysis
 FAKE_SIGNATURES	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^    public static boolean FAKE_SIGNATURES = false;$/;"	f	class:ECKey
-FIELD_ADDRESS	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String FIELD_ADDRESS = "address";$/;"	f	class:PeercoinURI
-FIELD_AMOUNT	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String FIELD_AMOUNT = "amount";$/;"	f	class:PeercoinURI
-FIELD_LABEL	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String FIELD_LABEL = "label";$/;"	f	class:PeercoinURI
-FIELD_MESSAGE	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String FIELD_MESSAGE = "message";$/;"	f	class:PeercoinURI
-FIELD_PAYMENT_REQUEST_URL	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String FIELD_PAYMENT_REQUEST_URL = "r";$/;"	f	class:PeercoinURI
+FIELD_ADDRESS	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String FIELD_ADDRESS = "address";$/;"	f	class:HTMLcoinURI
+FIELD_AMOUNT	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String FIELD_AMOUNT = "amount";$/;"	f	class:HTMLcoinURI
+FIELD_LABEL	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String FIELD_LABEL = "label";$/;"	f	class:HTMLcoinURI
+FIELD_MESSAGE	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String FIELD_MESSAGE = "message";$/;"	f	class:HTMLcoinURI
+FIELD_PAYMENT_REQUEST_URL	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String FIELD_PAYMENT_REQUEST_URL = "r";$/;"	f	class:HTMLcoinURI
 FILE_PROLOGUE_BYTES	core/src/main/java/com/matthewmitchell/peercoinj/store/SPVBlockStore.java	/^    protected static final int FILE_PROLOGUE_BYTES = 1024;$/;"	f	class:SPVBlockStore
 FORCE_SEND	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^        FORCE_SEND,$/;"	e	enum:PeerGroup.FilterRecalculateMode	file:
 FP_ESTIMATOR_ALPHA	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockChain.java	/^    public static final double FP_ESTIMATOR_ALPHA = 0.0001;$/;"	f	class:AbstractBlockChain
@@ -495,7 +495,7 @@ HDWTestVector	core/src/test/java/com/peercoin/peercoin/crypto/BIP32Test.java	/^ 
 HDWTestVector	core/src/test/java/com/peercoin/peercoin/crypto/BIP32Test.java	/^    static class HDWTestVector {$/;"	c	class:BIP32Test
 HDW_CHAIN_EXTERNAL	core/src/test/java/com/peercoin/peercoin/crypto/ChildKeyDerivationTest.java	/^    private static final int HDW_CHAIN_EXTERNAL = 0;$/;"	f	class:ChildKeyDerivationTest	file:
 HDW_CHAIN_INTERNAL	core/src/test/java/com/peercoin/peercoin/crypto/ChildKeyDerivationTest.java	/^    private static final int HDW_CHAIN_INTERNAL = 1;$/;"	f	class:ChildKeyDerivationTest	file:
-HEADER_LENGTH	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public static final int HEADER_LENGTH = COMMAND_LEN + 4 + 4;$/;"	f	class:PeercoinSerializer.PeercoinPacketHeader
+HEADER_LENGTH	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public static final int HEADER_LENGTH = COMMAND_LEN + 4 + 4;$/;"	f	class:HTMLcoinSerializer.HTMLcoinPacketHeader
 HEADER_MAGIC	core/src/main/java/com/matthewmitchell/peercoinj/store/SPVBlockStore.java	/^    public static final String HEADER_MAGIC = "SPVB";$/;"	f	class:SPVBlockStore
 HEADER_SIZE	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    public static final int HEADER_SIZE = 80;$/;"	f	class:Block
 Handler	core/src/main/java/com/matthewmitchell/peercoinj/net/NioClient.java	/^        Handler(StreamParser upstreamParser, int connectTimeoutMillis) {$/;"	m	class:NioClient.Handler
@@ -591,7 +591,7 @@ LAST_SEEN_BLOCK_HASH_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos
 LAST_SEEN_BLOCK_HEIGHT_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int LAST_SEEN_BLOCK_HEIGHT_FIELD_NUMBER = 12;$/;"	f	class:Protos.Wallet
 LAST_SEEN_BLOCK_TIME_SECS_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int LAST_SEEN_BLOCK_TIME_SECS_FIELD_NUMBER = 14;$/;"	f	class:Protos.Wallet
 LENGTH	core/src/main/java/com/matthewmitchell/peercoinj/core/Address.java	/^    public static final int LENGTH = 20;$/;"	f	class:Address
-LIBRARY_SUBVER	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    public static final String LIBRARY_SUBVER = "\/PeercoinJ:" + PeercoinJ_VERSION + "\/";$/;"	f	class:VersionMessage
+LIBRARY_SUBVER	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    public static final String LIBRARY_SUBVER = "\/HTMLcoinJ:" + HTMLcoinJ_VERSION + "\/";$/;"	f	class:VersionMessage
 LOCKTIME_THRESHOLD	core/src/main/java/com/matthewmitchell/peercoinj/core/Transaction.java	/^    public static final int LOCKTIME_THRESHOLD = 500000000; \/\/ Tue Nov  5 00:53:20 1985 UTC$/;"	f	class:Transaction
 LOCK_TIME_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int LOCK_TIME_FIELD_NUMBER = 4;$/;"	f	class:Protos.Transaction
 LT	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^            EQUAL, LT, GT, LTE, GTE$/;"	e	enum:WalletTool.Condition.Type	file:
@@ -612,7 +612,7 @@ ListenerRegistration	core/src/main/java/com/matthewmitchell/peercoinj/utils/List
 MAJOR_FIELD_NUMBER	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    public static final int MAJOR_FIELD_NUMBER = 1;$/;"	f	class:Protos.ClientVersion
 MAJOR_FIELD_NUMBER	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    public static final int MAJOR_FIELD_NUMBER = 1;$/;"	f	class:Protos.ServerVersion
 MANDATORY_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int MANDATORY_FIELD_NUMBER = 3;$/;"	f	class:Protos.Extension
-MASTER_HMAC_SHA512	core/src/main/java/com/matthewmitchell/peercoinj/crypto/HDKeyDerivation.java	/^    private static final HMac MASTER_HMAC_SHA512 = HDUtils.createHmacSha512Digest("Peercoin seed".getBytes());$/;"	f	class:HDKeyDerivation	file:
+MASTER_HMAC_SHA512	core/src/main/java/com/matthewmitchell/peercoinj/crypto/HDKeyDerivation.java	/^    private static final HMac MASTER_HMAC_SHA512 = HDUtils.createHmacSha512Digest("HTMLcoin seed".getBytes());$/;"	f	class:HDKeyDerivation	file:
 MAX_ADDRESSES	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    private static final long MAX_ADDRESSES = 1024;$/;"	f	class:AddressMessage	file:
 MAX_ADDRESSES_FACTOR	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/PeerDBDiscovery.java	/^    private static final int MAX_ADDRESSES_FACTOR = 8; \/\/ Only ever return at max 1\/8th the total addresses we have$/;"	f	class:PeerDBDiscovery	file:
 MAX_BLOCK_SIGOPS	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    public static final int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE \/ 50;$/;"	f	class:Block
@@ -864,7 +864,7 @@ OUTPUTS_FIELD_NUMBER	core/src/main/java/org/peercoin/protocols/payments/Protos.j
 OVERRIDING_TRANSACTION_FIELD_NUMBER	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static final int OVERRIDING_TRANSACTION_FIELD_NUMBER = 3;$/;"	f	class:Protos.TransactionConfidence
 OptionalFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/OptionalFieldValidationException.java	/^    public OptionalFieldValidationException(String s) {$/;"	m	class:OptionalFieldValidationException
 OptionalFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/OptionalFieldValidationException.java	/^    public OptionalFieldValidationException(String s, Throwable throwable) {$/;"	m	class:OptionalFieldValidationException
-OptionalFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/OptionalFieldValidationException.java	/^public class OptionalFieldValidationException extends PeercoinURIParseException {$/;"	c
+OptionalFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/OptionalFieldValidationException.java	/^public class OptionalFieldValidationException extends HTMLcoinURIParseException {$/;"	c
 OrphanBlock	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockChain.java	/^        OrphanBlock(Block block, @Nullable List<Sha256Hash> filteredTxHashes, @Nullable Map<Sha256Hash, Transaction> filteredTxn) {$/;"	m	class:AbstractBlockChain.OrphanBlock
 OrphanBlock	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockChain.java	/^    class OrphanBlock {$/;"	c	class:AbstractBlockChain
 Output	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    private Output($/;"	m	class:Protos.Output	file:
@@ -1052,24 +1052,24 @@ PeerStartupListener	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGr
 PeerTableModel	examples/src/main/java/com/peercoin/peercoin/examples/PeerMonitor.java	/^    private class PeerTableModel extends AbstractTableModel {$/;"	c	class:PeerMonitor
 PeerTableRenderer	examples/src/main/java/com/peercoin/peercoin/examples/PeerMonitor.java	/^        public PeerTableRenderer(PeerTableModel model) {$/;"	m	class:PeerMonitor.PeerTableRenderer
 PeerTableRenderer	examples/src/main/java/com/peercoin/peercoin/examples/PeerMonitor.java	/^    private class PeerTableRenderer extends JLabel implements TableCellRenderer {$/;"	c	class:PeerMonitor
-PeercoinAddressValidator	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^    public PeercoinAddressValidator(NetworkParameters params, TextField field, Node... nodes) {$/;"	m	class:PeercoinAddressValidator
-PeercoinAddressValidator	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^public class PeercoinAddressValidator {$/;"	c
-PeercoinJ_VERSION	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    public static final String PeercoinJ_VERSION = "0.11.3";$/;"	f	class:VersionMessage
-PeercoinPacketHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public PeercoinPacketHeader(ByteBuffer in) throws ProtocolException, BufferUnderflowException {$/;"	m	class:PeercoinSerializer.PeercoinPacketHeader
-PeercoinPacketHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public static class PeercoinPacketHeader {$/;"	c	class:PeercoinSerializer
-PeercoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public PeercoinSerializer(NetworkParameters params) {$/;"	m	class:PeercoinSerializer
-PeercoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public PeercoinSerializer(NetworkParameters params, boolean parseLazy, boolean parseRetain) {$/;"	m	class:PeercoinSerializer
-PeercoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^public class PeercoinSerializer {$/;"	c
-PeercoinSerializerTest	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^public class PeercoinSerializerTest {$/;"	c
-PeercoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public PeercoinURI(@Nullable NetworkParameters params, String input) throws PeercoinURIParseException {$/;"	m	class:PeercoinURI
-PeercoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public PeercoinURI(String uri) throws PeercoinURIParseException {$/;"	m	class:PeercoinURI
-PeercoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^public class PeercoinURI {$/;"	c
-PeercoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURIParseException.java	/^    public PeercoinURIParseException(String s) {$/;"	m	class:PeercoinURIParseException
-PeercoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURIParseException.java	/^    public PeercoinURIParseException(String s, Throwable throwable) {$/;"	m	class:PeercoinURIParseException
-PeercoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURIParseException.java	/^public class PeercoinURIParseException extends Exception {$/;"	c
-Peercoin_SCHEME	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static final String Peercoin_SCHEME = "ppcoin";$/;"	f	class:PeercoinURI
-Peercoin_SIGNED_MESSAGE_HEADER	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static final String Peercoin_SIGNED_MESSAGE_HEADER = "Peercoin Signed Message:\\n";$/;"	f	class:Utils
-Peercoin_SIGNED_MESSAGE_HEADER_BYTES	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static final byte[] Peercoin_SIGNED_MESSAGE_HEADER_BYTES = Peercoin_SIGNED_MESSAGE_HEADER.getBytes(Charsets.UTF_8);$/;"	f	class:Utils
+HTMLcoinAddressValidator	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^    public HTMLcoinAddressValidator(NetworkParameters params, TextField field, Node... nodes) {$/;"	m	class:HTMLcoinAddressValidator
+HTMLcoinAddressValidator	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^public class HTMLcoinAddressValidator {$/;"	c
+HTMLcoinJ_VERSION	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    public static final String HTMLcoinJ_VERSION = "0.11.3";$/;"	f	class:VersionMessage
+HTMLcoinPacketHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public HTMLcoinPacketHeader(ByteBuffer in) throws ProtocolException, BufferUnderflowException {$/;"	m	class:HTMLcoinSerializer.HTMLcoinPacketHeader
+HTMLcoinPacketHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public static class HTMLcoinPacketHeader {$/;"	c	class:HTMLcoinSerializer
+HTMLcoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public HTMLcoinSerializer(NetworkParameters params) {$/;"	m	class:HTMLcoinSerializer
+HTMLcoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public HTMLcoinSerializer(NetworkParameters params, boolean parseLazy, boolean parseRetain) {$/;"	m	class:HTMLcoinSerializer
+HTMLcoinSerializer	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^public class HTMLcoinSerializer {$/;"	c
+HTMLcoinSerializerTest	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^public class HTMLcoinSerializerTest {$/;"	c
+HTMLcoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public HTMLcoinURI(@Nullable NetworkParameters params, String input) throws HTMLcoinURIParseException {$/;"	m	class:HTMLcoinURI
+HTMLcoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public HTMLcoinURI(String uri) throws HTMLcoinURIParseException {$/;"	m	class:HTMLcoinURI
+HTMLcoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^public class HTMLcoinURI {$/;"	c
+HTMLcoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURIParseException.java	/^    public HTMLcoinURIParseException(String s) {$/;"	m	class:HTMLcoinURIParseException
+HTMLcoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURIParseException.java	/^    public HTMLcoinURIParseException(String s, Throwable throwable) {$/;"	m	class:HTMLcoinURIParseException
+HTMLcoinURIParseException	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURIParseException.java	/^public class HTMLcoinURIParseException extends Exception {$/;"	c
+HTMLcoin_SCHEME	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static final String HTMLcoin_SCHEME = "htmlcoin";$/;"	f	class:HTMLcoinURI
+HTMLcoin_SIGNED_MESSAGE_HEADER	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static final String HTMLcoin_SIGNED_MESSAGE_HEADER = "HTMLcoin Signed Message:\\n";$/;"	f	class:Utils
+HTMLcoin_SIGNED_MESSAGE_HEADER_BYTES	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static final byte[] HTMLcoin_SIGNED_MESSAGE_HEADER_BYTES = HTMLcoin_SIGNED_MESSAGE_HEADER.getBytes(Charsets.UTF_8);$/;"	f	class:Utils
 PendingPing	core/src/main/java/com/matthewmitchell/peercoinj/core/Peer.java	/^        public PendingPing(long nonce) {$/;"	m	class:Peer.PendingPing
 PendingPing	core/src/main/java/com/matthewmitchell/peercoinj/core/Peer.java	/^    private class PendingPing {$/;"	c	class:Peer
 Ping	core/src/main/java/com/matthewmitchell/peercoinj/core/Ping.java	/^    public Ping() {$/;"	m	class:Ping
@@ -1119,7 +1119,7 @@ PrunedException	core/src/main/java/com/matthewmitchell/peercoinj/core/PrunedExce
 Purpose	core/src/main/java/com/matthewmitchell/peercoinj/core/Transaction.java	/^    public enum Purpose {$/;"	g	class:Transaction
 Purpose	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private Purpose(int index, int value) {$/;"	m	class:Protos.Transaction.Purpose	file:
 Purpose	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public enum Purpose$/;"	g	class:Protos.Transaction
-QUESTION_MARK_SEPARATOR	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private static final String QUESTION_MARK_SEPARATOR = "?";$/;"	f	class:PeercoinURI	file:
+QUESTION_MARK_SEPARATOR	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private static final String QUESTION_MARK_SEPARATOR = "?";$/;"	f	class:HTMLcoinURI	file:
 RAW_DUMP	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^        RAW_DUMP,$/;"	e	enum:WalletTool.ActionEnum	file:
 READY	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelClientState.java	/^        READY,$/;"	e	enum:PaymentChannelClientState.State	file:
 READY	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelServerState.java	/^        READY,$/;"	e	enum:PaymentChannelServerState.State	file:
@@ -1146,7 +1146,7 @@ RecordingServerConnection	core/src/test/java/com/peercoin/peercoin/protocols/cha
 RefreshWallet	examples/src/main/java/com/peercoin/peercoin/examples/RefreshWallet.java	/^public class RefreshWallet {$/;"	c
 RequiredFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/RequiredFieldValidationException.java	/^    public RequiredFieldValidationException(String s) {$/;"	m	class:RequiredFieldValidationException
 RequiredFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/RequiredFieldValidationException.java	/^    public RequiredFieldValidationException(String s, Throwable throwable) {$/;"	m	class:RequiredFieldValidationException
-RequiredFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/RequiredFieldValidationException.java	/^public class RequiredFieldValidationException extends PeercoinURIParseException {$/;"	c
+RequiredFieldValidationException	core/src/main/java/com/matthewmitchell/peercoinj/uri/RequiredFieldValidationException.java	/^public class RequiredFieldValidationException extends HTMLcoinURIParseException {$/;"	c
 Result	core/src/main/java/com/matthewmitchell/peercoinj/net/FilterMerger.java	/^    public static class Result {$/;"	c	class:FilterMerger
 Result	core/src/main/java/com/matthewmitchell/peercoinj/wallet/RiskAnalysis.java	/^    public enum Result {$/;"	g	interface:RiskAnalysis
 ReturnRefund	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    private ReturnRefund($/;"	m	class:Protos.ReturnRefund	file:
@@ -1455,7 +1455,7 @@ UnitTestParams	core/src/main/java/com/matthewmitchell/peercoinj/params/UnitTestP
 UnitTestParams	core/src/main/java/com/matthewmitchell/peercoinj/params/UnitTestParams.java	/^public class UnitTestParams extends NetworkParameters {$/;"	c
 UnknownMessage	core/src/main/java/com/matthewmitchell/peercoinj/core/UnknownMessage.java	/^    public UnknownMessage(NetworkParameters params, String name, byte[] payloadBytes) throws ProtocolException {$/;"	m	class:UnknownMessage
 UnknownMessage	core/src/main/java/com/matthewmitchell/peercoinj/core/UnknownMessage.java	/^public class UnknownMessage extends EmptyMessage {$/;"	c
-UnknownMessage	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    class UnknownMessage extends Message {$/;"	c	class:PeercoinSerializerTest
+UnknownMessage	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    class UnknownMessage extends Message {$/;"	c	class:HTMLcoinSerializerTest
 UnreadableWalletException	core/src/main/java/com/matthewmitchell/peercoinj/store/UnreadableWalletException.java	/^    public UnreadableWalletException(String s) {$/;"	m	class:UnreadableWalletException
 UnreadableWalletException	core/src/main/java/com/matthewmitchell/peercoinj/store/UnreadableWalletException.java	/^    public UnreadableWalletException(String s, Throwable t) {$/;"	m	class:UnreadableWalletException
 UnreadableWalletException	core/src/main/java/com/matthewmitchell/peercoinj/store/UnreadableWalletException.java	/^public class UnreadableWalletException extends Exception {$/;"	c
@@ -1716,18 +1716,18 @@ addWatchedScriptBuilder	core/src/main/java/org/peercoinj/wallet/Protos.java	/^  
 addWatchedScriptBuilder	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      public org.peercoinj.wallet.Protos.Script.Builder addWatchedScriptBuilder() {$/;"	m	class:Protos.Wallet.Builder
 addWatchedScripts	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public int addWatchedScripts(final List<Script> scripts) {$/;"	m	class:Wallet
 addr	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerAddress.java	/^    private InetAddress addr;$/;"	f	class:PeerAddress	file:
-addrMessage	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    private final byte[] addrMessage = Hex.decode("f9beb4d96164647200000000000000001f000000" +$/;"	f	class:PeercoinSerializerTest	file:
+addrMessage	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    private final byte[] addrMessage = Hex.decode("f9beb4d96164647200000000000000001f000000" +$/;"	f	class:HTMLcoinSerializerTest	file:
 address	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/PeerDBDiscovery.java	/^         PeerAddress address;$/;"	f	class:PeerDBDiscovery.PeerData
 address	wallettemplate/src/main/java/wallettemplate/SendMoneyController.java	/^    public TextField address;$/;"	f	class:SendMoneyController
 address1	core/src/test/java/com/peercoin/peercoin/core/MemoryPoolTest.java	/^    private PeerAddress address1, address2, address3;$/;"	f	class:MemoryPoolTest	file:
 address2	core/src/test/java/com/peercoin/peercoin/core/MemoryPoolTest.java	/^    private PeerAddress address1, address2, address3;$/;"	f	class:MemoryPoolTest	file:
 address3	core/src/test/java/com/peercoin/peercoin/core/MemoryPoolTest.java	/^    private PeerAddress address1, address2, address3;$/;"	f	class:MemoryPoolTest	file:
 addressBuckets	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/PeerDBDiscovery.java	/^    @GuardedBy("this") List<AddressSet> addressBuckets = new ArrayList<AddressSet>(TOTAL_SETS);$/;"	f	class:PeerDBDiscovery
-addressControl	wallettemplate/src/main/java/wallettemplate/Controller.java	/^    public ClickablePeercoinAddress addressControl;$/;"	f	class:Controller
+addressControl	wallettemplate/src/main/java/wallettemplate/Controller.java	/^    public ClickableHTMLcoinAddress addressControl;$/;"	f	class:Controller
 addressHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    protected int addressHeader;$/;"	f	class:NetworkParameters
-addressLabel	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    @FXML protected Label addressLabel;$/;"	f	class:ClickablePeercoinAddress
-addressMenu	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    @FXML protected ContextMenu addressMenu;$/;"	f	class:ClickablePeercoinAddress
-addressProperty	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    public StringProperty addressProperty() {$/;"	m	class:ClickablePeercoinAddress
+addressLabel	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    @FXML protected Label addressLabel;$/;"	f	class:ClickableHTMLcoinAddress
+addressMenu	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    @FXML protected ContextMenu addressMenu;$/;"	f	class:ClickableHTMLcoinAddress
+addressProperty	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    public StringProperty addressProperty() {$/;"	m	class:ClickableHTMLcoinAddress
 addressToSetMap	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/PeerDBDiscovery.java	/^    @GuardedBy("this") Map<InetAddress, PeerData> addressToSetMap = new HashMap<InetAddress, PeerData>();$/;"	f	class:PeerDBDiscovery
 addresses	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    private List<PeerAddress> addresses;$/;"	f	class:AddressMessage	file:
 addresses	core/src/main/java/com/matthewmitchell/peercoinj/core/MemoryPool.java	/^        Set<PeerAddress> addresses;$/;"	f	class:MemoryPool.Entry
@@ -2076,7 +2076,7 @@ checkpoints	core/src/main/java/com/matthewmitchell/peercoinj/core/CheckpointMana
 checkpoints	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    protected Map<Integer, Sha256Hash> checkpoints = new HashMap<Integer, Sha256Hash>();$/;"	f	class:NetworkParameters
 checkpoints	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    protected InputStream checkpoints;$/;"	f	class:WalletAppKit
 checksum	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    protected transient byte[] checksum;$/;"	f	class:Message
-checksum	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public final byte[] checksum;$/;"	f	class:PeercoinSerializer.PeercoinPacketHeader
+checksum	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public final byte[] checksum;$/;"	f	class:HTMLcoinSerializer.HTMLcoinPacketHeader
 childNumberPath	core/src/main/java/com/matthewmitchell/peercoinj/crypto/DeterministicKey.java	/^    private final ImmutableList<ChildNumber> childNumberPath;$/;"	f	class:DeterministicKey	file:
 chunks	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    protected List<ScriptChunk> chunks;$/;"	f	class:Script
 chunks	core/src/main/java/com/matthewmitchell/peercoinj/script/ScriptBuilder.java	/^    private List<ScriptChunk> chunks;$/;"	f	class:ScriptBuilder	file:
@@ -2372,7 +2372,7 @@ com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peerco
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerFilterProvider.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
-com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
+com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/Ping.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/Pong.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/main/java/com/matthewmitchell/peercoinj/core/ProtocolException.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
@@ -2411,7 +2411,7 @@ com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/MemoryPoolTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/PeerAddressTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
-com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
+com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/VarIntTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
 com.matthewmitchell.peercoinj.core	core/src/test/java/com/peercoin/peercoin/core/VersionMessageTest.java	/^package com.matthewmitchell.peercoinj.core;$/;"	p
@@ -2515,8 +2515,8 @@ com.matthewmitchell.peercoinj.tools	tools/src/main/java/com/peercoin/peercoin/to
 com.matthewmitchell.peercoinj.tools	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^package com.matthewmitchell.peercoinj.tools;$/;"	p
 com.matthewmitchell.peercoinj.tools	tools/src/main/java/com/peercoin/peercoin/tools/WatchMempool.java	/^package com.matthewmitchell.peercoinj.tools;$/;"	p
 com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/OptionalFieldValidationException.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
-com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
-com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURIParseException.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
+com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
+com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURIParseException.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
 com.matthewmitchell.peercoinj.uri	core/src/main/java/com/matthewmitchell/peercoinj/uri/RequiredFieldValidationException.java	/^package com.matthewmitchell.peercoinj.uri;$/;"	p
 com.matthewmitchell.peercoinj.utils	core/src/main/java/com/matthewmitchell/peercoinj/utils/BlockFileLoader.java	/^package com.matthewmitchell.peercoinj.utils;$/;"	p
 com.matthewmitchell.peercoinj.utils	core/src/main/java/com/matthewmitchell/peercoinj/utils/BriefLogFormatter.java	/^package com.matthewmitchell.peercoinj.utils;$/;"	p
@@ -2536,7 +2536,7 @@ com.matthewmitchell.peercoinj.wallet	core/src/main/java/com/matthewmitchell/peer
 com.matthewmitchell.peercoinj.wallet	core/src/main/java/com/matthewmitchell/peercoinj/wallet/WalletFiles.java	/^package com.matthewmitchell.peercoinj.wallet;$/;"	p
 com.matthewmitchell.peercoinj.wallet	core/src/main/java/com/matthewmitchell/peercoinj/wallet/WalletTransaction.java	/^package com.matthewmitchell.peercoinj.wallet;$/;"	p
 com.matthewmitchell.peercoinj.wallet	core/src/test/java/com/peercoin/peercoin/wallet/DefaultRiskAnalysisTest.java	/^package com.matthewmitchell.peercoinj.wallet;$/;"	p
-command	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public final String command;$/;"	f	class:PeercoinSerializer.PeercoinPacketHeader
+command	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public final String command;$/;"	f	class:HTMLcoinSerializer.HTMLcoinPacketHeader
 comment	core/src/main/java/com/matthewmitchell/peercoinj/core/AlertMessage.java	/^    private String comment, statusBar, reserved;$/;"	f	class:AlertMessage	file:
 commitDatabaseBatchWrite	core/src/main/java/com/matthewmitchell/peercoinj/store/FullPrunedBlockStore.java	/^    void commitDatabaseBatchWrite() throws BlockStoreException;$/;"	m	interface:FullPrunedBlockStore
 commitDatabaseBatchWrite	core/src/main/java/com/matthewmitchell/peercoinj/store/H2FullPrunedBlockStore.java	/^    public void commitDatabaseBatchWrite() throws BlockStoreException {$/;"	m	class:H2FullPrunedBlockStore
@@ -2627,13 +2627,13 @@ controller	wallettemplate/src/main/java/wallettemplate/Main.java	/^        publi
 controlsBox	wallettemplate/src/main/java/wallettemplate/Controller.java	/^    public HBox controlsBox;$/;"	f	class:Controller
 convertAddress	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/SeedPeers.java	/^    private InetAddress convertAddress(int seed) throws UnknownHostException {$/;"	m	class:SeedPeers	file:
 convertToByteArray	core/src/main/java/com/matthewmitchell/peercoinj/crypto/KeyCrypterScrypt.java	/^    private static byte[] convertToByteArray(CharSequence charSequence) {$/;"	m	class:KeyCrypterScrypt	file:
-convertToPeercoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static String convertToPeercoinURI(Address address, BigInteger amount, String label, String message) {$/;"	m	class:PeercoinURI
-convertToPeercoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public static String convertToPeercoinURI(String address, @Nullable BigInteger amount, @Nullable String label,$/;"	m	class:PeercoinURI
-copyAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    protected void copyAddress(ActionEvent event) {$/;"	m	class:ClickablePeercoinAddress
+convertToHTMLcoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static String convertToHTMLcoinURI(Address address, BigInteger amount, String label, String message) {$/;"	m	class:HTMLcoinURI
+convertToHTMLcoinURI	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public static String convertToHTMLcoinURI(String address, @Nullable BigInteger amount, @Nullable String label,$/;"	m	class:HTMLcoinURI
+copyAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    protected void copyAddress(ActionEvent event) {$/;"	m	class:ClickableHTMLcoinAddress
 copyOf	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static byte[] copyOf(byte[] in, int length) {$/;"	m	class:Utils
 copyOfRange	core/src/main/java/com/matthewmitchell/peercoinj/core/Base58.java	/^    private static byte[] copyOfRange(byte[] source, int from, int to) {$/;"	m	class:Base58	file:
-copyWidget	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    @FXML protected Label copyWidget;$/;"	f	class:ClickablePeercoinAddress
-copyWidgetClicked	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    protected void copyWidgetClicked(MouseEvent event) {$/;"	m	class:ClickablePeercoinAddress
+copyWidget	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    @FXML protected Label copyWidget;$/;"	f	class:ClickableHTMLcoinAddress
+copyWidgetClicked	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    protected void copyWidgetClicked(MouseEvent event) {$/;"	m	class:ClickableHTMLcoinAddress
 correctlySpends	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    public void correctlySpends(Transaction txContainingThis, long scriptSigIndex, Script scriptPubKey,$/;"	m	class:Script
 count	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^        int item, count;$/;"	f	class:Utils.Pair
 countConnectedAndPendingPeers	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^    private int countConnectedAndPendingPeers() {$/;"	m	class:PeerGroup	file:
@@ -2682,9 +2682,9 @@ createFakeTx	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.ja
 createFakeTx	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.java	/^    public static Transaction createFakeTx(NetworkParameters params, BigInteger nanocoins, ECKey to) throws IOException, ProtocolException {$/;"	m	class:TestUtils
 createFakeTx	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.java	/^    public static Transaction[] createFakeTx(NetworkParameters params, BigInteger nanocoins,$/;"	m	class:TestUtils
 createFakeTxWithChangeAddress	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.java	/^    public static Transaction createFakeTxWithChangeAddress(NetworkParameters params, BigInteger nanocoins, Address to, Address changeOutput)$/;"	m	class:TestUtils
-createFromPeercoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromPeercoinUri(final PeercoinURI uri) throws PaymentRequestException {$/;"	m	class:PaymentSession
-createFromPeercoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromPeercoinUri(final PeercoinURI uri, final boolean verifyPki)$/;"	m	class:PaymentSession
-createFromPeercoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromPeercoinUri(final PeercoinURI uri, final boolean verifyPki, @Nullable final String trustStorePath)$/;"	m	class:PaymentSession
+createFromHTMLcoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromHTMLcoinUri(final HTMLcoinURI uri) throws PaymentRequestException {$/;"	m	class:PaymentSession
+createFromHTMLcoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromHTMLcoinUri(final HTMLcoinURI uri, final boolean verifyPki)$/;"	m	class:PaymentSession
+createFromHTMLcoinUri	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromHTMLcoinUri(final HTMLcoinURI uri, final boolean verifyPki, @Nullable final String trustStorePath)$/;"	m	class:PaymentSession
 createFromUrl	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromUrl(final String url) throws PaymentRequestException {$/;"	m	class:PaymentSession
 createFromUrl	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromUrl(final String url, final boolean verifyPki)$/;"	m	class:PaymentSession
 createFromUrl	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public static ListenableFuture<PaymentSession> createFromUrl(final String url, final boolean verifyPki, @Nullable final String trustStorePath)$/;"	m	class:PaymentSession
@@ -2748,7 +2748,7 @@ decodeCompactBits	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.ja
 decodeFromDER	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^        public static ECDSASignature decodeFromDER(byte[] bytes) {$/;"	m	class:ECKey.ECDSASignature
 decodeFromOpN	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    public static int decodeFromOpN(byte opcode) throws IllegalArgumentException {$/;"	m	class:Script
 decodeFromOpN	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    static int decodeFromOpN(int opcode) {$/;"	m	class:Script
-decodeFromPeercoin	core/src/main/java/com/matthewmitchell/peercoinj/crypto/TransactionSignature.java	/^    public static TransactionSignature decodeFromPeercoin(byte[] bytes, boolean requireCanonical) throws VerificationException {$/;"	m	class:TransactionSignature
+decodeFromHTMLcoin	core/src/main/java/com/matthewmitchell/peercoinj/crypto/TransactionSignature.java	/^    public static TransactionSignature decodeFromHTMLcoin(byte[] bytes, boolean requireCanonical) throws VerificationException {$/;"	m	class:TransactionSignature
 decodeMPI	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static BigInteger decodeMPI(byte[] mpi, boolean hasLength) {$/;"	m	class:Utils
 decodeToBigInteger	core/src/main/java/com/matthewmitchell/peercoinj/core/Base58.java	/^    public static BigInteger decodeToBigInteger(String input) throws AddressFormatException {$/;"	m	class:Base58
 decompressKey	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^    private static ECPoint decompressKey(BigInteger xBN, boolean yBit) {$/;"	m	class:ECKey	file:
@@ -2814,12 +2814,12 @@ descriptor	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/S
 descriptor	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^      descriptor;$/;"	f	class:Protos	file:
 descriptor	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^      descriptor;$/;"	f	class:Protos	file:
 descriptor	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      descriptor;$/;"	f	class:Protos	file:
-deserialize	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public Message deserialize(ByteBuffer in) throws ProtocolException, IOException {$/;"	m	class:PeercoinSerializer
+deserialize	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public Message deserialize(ByteBuffer in) throws ProtocolException, IOException {$/;"	m	class:HTMLcoinSerializer
 deserialize	core/src/test/java/com/peercoin/peercoin/core/AlertMessageTest.java	/^    public void deserialize() throws Exception {$/;"	m	class:AlertMessageTest
 deserializeCompact	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredBlock.java	/^    public static StoredBlock deserializeCompact(NetworkParameters params, ByteBuffer buffer) throws ProtocolException {$/;"	m	class:StoredBlock
-deserializeHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public PeercoinPacketHeader deserializeHeader(ByteBuffer in) throws ProtocolException, IOException {$/;"	m	class:PeercoinSerializer
+deserializeHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public HTMLcoinPacketHeader deserializeHeader(ByteBuffer in) throws ProtocolException, IOException {$/;"	m	class:HTMLcoinSerializer
 deserializeMessage	core/src/main/java/com/matthewmitchell/peercoinj/net/ProtobufParser.java	/^    private void deserializeMessage(ByteBuffer buff) throws Exception {$/;"	m	class:ProtobufParser	file:
-deserializePayload	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public Message deserializePayload(PeercoinPacketHeader header, ByteBuffer in) throws ProtocolException, BufferUnderflowException {$/;"	m	class:PeercoinSerializer
+deserializePayload	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public Message deserializePayload(HTMLcoinPacketHeader header, ByteBuffer in) throws ProtocolException, BufferUnderflowException {$/;"	m	class:HTMLcoinSerializer
 deserializeWalletExtension	core/src/main/java/com/matthewmitchell/peercoinj/core/WalletExtension.java	/^    public void deserializeWalletExtension(Wallet containingWallet, byte[] data) throws Exception;$/;"	m	interface:WalletExtension
 deserializeWalletExtension	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/StoredPaymentChannelClientStates.java	/^    public void deserializeWalletExtension(Wallet containingWallet, byte[] data) throws Exception {$/;"	m	class:StoredPaymentChannelClientStates
 deserializeWalletExtension	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/StoredPaymentChannelServerStates.java	/^    public void deserializeWalletExtension(Wallet containingWallet, byte[] data) throws Exception {$/;"	m	class:StoredPaymentChannelServerStates
@@ -2888,8 +2888,8 @@ encodeCompactBits	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.ja
 encodeMPI	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static byte[] encodeMPI(BigInteger value, boolean includeLength) {$/;"	m	class:Utils
 encodeToDER	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^        public byte[] encodeToDER() {$/;"	m	class:ECKey.ECDSASignature
 encodeToOpN	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    static int encodeToOpN(int value) {$/;"	m	class:Script
-encodeToPeercoin	core/src/main/java/com/matthewmitchell/peercoinj/crypto/TransactionSignature.java	/^    public byte[] encodeToPeercoin() {$/;"	m	class:TransactionSignature
-encodeURLString	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    static String encodeURLString(String stringToEncode) {$/;"	m	class:PeercoinURI
+encodeToHTMLcoin	core/src/main/java/com/matthewmitchell/peercoinj/crypto/TransactionSignature.java	/^    public byte[] encodeToHTMLcoin() {$/;"	m	class:TransactionSignature
+encodeURLString	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    static String encodeURLString(String stringToEncode) {$/;"	m	class:HTMLcoinURI
 encrypt	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^    public ECKey encrypt(KeyCrypter keyCrypter, KeyParameter aesKey) throws KeyCrypterException {$/;"	m	class:ECKey
 encrypt	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public KeyParameter encrypt(CharSequence password) {$/;"	m	class:Wallet
 encrypt	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public void encrypt(KeyCrypter keyCrypter, KeyParameter aesKey) {$/;"	m	class:Wallet
@@ -3065,13 +3065,13 @@ get	core/src/main/java/com/matthewmitchell/peercoinj/wallet/AllowUnconfirmedCoin
 getAcceptableAddressCodes	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    public int[] getAcceptableAddressCodes() {$/;"	m	class:NetworkParameters
 getAddr	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerAddress.java	/^    public InetAddress getAddr() {$/;"	m	class:PeerAddress
 getAddress	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    public PeerAddress getAddress() {$/;"	m	class:PeerSocketHandler
-getAddress	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public Address getAddress() {$/;"	m	class:PeercoinURI
-getAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    public String getAddress() {$/;"	m	class:ClickablePeercoinAddress
+getAddress	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public Address getAddress() {$/;"	m	class:HTMLcoinURI
+getAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    public String getAddress() {$/;"	m	class:ClickableHTMLcoinAddress
 getAddressForPeer	examples/src/main/java/com/peercoin/peercoin/examples/PeerMonitor.java	/^        private Object getAddressForPeer(Peer peer) {$/;"	m	class:PeerMonitor.PeerTableModel	file:
 getAddressHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    public int getAddressHeader() {$/;"	m	class:NetworkParameters
 getAddresses	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    public List<PeerAddress> getAddresses() {$/;"	m	class:AddressMessage
 getAlertSigningKey	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    public byte[] getAlertSigningKey() {$/;"	m	class:NetworkParameters
-getAmount	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public BigInteger getAmount() {$/;"	m	class:PeercoinURI
+getAmount	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public BigInteger getAmount() {$/;"	m	class:HTMLcoinURI
 getAmount	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^      public long getAmount() {$/;"	m	class:Protos.Output.Builder
 getAmount	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    long getAmount();$/;"	m	interface:Protos.OutputOrBuilder
 getAmount	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    public long getAmount() {$/;"	m	class:Protos.Output
@@ -3685,7 +3685,7 @@ getKeyRotationTime	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    lon
 getKeyRotationTime	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public long getKeyRotationTime() {$/;"	m	class:Protos.Wallet
 getKeychainSize	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public int getKeychainSize() {$/;"	m	class:Wallet
 getKeys	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public List<ECKey> getKeys() {$/;"	m	class:Wallet
-getLabel	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public String getLabel() {$/;"	m	class:PeercoinURI
+getLabel	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public String getLabel() {$/;"	m	class:HTMLcoinURI
 getLabel	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      public java.lang.String getLabel() {$/;"	m	class:Protos.Key.Builder
 getLabel	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    java.lang.String getLabel();$/;"	m	interface:Protos.KeyOrBuilder
 getLabel	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public java.lang.String getLabel() {$/;"	m	class:Protos.Key
@@ -3759,7 +3759,7 @@ getMerchantData	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/
 getMerchantData	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    public com.google.protobuf.ByteString getMerchantData() {$/;"	m	class:Protos.Payment
 getMerchantData	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    public com.google.protobuf.ByteString getMerchantData() {$/;"	m	class:Protos.PaymentDetails
 getMerkleRoot	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    public Sha256Hash getMerkleRoot() {$/;"	m	class:Block
-getMessage	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public String getMessage() {$/;"	m	class:PeercoinURI
+getMessage	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public String getMessage() {$/;"	m	class:HTMLcoinURI
 getMessageSize	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    public int getMessageSize() {$/;"	m	class:AddressMessage
 getMessageSize	core/src/main/java/com/matthewmitchell/peercoinj/core/EmptyMessage.java	/^    public int getMessageSize() {$/;"	m	class:EmptyMessage
 getMessageSize	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    public int getMessageSize() {$/;"	m	class:Message
@@ -3877,7 +3877,7 @@ getP	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public int getP()
 getP2SHHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    public int getP2SHHeader() {$/;"	m	class:NetworkParameters
 getP2SHSigOpCount	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    public static long getP2SHSigOpCount(byte[] scriptSig) throws ScriptException {$/;"	m	class:Script
 getPacketMagic	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    public long getPacketMagic() {$/;"	m	class:NetworkParameters
-getParameterByName	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public Object getParameterByName(String name) {$/;"	m	class:PeercoinURI
+getParameterByName	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public Object getParameterByName(String name) {$/;"	m	class:HTMLcoinURI
 getParameters	core/src/main/java/com/matthewmitchell/peercoinj/core/Address.java	/^    public NetworkParameters getParameters() {$/;"	m	class:Address
 getParametersFromAddress	core/src/main/java/com/matthewmitchell/peercoinj/core/Address.java	/^    public static NetworkParameters getParametersFromAddress(String address) throws AddressFormatException {$/;"	m	class:Address
 getParams	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    public NetworkParameters getParams() {$/;"	m	class:Message
@@ -3936,7 +3936,7 @@ getPaymentProtocolId	core/src/main/java/com/matthewmitchell/peercoinj/core/Netwo
 getPaymentProtocolId	core/src/main/java/com/matthewmitchell/peercoinj/params/MainNetParams.java	/^    public String getPaymentProtocolId() {$/;"	m	class:MainNetParams
 getPaymentProtocolId	core/src/main/java/com/matthewmitchell/peercoinj/params/UnitTestParams.java	/^    public String getPaymentProtocolId() {$/;"	m	class:UnitTestParams
 getPaymentRequest	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public Protos.PaymentRequest getPaymentRequest() {$/;"	m	class:PaymentSession
-getPaymentRequestUrl	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public String getPaymentRequestUrl() {$/;"	m	class:PeercoinURI
+getPaymentRequestUrl	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public String getPaymentRequestUrl() {$/;"	m	class:HTMLcoinURI
 getPaymentUrl	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    public @Nullable String getPaymentUrl() {$/;"	m	class:PaymentSession
 getPaymentUrl	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^      public java.lang.String getPaymentUrl() {$/;"	m	class:Protos.PaymentDetails.Builder
 getPaymentUrl	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    java.lang.String getPaymentUrl();$/;"	m	interface:Protos.PaymentDetailsOrBuilder
@@ -4838,8 +4838,8 @@ hashes	core/src/main/java/com/matthewmitchell/peercoinj/core/PartialMerkleTree.j
 hashesUsed	core/src/main/java/com/matthewmitchell/peercoinj/core/PartialMerkleTree.java	/^        public int bitsUsed = 0, hashesUsed = 0;$/;"	f	class:PartialMerkleTree.ValuesUsed
 haveReadyInactivePeer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^    private boolean haveReadyInactivePeer(long nowMillis) {$/;"	m	class:PeerGroup	file:
 header	core/src/main/java/com/matthewmitchell/peercoinj/core/FilteredBlock.java	/^    private Block header;$/;"	f	class:FilteredBlock	file:
-header	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    private PeercoinSerializer.PeercoinPacketHeader header;$/;"	f	class:PeerSocketHandler	file:
-header	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public final byte[] header;$/;"	f	class:PeercoinSerializer.PeercoinPacketHeader
+header	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    private HTMLcoinSerializer.HTMLcoinPacketHeader header;$/;"	f	class:PeerSocketHandler	file:
+header	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public final byte[] header;$/;"	f	class:HTMLcoinSerializer.HTMLcoinPacketHeader
 header	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredBlock.java	/^    private Block header;$/;"	f	class:StoredBlock	file:
 headerBytesValid	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    private transient boolean headerBytesValid;$/;"	f	class:Block	file:
 headerParsed	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    private transient boolean headerParsed;$/;"	f	class:Block	file:
@@ -5192,8 +5192,8 @@ isOpCode	core/src/main/java/com/matthewmitchell/peercoinj/script/ScriptChunk.jav
 isOpCode	core/src/main/java/com/matthewmitchell/peercoinj/script/ScriptChunk.java	/^    public boolean isOpCode() {$/;"	m	class:ScriptChunk
 isOrphan	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockChain.java	/^    public boolean isOrphan(Sha256Hash block) {$/;"	m	class:AbstractBlockChain
 isP2SHAddress	core/src/main/java/com/matthewmitchell/peercoinj/core/Address.java	/^    public boolean isP2SHAddress() {$/;"	m	class:Address
-isParseLazyMode	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public boolean isParseLazyMode() {$/;"	m	class:PeercoinSerializer
-isParseRetainMode	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public boolean isParseRetainMode() {$/;"	m	class:PeercoinSerializer
+isParseLazyMode	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public boolean isParseLazyMode() {$/;"	m	class:HTMLcoinSerializer
+isParseRetainMode	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public boolean isParseRetainMode() {$/;"	m	class:HTMLcoinSerializer
 isParsed	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    public boolean isParsed() {$/;"	m	class:Message
 isParsedHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    boolean isParsedHeader() {$/;"	m	class:Block
 isParsedTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    boolean isParsedTransactions() {$/;"	m	class:Block
@@ -5323,7 +5323,7 @@ log	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    pri
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/Peer.java	/^    private static final Logger log = LoggerFactory.getLogger(Peer.class);$/;"	f	class:Peer	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^    private static final Logger log = LoggerFactory.getLogger(PeerGroup.class);$/;"	f	class:PeerGroup	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    private static final Logger log = LoggerFactory.getLogger(PeerSocketHandler.class);$/;"	f	class:PeerSocketHandler	file:
-log	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private static final Logger log = LoggerFactory.getLogger(PeercoinSerializer.class);$/;"	f	class:PeercoinSerializer	file:
+log	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private static final Logger log = LoggerFactory.getLogger(HTMLcoinSerializer.class);$/;"	f	class:HTMLcoinSerializer	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/Transaction.java	/^    private static final Logger log = LoggerFactory.getLogger(Transaction.class);$/;"	f	class:Transaction	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionBroadcast.java	/^    private static final Logger log = LoggerFactory.getLogger(TransactionBroadcast.class);$/;"	f	class:TransactionBroadcast	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutput.java	/^    private static final Logger log = LoggerFactory.getLogger(TransactionOutput.class);$/;"	f	class:TransactionOutput	file:
@@ -5348,7 +5348,7 @@ log	core/src/main/java/com/matthewmitchell/peercoinj/store/H2FullPrunedBlockStor
 log	core/src/main/java/com/matthewmitchell/peercoinj/store/PostgresFullPrunedBlockStore.java	/^    private static final Logger log = LoggerFactory.getLogger(PostgresFullPrunedBlockStore.class);$/;"	f	class:PostgresFullPrunedBlockStore	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/store/SPVBlockStore.java	/^    private static final Logger log = LoggerFactory.getLogger(SPVBlockStore.class);$/;"	f	class:SPVBlockStore	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/store/WalletProtobufSerializer.java	/^    private static final Logger log = LoggerFactory.getLogger(WalletProtobufSerializer.class);$/;"	f	class:WalletProtobufSerializer	file:
-log	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private static final Logger log = LoggerFactory.getLogger(PeercoinURI.class);$/;"	f	class:PeercoinURI	file:
+log	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private static final Logger log = LoggerFactory.getLogger(HTMLcoinURI.class);$/;"	f	class:HTMLcoinURI	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/utils/Threading.java	/^        private static final Logger log = LoggerFactory.getLogger(UserThread.class);$/;"	f	class:Threading.UserThread	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/wallet/KeyTimeCoinSelector.java	/^    private static final Logger log = LoggerFactory.getLogger(KeyTimeCoinSelector.class);$/;"	f	class:KeyTimeCoinSelector	file:
 log	core/src/main/java/com/matthewmitchell/peercoinj/wallet/WalletFiles.java	/^    private static final Logger log = LoggerFactory.getLogger(WalletFiles.class);$/;"	f	class:WalletFiles	file:
@@ -5383,7 +5383,7 @@ major_	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^      privat
 major_	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^      private int major_ ;$/;"	f	class:Protos.ServerVersion.Builder	file:
 major_	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    private int major_;$/;"	f	class:Protos.ClientVersion	file:
 major_	core/src/main/java/org/peercoin/paymentchannel/Protos.java	/^    private int major_;$/;"	f	class:Protos.ServerVersion	file:
-makeMessage	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private Message makeMessage(String command, int length, byte[] payloadBytes, byte[] hash, byte[] checksum) throws ProtocolException {$/;"	m	class:PeercoinSerializer	file:
+makeMessage	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private Message makeMessage(String command, int length, byte[] payloadBytes, byte[] hash, byte[] checksum) throws ProtocolException {$/;"	m	class:HTMLcoinSerializer	file:
 makeRecorders	core/src/test/java/com/peercoin/peercoin/protocols/channels/ChannelTestUtils.java	/^    public static RecordingPair makeRecorders(final Wallet serverWallet, final TransactionBroadcaster mockBroadcaster) {$/;"	m	class:ChannelTestUtils
 makeSolvedTestBlock	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.java	/^    public static Block makeSolvedTestBlock(Block prev, Transaction... transactions) throws BlockStoreException {$/;"	m	class:TestUtils
 makeSolvedTestBlock	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestUtils.java	/^    public static Block makeSolvedTestBlock(BlockStore blockStore, Address coinsTo) throws BlockStoreException {$/;"	m	class:TestUtils
@@ -5403,7 +5403,7 @@ markAsSpent	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOut
 markAsUnspent	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutput.java	/^    public void markAsUnspent() {$/;"	m	class:TransactionOutput
 markBroadcast	core/src/main/java/com/matthewmitchell/peercoinj/core/MemoryPool.java	/^    private void markBroadcast(PeerAddress byPeer, Transaction tx) {$/;"	m	class:MemoryPool	file:
 markBroadcastBy	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionConfidence.java	/^    public synchronized boolean markBroadcastBy(PeerAddress address) {$/;"	m	class:TransactionConfidence
-matchPeercoins	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^        public boolean matchPeercoins(BigInteger comparison) {$/;"	m	class:WalletTool.Condition
+matchHTMLcoins	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^        public boolean matchHTMLcoins(BigInteger comparison) {$/;"	m	class:WalletTool.Condition
 matchedChildBits	core/src/main/java/com/matthewmitchell/peercoinj/core/PartialMerkleTree.java	/^    byte[] matchedChildBits;$/;"	f	class:PartialMerkleTree
 matchesAll	core/src/main/java/com/matthewmitchell/peercoinj/core/BloomFilter.java	/^    public boolean matchesAll() {$/;"	m	class:BloomFilter
 matchingSubVers	core/src/main/java/com/matthewmitchell/peercoinj/core/AlertMessage.java	/^    private Set<String> matchingSubVers;$/;"	f	class:AlertMessage	file:
@@ -5705,7 +5705,7 @@ n_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private long n_;$/;
 name	core/src/main/java/com/matthewmitchell/peercoinj/core/UnknownMessage.java	/^    private String name;$/;"	f	class:UnknownMessage	file:
 name	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^        public final String name;$/;"	f	class:PaymentSession.PkiVerificationData
 name	core/src/test/java/com/peercoin/peercoin/crypto/BIP32Test.java	/^            final String name;$/;"	f	class:BIP32Test.HDWTestVector.DerivedTestCase
-names	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private static Map<Class<? extends Message>, String> names = new HashMap<Class<? extends Message>, String>();$/;"	f	class:PeercoinSerializer	file:
+names	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private static Map<Class<? extends Message>, String> names = new HashMap<Class<? extends Message>, String>();$/;"	f	class:HTMLcoinSerializer	file:
 nativeECDSABuffer	core/src/main/java/org/peercoin/NativeSecp256k1.java	/^    private static ThreadLocal<ByteBuffer> nativeECDSABuffer = new ThreadLocal<ByteBuffer>();$/;"	f	class:NativeSecp256k1	file:
 netParams	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/DnsDiscovery.java	/^    private final NetworkParameters netParams;$/;"	f	class:DnsDiscovery	file:
 networkIdentifier_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private java.lang.Object networkIdentifier_ = "";$/;"	f	class:Protos.Wallet.Builder	file:
@@ -5842,7 +5842,7 @@ nextBlock	core/src/main/java/com/matthewmitchell/peercoinj/utils/BlockFileLoader
 nextMessage	core/src/test/java/com/peercoin/peercoin/core/InboundMessageQueuer.java	/^    public Message nextMessage() {$/;"	m	class:InboundMessageQueuer
 nextMessageBlocking	core/src/test/java/com/peercoin/peercoin/core/InboundMessageQueuer.java	/^    public Message nextMessageBlocking() throws InterruptedException {$/;"	m	class:InboundMessageQueuer
 nextPeer	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/SeedPeers.java	/^    private InetSocketAddress nextPeer() throws UnknownHostException {$/;"	m	class:SeedPeers	file:
-nodes	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^    private Node[] nodes;$/;"	f	class:PeercoinAddressValidator	file:
+nodes	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^    private Node[] nodes;$/;"	f	class:HTMLcoinAddressValidator	file:
 nonFinal	core/src/main/java/com/matthewmitchell/peercoinj/wallet/DefaultRiskAnalysis.java	/^    protected Transaction nonFinal;$/;"	f	class:DefaultRiskAnalysis
 nonFinal	core/src/test/java/com/peercoin/peercoin/wallet/DefaultRiskAnalysisTest.java	/^    public void nonFinal() throws Exception {$/;"	m	class:DefaultRiskAnalysisTest
 nonFinalDependency	core/src/test/java/com/peercoin/peercoin/wallet/DefaultRiskAnalysisTest.java	/^    public void nonFinalDependency() {$/;"	m	class:DefaultRiskAnalysisTest
@@ -5917,7 +5917,7 @@ onPeerDisconnected	core/src/main/java/com/matthewmitchell/peercoinj/core/Abstrac
 onPeerDisconnected	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerEventListener.java	/^    public void onPeerDisconnected(Peer peer, int peerCount);$/;"	m	interface:PeerEventListener
 onPeerDisconnected	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^        public void onPeerDisconnected(Peer peer, int peerCount) {$/;"	m	class:PeerGroup.PeerStartupListener
 onPeerDisconnected	core/src/main/java/com/matthewmitchell/peercoinj/jni/NativePeerEventListener.java	/^    public native void onPeerDisconnected(Peer peer, int peerCount);$/;"	m	class:NativePeerEventListener
-onPeercoinSetup	wallettemplate/src/main/java/wallettemplate/Controller.java	/^    public void onPeercoinSetup() {$/;"	m	class:Controller
+onHTMLcoinSetup	wallettemplate/src/main/java/wallettemplate/Controller.java	/^    public void onHTMLcoinSetup() {$/;"	m	class:Controller
 onPreMessageReceived	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractPeerEventListener.java	/^    public Message onPreMessageReceived(Peer peer, Message m) {$/;"	m	class:AbstractPeerEventListener
 onPreMessageReceived	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerEventListener.java	/^    public Message onPreMessageReceived(Peer peer, Message m);$/;"	m	interface:PeerEventListener
 onPreMessageReceived	core/src/main/java/com/matthewmitchell/peercoinj/jni/NativePeerEventListener.java	/^    public native Message onPreMessageReceived(Peer peer, Message m);$/;"	m	class:NativePeerEventListener
@@ -5975,14 +5975,14 @@ p2shHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParamete
 p_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private int p_ = 1;$/;"	f	class:Protos.ScryptParameters.Builder	file:
 p_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private int p_;$/;"	f	class:Protos.ScryptParameters	file:
 packetMagic	core/src/main/java/com/matthewmitchell/peercoinj/core/NetworkParameters.java	/^    protected long packetMagic;$/;"	f	class:NetworkParameters
-parameterMap	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private final Map<String, Object> parameterMap = new LinkedHashMap<String, Object>();$/;"	f	class:PeercoinURI	file:
+parameterMap	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private final Map<String, Object> parameterMap = new LinkedHashMap<String, Object>();$/;"	f	class:HTMLcoinURI	file:
 parameters	core/src/test/java/com/peercoin/peercoin/net/NetworkAbstractionTests.java	/^    public static Collection<Integer[]> parameters() {$/;"	m	class:NetworkAbstractionTests
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockChain.java	/^    public final NetworkParameters params;$/;"	f	class:AbstractBlockChain
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/CheckpointManager.java	/^    protected final NetworkParameters params;$/;"	f	class:CheckpointManager
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    protected NetworkParameters params;$/;"	f	class:Message
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/Peer.java	/^    private final NetworkParameters params;$/;"	f	class:Peer	file:
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^    private final NetworkParameters params;$/;"	f	class:PeerGroup	file:
-params	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private NetworkParameters params;$/;"	f	class:PeercoinSerializer	file:
+params	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private NetworkParameters params;$/;"	f	class:HTMLcoinSerializer	file:
 params	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    private final NetworkParameters params;$/;"	f	class:Wallet	file:
 params	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    protected final NetworkParameters params;$/;"	f	class:WalletAppKit
 params	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    public NetworkParameters params() {$/;"	m	class:WalletAppKit
@@ -6005,7 +6005,7 @@ params	examples/src/main/java/com/peercoin/peercoin/examples/ExamplePaymentChann
 params	examples/src/main/java/com/peercoin/peercoin/examples/PeerMonitor.java	/^    private NetworkParameters params;$/;"	f	class:PeerMonitor	file:
 params	tools/src/main/java/com/peercoin/peercoin/tools/WalletTool.java	/^    private static NetworkParameters params;$/;"	f	class:WalletTool	file:
 params	wallettemplate/src/main/java/wallettemplate/Main.java	/^    public static NetworkParameters params = MainNetParams.get();$/;"	f	class:Main
-params	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^    private NetworkParameters params;$/;"	f	class:PeercoinAddressValidator	file:
+params	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^    private NetworkParameters params;$/;"	f	class:HTMLcoinAddressValidator	file:
 parent	core/src/main/java/com/matthewmitchell/peercoinj/core/ChildMessage.java	/^    @Nullable private Message parent;$/;"	f	class:ChildMessage	file:
 parent	core/src/main/java/com/matthewmitchell/peercoinj/crypto/DeterministicKey.java	/^    private final DeterministicKey parent;$/;"	f	class:DeterministicKey	file:
 parentTransaction	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionInput.java	/^    private Transaction parentTransaction;$/;"	f	class:TransactionInput	file:
@@ -6031,7 +6031,7 @@ parse	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutPoint.
 parse	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutput.java	/^    void parse() throws ProtocolException {$/;"	m	class:TransactionOutput
 parse	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    public void parse() throws ProtocolException {$/;"	m	class:VersionMessage
 parse	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    private void parse(byte[] program) throws ScriptException {$/;"	m	class:Script	file:
-parse	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^        void parse() throws ProtocolException {$/;"	m	class:PeercoinSerializerTest.UnknownMessage
+parse	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^        void parse() throws ProtocolException {$/;"	m	class:HTMLcoinSerializerTest.UnknownMessage
 parseAsHexOrBase58	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static byte[] parseAsHexOrBase58(String data) {$/;"	m	class:Utils
 parseDelimitedFrom	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/ClientState.java	/^    public static com.matthewmitchell.peercoinj.protocols.channels.ClientState.StoredClientPaymentChannel parseDelimitedFrom($/;"	m	class:ClientState.StoredClientPaymentChannel
 parseDelimitedFrom	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/ClientState.java	/^    public static com.matthewmitchell.peercoinj.protocols.channels.ClientState.StoredClientPaymentChannel parseDelimitedFrom(java.io.InputStream input)$/;"	m	class:ClientState.StoredClientPaymentChannel
@@ -6190,7 +6190,7 @@ parseFrom	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public stati
 parseFrom	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    public static org.peercoinj.wallet.Protos.Wallet parseFrom(java.io.InputStream input)$/;"	m	class:Protos.Wallet
 parseHeader	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    private void parseHeader() throws ProtocolException {$/;"	m	class:Block	file:
 parseLazy	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    protected transient final boolean parseLazy;$/;"	f	class:Message
-parseLazy	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private boolean parseLazy = false;$/;"	f	class:PeercoinSerializer	file:
+parseLazy	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private boolean parseLazy = false;$/;"	f	class:HTMLcoinSerializer	file:
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:AddressMessage
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/AlertMessage.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:AlertMessage
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:Block
@@ -6211,12 +6211,12 @@ parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionInput
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutPoint.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:TransactionOutPoint
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutput.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:TransactionOutput
 parseLite	core/src/main/java/com/matthewmitchell/peercoinj/core/VersionMessage.java	/^    protected void parseLite() throws ProtocolException {$/;"	m	class:VersionMessage
-parseLite	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^        protected void parseLite() throws ProtocolException {$/;"	m	class:PeercoinSerializerTest.UnknownMessage
+parseLite	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^        protected void parseLite() throws ProtocolException {$/;"	m	class:HTMLcoinSerializerTest.UnknownMessage
 parseLockTimeStr	core/src/main/java/com/matthewmitchell/peercoinj/core/Transaction.java	/^    public static long parseLockTimeStr(String lockTimeStr) throws ParseException {$/;"	m	class:Transaction
-parseParameters	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private void parseParameters(@Nullable NetworkParameters params, String addressToken, String[] nameValuePairTokens) throws PeercoinURIParseException {$/;"	m	class:PeercoinURI	file:
+parseParameters	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private void parseParameters(@Nullable NetworkParameters params, String addressToken, String[] nameValuePairTokens) throws HTMLcoinURIParseException {$/;"	m	class:HTMLcoinURI	file:
 parsePaymentRequest	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    private void parsePaymentRequest(Protos.PaymentRequest request) throws PaymentRequestException {$/;"	m	class:PaymentSession	file:
 parseRetain	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    protected transient final boolean parseRetain;$/;"	f	class:Message
-parseRetain	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    private boolean parseRetain = false;$/;"	f	class:PeercoinSerializer	file:
+parseRetain	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    private boolean parseRetain = false;$/;"	f	class:HTMLcoinSerializer	file:
 parseToProto	core/src/main/java/com/matthewmitchell/peercoinj/store/WalletProtobufSerializer.java	/^    public static Protos.Wallet parseToProto(InputStream input) throws IOException {$/;"	m	class:WalletProtobufSerializer
 parseTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    private void parseTransactions() throws ProtocolException {$/;"	m	class:Block	file:
 parseUserList	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/IrcDiscovery.java	/^    static ArrayList<InetSocketAddress> parseUserList(String[] userNames) throws UnknownHostException {$/;"	m	class:IrcDiscovery
@@ -6400,10 +6400,10 @@ putChannel	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/S
 putKey	core/src/main/java/com/matthewmitchell/peercoinj/crypto/DeterministicHierarchy.java	/^    private void putKey(DeterministicKey key) {$/;"	m	class:DeterministicHierarchy	file:
 putUpdateStoredBlock	core/src/main/java/com/matthewmitchell/peercoinj/store/H2FullPrunedBlockStore.java	/^    private void putUpdateStoredBlock(StoredBlock storedBlock, boolean wasUndoable) throws SQLException {$/;"	m	class:H2FullPrunedBlockStore	file:
 putUpdateStoredBlock	core/src/main/java/com/matthewmitchell/peercoinj/store/PostgresFullPrunedBlockStore.java	/^    private void putUpdateStoredBlock(StoredBlock storedBlock, boolean wasUndoable) throws SQLException {$/;"	m	class:PostgresFullPrunedBlockStore	file:
-putWithValidation	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    private void putWithValidation(String key, Object value) throws PeercoinURIParseException {$/;"	m	class:PeercoinURI	file:
+putWithValidation	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    private void putWithValidation(String key, Object value) throws HTMLcoinURIParseException {$/;"	m	class:HTMLcoinURI	file:
 q	core/src/test/java/com/peercoin/peercoin/protocols/channels/ChannelTestUtils.java	/^        public BlockingQueue<Object> q = new LinkedBlockingQueue<Object>();$/;"	f	class:ChannelTestUtils.RecordingClientConnection
 q	core/src/test/java/com/peercoin/peercoin/protocols/channels/ChannelTestUtils.java	/^        public BlockingQueue<Object> q = new LinkedBlockingQueue<Object>();$/;"	f	class:ChannelTestUtils.RecordingServerConnection
-qrCode	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    @FXML protected Label qrCode;$/;"	f	class:ClickablePeercoinAddress
+qrCode	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    @FXML protected Label qrCode;$/;"	f	class:ClickableHTMLcoinAddress
 queueListeners	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionConfidence.java	/^    public void queueListeners(final Listener.ChangeReason reason) {$/;"	m	class:TransactionConfidence
 queueOnCoinsReceived	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    private void queueOnCoinsReceived(final Transaction tx, final BigInteger balance, final BigInteger newBalance) {$/;"	m	class:Wallet	file:
 queueOnCoinsSent	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    private void queueOnCoinsSent(final Transaction tx, final BigInteger prevBalance, final BigInteger newBalance) {$/;"	m	class:Wallet	file:
@@ -6532,7 +6532,7 @@ reorganize	core/src/main/java/com/matthewmitchell/peercoinj/core/AbstractBlockCh
 reorganize	core/src/main/java/com/matthewmitchell/peercoinj/core/BlockChainListener.java	/^    void reorganize(StoredBlock splitPoint, List<StoredBlock> oldBlocks,$/;"	m	interface:BlockChainListener
 reorganize	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public void reorganize(StoredBlock splitPoint, List<StoredBlock> oldBlocks, List<StoredBlock> newBlocks) throws VerificationException {$/;"	m	class:Wallet
 reorganize	core/src/main/java/com/matthewmitchell/peercoinj/jni/NativeBlockChainListener.java	/^    public native void reorganize(StoredBlock splitPoint, List<StoredBlock> oldBlocks, List<StoredBlock> newBlocks) throws VerificationException;$/;"	m	class:NativeBlockChainListener
-requestMoney	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    protected void requestMoney(MouseEvent event) {$/;"	m	class:ClickablePeercoinAddress
+requestMoney	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    protected void requestMoney(MouseEvent event) {$/;"	m	class:ClickableHTMLcoinAddress
 requireMandatoryExtensions	core/src/main/java/com/matthewmitchell/peercoinj/store/WalletProtobufSerializer.java	/^    private boolean requireMandatoryExtensions = true;$/;"	f	class:WalletProtobufSerializer	file:
 reserved	core/src/main/java/com/matthewmitchell/peercoinj/core/AlertMessage.java	/^    private String comment, statusBar, reserved;$/;"	f	class:AlertMessage	file:
 reset	core/src/main/java/com/matthewmitchell/peercoinj/core/UnsafeByteArrayOutputStream.java	/^    public void reset() {$/;"	m	class:UnsafeByteArrayOutputStream
@@ -6613,7 +6613,7 @@ secureRandom	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^
 secureRandom	core/src/main/java/com/matthewmitchell/peercoinj/crypto/KeyCrypterScrypt.java	/^    private static final transient SecureRandom secureRandom = new SecureRandom();$/;"	f	class:KeyCrypterScrypt	file:
 seed	core/src/test/java/com/peercoin/peercoin/crypto/BIP32Test.java	/^        final String seed;$/;"	f	class:BIP32Test.HDWTestVector
 seedAddrs	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/SeedPeers.java	/^    public static int[] seedAddrs =$/;"	f	class:SeedPeers
-seekPastMagicBytes	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public void seekPastMagicBytes(ByteBuffer in) throws BufferUnderflowException {$/;"	m	class:PeercoinSerializer
+seekPastMagicBytes	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public void seekPastMagicBytes(ByteBuffer in) throws BufferUnderflowException {$/;"	m	class:HTMLcoinSerializer
 seen	core/src/main/java/com/matthewmitchell/peercoinj/core/MemoryPool.java	/^    public Transaction seen(Transaction tx, PeerAddress byPeer) {$/;"	m	class:MemoryPool
 seen	core/src/main/java/com/matthewmitchell/peercoinj/core/MemoryPool.java	/^    public void seen(Sha256Hash hash, PeerAddress byPeer) {$/;"	m	class:MemoryPool
 select	core/src/main/java/com/matthewmitchell/peercoinj/wallet/CoinSelector.java	/^    public CoinSelection select(BigInteger target, LinkedList<TransactionOutput> candidates);$/;"	m	interface:CoinSelector
@@ -6654,7 +6654,7 @@ sendTransactionsToListener	core/src/main/java/com/matthewmitchell/peercoinj/core
 sequence	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionInput.java	/^    private long sequence;$/;"	f	class:TransactionInput	file:
 sequence_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private int sequence_ ;$/;"	f	class:Protos.TransactionInput.Builder	file:
 sequence_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private int sequence_;$/;"	f	class:Protos.TransactionInput	file:
-serDeser	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    private void serDeser(PeercoinSerializer bs, Message message, byte[] sourceBytes, byte[] containedBytes, byte[] containingBytes) throws Exception {$/;"	m	class:LazyParseByteCacheTest	file:
+serDeser	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    private void serDeser(HTMLcoinSerializer bs, Message message, byte[] sourceBytes, byte[] containedBytes, byte[] containingBytes) throws Exception {$/;"	m	class:LazyParseByteCacheTest	file:
 serialVersionUID	core/src/main/java/com/matthewmitchell/peercoinj/core/AddressMessage.java	/^    private static final long serialVersionUID = 8058283864924679460L;$/;"	f	class:AddressMessage	file:
 serialVersionUID	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    private static final long serialVersionUID = 2738848929966035281L;$/;"	f	class:Block	file:
 serialVersionUID	core/src/main/java/com/matthewmitchell/peercoinj/core/ChildMessage.java	/^    private static final long serialVersionUID = -7657113383624517931L;$/;"	f	class:ChildMessage	file:
@@ -6715,8 +6715,8 @@ serialVersionUID	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    priva
 serialVersionUID	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private static final long serialVersionUID = 0L;$/;"	f	class:Protos.TransactionInput	file:
 serialVersionUID	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private static final long serialVersionUID = 0L;$/;"	f	class:Protos.TransactionOutput	file:
 serialVersionUID	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private static final long serialVersionUID = 0L;$/;"	f	class:Protos.Wallet	file:
-serialize	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public void serialize(Message message, OutputStream out) throws IOException {$/;"	m	class:PeercoinSerializer
-serialize	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^    public void serialize(String name, byte[] message, OutputStream out) throws IOException {$/;"	m	class:PeercoinSerializer
+serialize	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public void serialize(Message message, OutputStream out) throws IOException {$/;"	m	class:HTMLcoinSerializer
+serialize	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^    public void serialize(String name, byte[] message, OutputStream out) throws IOException {$/;"	m	class:HTMLcoinSerializer
 serialize	core/src/main/java/com/matthewmitchell/peercoinj/crypto/DeterministicKey.java	/^    private byte[] serialize(boolean pub) {$/;"	m	class:DeterministicKey	file:
 serializeCompact	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredBlock.java	/^    public void serializeCompact(ByteBuffer buffer) {$/;"	m	class:StoredBlock
 serializePrivB58	core/src/main/java/com/matthewmitchell/peercoinj/crypto/DeterministicKey.java	/^    public String serializePrivB58() {$/;"	m	class:DeterministicKey
@@ -6730,7 +6730,7 @@ serializeWalletExtension	core/src/main/java/com/matthewmitchell/peercoinj/protoc
 serializeWalletExtension	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/StoredPaymentChannelServerStates.java	/^    public byte[] serializeWalletExtension() {$/;"	m	class:StoredPaymentChannelServerStates
 serializedPaymentDetails_	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^      private com.google.protobuf.ByteString serializedPaymentDetails_ = com.google.protobuf.ByteString.EMPTY;$/;"	f	class:Protos.PaymentRequest.Builder	file:
 serializedPaymentDetails_	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    private com.google.protobuf.ByteString serializedPaymentDetails_;$/;"	f	class:Protos.PaymentRequest	file:
-serializer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    private final PeercoinSerializer serializer;$/;"	f	class:PeerSocketHandler	file:
+serializer	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerSocketHandler.java	/^    private final HTMLcoinSerializer serializer;$/;"	f	class:PeerSocketHandler	file:
 server	core/src/main/java/com/matthewmitchell/peercoinj/net/discovery/IrcDiscovery.java	/^    private String server;$/;"	f	class:IrcDiscovery	file:
 server	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelServerListener.java	/^    private NioServer server;$/;"	f	class:PaymentChannelServerListener	file:
 server	core/src/test/java/com/peercoin/peercoin/protocols/channels/ChannelTestUtils.java	/^        public PaymentChannelServer server;$/;"	f	class:ChannelTestUtils.RecordingPair
@@ -6746,7 +6746,7 @@ services_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private lo
 services_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private long services_;$/;"	f	class:Protos.PeerAddress	file:
 setAcceptRiskyTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    public void setAcceptRiskyTransactions(boolean acceptRiskyTransactions) {$/;"	m	class:Wallet
 setAddr	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerAddress.java	/^    public void setAddr(InetAddress addr) {$/;"	m	class:PeerAddress
-setAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    public void setAddress(String address) {$/;"	m	class:ClickablePeercoinAddress
+setAddress	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    public void setAddress(String address) {$/;"	m	class:ClickableHTMLcoinAddress
 setAmount	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^      public Builder setAmount(long value) {$/;"	m	class:Protos.Output.Builder
 setAppearedAtChainHeight	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionConfidence.java	/^    public synchronized void setAppearedAtChainHeight(int appearedAtChainHeight) {$/;"	m	class:TransactionConfidence
 setAppearedAtHeight	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      public Builder setAppearedAtHeight(int value) {$/;"	m	class:Protos.TransactionConfidence.Builder
@@ -7037,7 +7037,7 @@ shouldVerifyTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/A
 shouldVerifyTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/BlockChain.java	/^    protected boolean shouldVerifyTransactions() {$/;"	m	class:BlockChain
 shouldVerifyTransactions	core/src/main/java/com/matthewmitchell/peercoinj/core/FullPrunedBlockChain.java	/^    protected boolean shouldVerifyTransactions() {$/;"	m	class:FullPrunedBlockChain
 show	wallettemplate/src/main/java/wallettemplate/Main.java	/^        public void show() {$/;"	m	class:Main.OverlayUI
-showQRCode	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    protected void showQRCode(MouseEvent event) {$/;"	m	class:ClickablePeercoinAddress
+showQRCode	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    protected void showQRCode(MouseEvent event) {$/;"	m	class:ClickableHTMLcoinAddress
 shutDown	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^    protected void shutDown() throws Exception {$/;"	m	class:PeerGroup
 shutDown	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    protected void shutDown() throws Exception {$/;"	m	class:WalletAppKit
 shutDown	core/src/main/java/com/matthewmitchell/peercoinj/net/BlockingClientManager.java	/^    protected void shutDown() throws Exception {$/;"	m	class:BlockingClientManager
@@ -7068,7 +7068,7 @@ signature_	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    
 signature_	core/src/main/java/org/peercoin/protocols/payments/Protos.java	/^    private com.google.protobuf.ByteString signature_;$/;"	f	class:Protos.PaymentRequest	file:
 signedMessageToKey	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^    public static ECKey signedMessageToKey(String message, String signatureBase64) throws SignatureException {$/;"	m	class:ECKey
 singleDigest	core/src/main/java/com/matthewmitchell/peercoinj/core/Utils.java	/^    public static byte[] singleDigest(byte[] input, int offset, int length) {$/;"	m	class:Utils
-size	core/src/main/java/com/matthewmitchell/peercoinj/core/PeercoinSerializer.java	/^        public final int size;$/;"	f	class:PeercoinSerializer.PeercoinPacketHeader
+size	core/src/main/java/com/matthewmitchell/peercoinj/core/HTMLcoinSerializer.java	/^        public final int size;$/;"	f	class:HTMLcoinSerializer.HTMLcoinPacketHeader
 size	core/src/main/java/com/matthewmitchell/peercoinj/core/UnsafeByteArrayOutputStream.java	/^    public int size() {$/;"	m	class:UnsafeByteArrayOutputStream
 size	core/src/main/java/com/matthewmitchell/peercoinj/utils/MockTransactionBroadcaster.java	/^    public int size() {$/;"	m	class:MockTransactionBroadcaster
 sizeOf	core/src/main/java/com/matthewmitchell/peercoinj/core/VarInt.java	/^    public static int sizeOf(int value) {$/;"	m	class:VarInt
@@ -7142,8 +7142,8 @@ tasks	core/src/main/java/com/matthewmitchell/peercoinj/utils/Threading.java	/^  
 tearDown	core/src/main/java/com/matthewmitchell/peercoinj/utils/TestWithWallet.java	/^    public void tearDown() throws Exception {$/;"	m	class:TestWithWallet
 tempMap	core/src/main/java/com/matthewmitchell/peercoinj/store/MemoryFullPrunedBlockStore.java	/^    ThreadLocal<HashMap<KeyType, ValueType>> tempMap;$/;"	f	class:TransactionalHashMap
 tempSetRemoved	core/src/main/java/com/matthewmitchell/peercoinj/store/MemoryFullPrunedBlockStore.java	/^    ThreadLocal<HashSet<KeyType>> tempSetRemoved;$/;"	f	class:TransactionalHashMap
-testAddr	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testAddr() throws Exception {$/;"	m	class:PeercoinSerializerTest
-testAddr	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^    private boolean testAddr(String text) {$/;"	m	class:PeercoinAddressValidator	file:
+testAddr	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testAddr() throws Exception {$/;"	m	class:HTMLcoinSerializerTest
+testAddr	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^    private boolean testAddr(String text) {$/;"	m	class:HTMLcoinAddressValidator	file:
 testBadChecksum	core/src/test/java/com/peercoin/peercoin/crypto/MnemonicCodeTest.java	/^    public void testBadChecksum() throws Exception {$/;"	m	class:MnemonicCodeTest
 testBadEntropyLength	core/src/test/java/com/peercoin/peercoin/crypto/MnemonicCodeTest.java	/^    public void testBadEntropyLength() throws Exception {$/;"	m	class:MnemonicCodeTest
 testBadLength	core/src/test/java/com/peercoin/peercoin/crypto/MnemonicCodeTest.java	/^    public void testBadLength() throws Exception {$/;"	m	class:MnemonicCodeTest
@@ -7151,8 +7151,8 @@ testBadWord	core/src/test/java/com/peercoin/peercoin/crypto/MnemonicCodeTest.jav
 testBlock	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    public void testBlock(byte[] blockBytes, boolean isChild, boolean lazy, boolean retain) throws Exception {$/;"	m	class:LazyParseByteCacheTest
 testBlockAll	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    public void testBlockAll() throws Exception {$/;"	m	class:LazyParseByteCacheTest
 testBytes	core/src/test/java/com/peercoin/peercoin/core/VarIntTest.java	/^    public void testBytes() throws Exception {$/;"	m	class:VarIntTest
-testCachedParsing	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    private void testCachedParsing(boolean lazy)  throws Exception {$/;"	m	class:PeercoinSerializerTest	file:
-testCachedParsing	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testCachedParsing()  throws Exception {$/;"	m	class:PeercoinSerializerTest
+testCachedParsing	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    private void testCachedParsing(boolean lazy)  throws Exception {$/;"	m	class:HTMLcoinSerializerTest	file:
+testCachedParsing	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testCachedParsing()  throws Exception {$/;"	m	class:HTMLcoinSerializerTest
 testChildKeyDerivation	core/src/test/java/com/peercoin/peercoin/crypto/ChildKeyDerivationTest.java	/^    public void testChildKeyDerivation() throws Exception {$/;"	m	class:ChildKeyDerivationTest
 testConnectionEventHandlers	core/src/test/java/com/peercoin/peercoin/net/NetworkAbstractionTests.java	/^    public void testConnectionEventHandlers() throws Exception {$/;"	m	class:NetworkAbstractionTests
 testDecode	core/src/test/java/com/peercoin/peercoin/core/Base58Test.java	/^    public void testDecode() throws Exception {$/;"	m	class:Base58Test
@@ -7164,28 +7164,28 @@ testEncryptDecryptBytes1	core/src/test/java/com/peercoin/peercoin/crypto/KeyCryp
 testEncryptDecryptBytes2	core/src/test/java/com/peercoin/peercoin/crypto/KeyCrypterScryptTest.java	/^    public void testEncryptDecryptBytes2() throws KeyCrypterException {$/;"	m	class:KeyCrypterScryptTest
 testFailure	core/src/test/java/com/peercoin/peercoin/core/utils/ExponentialBackoffTest.java	/^    public void testFailure() {$/;"	m	class:ExponentialBackoffTest
 testFormatting	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testFormatting() {$/;"	m	class:UtilsTest
-testHeaders1	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testHeaders1() throws Exception {$/;"	m	class:PeercoinSerializerTest
-testHeaders2	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testHeaders2() throws Exception {$/;"	m	class:PeercoinSerializerTest
+testHeaders1	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testHeaders1() throws Exception {$/;"	m	class:HTMLcoinSerializerTest
+testHeaders2	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testHeaders2() throws Exception {$/;"	m	class:HTMLcoinSerializerTest
 testHmac	core/src/test/java/com/peercoin/peercoin/crypto/HDUtilsTest.java	/^    public void testHmac() throws Exception {$/;"	m	class:HDUtilsTest
 testInQueue	core/src/test/java/com/peercoin/peercoin/core/utils/ExponentialBackoffTest.java	/^    public void testInQueue() {$/;"	m	class:ExponentialBackoffTest
 testInts	core/src/test/java/com/peercoin/peercoin/core/VarIntTest.java	/^    public void testInts() throws Exception {$/;"	m	class:VarIntTest
 testKeyCrypterGood1	core/src/test/java/com/peercoin/peercoin/crypto/KeyCrypterScryptTest.java	/^    public void testKeyCrypterGood1() throws KeyCrypterException {$/;"	m	class:KeyCrypterScryptTest
 testKeyCrypterGood2	core/src/test/java/com/peercoin/peercoin/crypto/KeyCrypterScryptTest.java	/^    public void testKeyCrypterGood2() throws Exception {$/;"	m	class:KeyCrypterScryptTest
 testKeyCrypterWrongPassword	core/src/test/java/com/peercoin/peercoin/crypto/KeyCrypterScryptTest.java	/^    public void testKeyCrypterWrongPassword() throws KeyCrypterException {$/;"	m	class:KeyCrypterScryptTest
-testLazyParsing	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testLazyParsing()  throws Exception {$/;"	m	class:PeercoinSerializerTest
+testLazyParsing	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testLazyParsing()  throws Exception {$/;"	m	class:HTMLcoinSerializerTest
 testLong	core/src/test/java/com/peercoin/peercoin/core/VarIntTest.java	/^    public void testLong() throws Exception {$/;"	m	class:VarIntTest
 testLongToByteArray	core/src/test/java/com/peercoin/peercoin/crypto/HDUtilsTest.java	/^    public void testLongToByteArray() throws Exception {$/;"	m	class:HDUtilsTest
 testMaxOfMostFreq	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testMaxOfMostFreq() throws Exception {$/;"	m	class:UtilsTest
 testPeerAddressRoundtrip	core/src/test/java/com/peercoin/peercoin/core/PeerAddressTest.java	/^    public void testPeerAddressRoundtrip() throws Exception {$/;"	m	class:PeerAddressTest
-testPeercoinPacketHeader	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testPeercoinPacketHeader() {$/;"	m	class:PeercoinSerializerTest
-testPeercoinSerialize	core/src/test/java/com/peercoin/peercoin/core/PeerAddressTest.java	/^    public void testPeercoinSerialize() throws Exception {$/;"	m	class:PeerAddressTest
-testPeercoinValueToPlainString	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testPeercoinValueToPlainString() {$/;"	m	class:UtilsTest
+testHTMLcoinPacketHeader	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testHTMLcoinPacketHeader() {$/;"	m	class:HTMLcoinSerializerTest
+testHTMLcoinSerialize	core/src/test/java/com/peercoin/peercoin/core/PeerAddressTest.java	/^    public void testHTMLcoinSerialize() throws Exception {$/;"	m	class:PeerAddressTest
+testHTMLcoinValueToPlainString	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testHTMLcoinValueToPlainString() {$/;"	m	class:UtilsTest
 testPointCompression	core/src/test/java/com/peercoin/peercoin/crypto/HDUtilsTest.java	/^    public void testPointCompression() {$/;"	m	class:HDUtilsTest
 testReceiveCoinbaseTransaction	core/src/test/java/com/peercoin/peercoin/core/CoinbaseBlockTest.java	/^    public void testReceiveCoinbaseTransaction() throws Exception {$/;"	m	class:CoinbaseBlockTest
 testReverseBytes	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testReverseBytes() {$/;"	m	class:UtilsTest
 testReverseDwordBytes	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testReverseDwordBytes() {$/;"	m	class:UtilsTest
-testSeekPastMagicBytes	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testSeekPastMagicBytes() {$/;"	m	class:PeercoinSerializerTest
-testSerializeUnknownMessage	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    public void testSerializeUnknownMessage() {$/;"	m	class:PeercoinSerializerTest
+testSeekPastMagicBytes	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testSeekPastMagicBytes() {$/;"	m	class:HTMLcoinSerializerTest
+testSerializeUnknownMessage	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    public void testSerializeUnknownMessage() {$/;"	m	class:HTMLcoinSerializerTest
 testShorts	core/src/test/java/com/peercoin/peercoin/core/VarIntTest.java	/^    public void testShorts() throws Exception {$/;"	m	class:VarIntTest
 testSuccess	core/src/test/java/com/peercoin/peercoin/core/utils/ExponentialBackoffTest.java	/^    public void testSuccess() {$/;"	m	class:ExponentialBackoffTest
 testToNanoCoins	core/src/test/java/com/peercoin/peercoin/core/UtilsTest.java	/^    public void testToNanoCoins() {$/;"	m	class:UtilsTest
@@ -7304,13 +7304,13 @@ toString	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/Sto
 toString	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/StoredServerChannel.java	/^    public synchronized String toString() {$/;"	m	class:StoredServerChannel
 toString	core/src/main/java/com/matthewmitchell/peercoinj/script/Script.java	/^    public String toString() {$/;"	m	class:Script
 toString	core/src/main/java/com/matthewmitchell/peercoinj/store/MemoryFullPrunedBlockStore.java	/^    public String toString() {$/;"	m	class:StoredTransactionOutPoint
-toString	core/src/main/java/com/matthewmitchell/peercoinj/uri/PeercoinURI.java	/^    public String toString() {$/;"	m	class:PeercoinURI
+toString	core/src/main/java/com/matthewmitchell/peercoinj/uri/HTMLcoinURI.java	/^    public String toString() {$/;"	m	class:HTMLcoinURI
 toString	core/src/main/java/com/matthewmitchell/peercoinj/utils/ExponentialBackoff.java	/^    public String toString() {$/;"	m	class:ExponentialBackoff
 toString	core/src/main/java/com/matthewmitchell/peercoinj/wallet/DefaultRiskAnalysis.java	/^    public String toString() {$/;"	m	class:DefaultRiskAnalysis
 toStringHelper	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    private void toStringHelper(StringBuilder builder, Map<Sha256Hash, Transaction> transactionMap,$/;"	m	class:Wallet	file:
 toStringWithPrivate	core/src/main/java/com/matthewmitchell/peercoinj/core/ECKey.java	/^    public String toStringWithPrivate() {$/;"	m	class:ECKey
 toUncompressed	core/src/main/java/com/matthewmitchell/peercoinj/crypto/HDUtils.java	/^    static ECPoint toUncompressed(ECPoint pubKPoint) {$/;"	m	class:HDUtils
-toggleButtons	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^    private void toggleButtons(String current) {$/;"	m	class:PeercoinAddressValidator	file:
+toggleButtons	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^    private void toggleButtons(String current) {$/;"	m	class:HTMLcoinAddressValidator	file:
 totalValue	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelClientState.java	/^    private final BigInteger totalValue;$/;"	f	class:PaymentChannelClientState	file:
 totalValue	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelServerState.java	/^    private BigInteger totalValue;$/;"	f	class:PaymentChannelServerState	file:
 totalValue	core/src/main/java/com/matthewmitchell/peercoinj/protocols/payments/PaymentSession.java	/^    private BigInteger totalValue = BigInteger.ZERO;$/;"	f	class:PaymentSession	file:
@@ -7370,7 +7370,7 @@ txConfidenceListener	core/src/main/java/com/matthewmitchell/peercoinj/core/Walle
 txCounter	core/src/main/java/com/matthewmitchell/peercoinj/core/Block.java	/^    static private int txCounter;$/;"	f	class:Block	file:
 txMap	core/src/main/java/com/matthewmitchell/peercoinj/store/WalletProtobufSerializer.java	/^    protected Map<ByteString, Transaction> txMap;$/;"	f	class:WalletProtobufSerializer
 txMessage	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    private final byte[] txMessage = Hex.decode($/;"	f	class:LazyParseByteCacheTest	file:
-txMessage	core/src/test/java/com/peercoin/peercoin/core/PeercoinSerializerTest.java	/^    private final byte[] txMessage = Hex.decode($/;"	f	class:PeercoinSerializerTest	file:
+txMessage	core/src/test/java/com/peercoin/peercoin/core/HTMLcoinSerializerTest.java	/^    private final byte[] txMessage = Hex.decode($/;"	f	class:HTMLcoinSerializerTest	file:
 txMessagePart	core/src/test/java/com/peercoin/peercoin/core/LazyParseByteCacheTest.java	/^    private final byte[] txMessagePart = Hex.decode($/;"	f	class:LazyParseByteCacheTest	file:
 txOutChanges	core/src/main/java/com/matthewmitchell/peercoinj/core/StoredUndoableBlock.java	/^    private TransactionOutputChanges txOutChanges;$/;"	f	class:StoredUndoableBlock	file:
 txOutsCreated	core/src/main/java/com/matthewmitchell/peercoinj/core/TransactionOutputChanges.java	/^    public final List<StoredTransactionOutput> txOutsCreated;$/;"	f	class:TransactionOutputChanges
@@ -7439,7 +7439,7 @@ unknownFields	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private 
 unknownFields	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private final com.google.protobuf.UnknownFieldSet unknownFields;$/;"	f	class:Protos.TransactionInput	file:
 unknownFields	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private final com.google.protobuf.UnknownFieldSet unknownFields;$/;"	f	class:Protos.TransactionOutput	file:
 unknownFields	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private final com.google.protobuf.UnknownFieldSet unknownFields;$/;"	f	class:Protos.Wallet	file:
-unsafePeercoinSerialize	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    public byte[] unsafePeercoinSerialize() {$/;"	m	class:Message
+unsafeHTMLcoinSerialize	core/src/main/java/com/matthewmitchell/peercoinj/core/Message.java	/^    public byte[] unsafeHTMLcoinSerialize() {$/;"	m	class:Message
 unspent	core/src/main/java/com/matthewmitchell/peercoinj/core/Wallet.java	/^    final Map<Sha256Hash, Transaction> unspent;$/;"	f	class:Wallet
 updateChannelInWallet	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelClientState.java	/^    private synchronized void updateChannelInWallet() {$/;"	m	class:PaymentChannelClientState	file:
 updateChannelInWallet	core/src/main/java/com/matthewmitchell/peercoinj/protocols/channels/PaymentChannelServerState.java	/^    private synchronized void updateChannelInWallet() {$/;"	m	class:PaymentChannelServerState	file:
@@ -7455,7 +7455,7 @@ updatedAt	core/src/main/java/com/matthewmitchell/peercoinj/core/Transaction.java
 updatedAt_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^      private long updatedAt_ ;$/;"	f	class:Protos.Transaction.Builder	file:
 updatedAt_	core/src/main/java/org/peercoinj/wallet/Protos.java	/^    private long updatedAt_;$/;"	f	class:Protos.Transaction	file:
 upstreamParser	core/src/main/java/com/matthewmitchell/peercoinj/net/NioClient.java	/^        private final StreamParser upstreamParser;$/;"	f	class:NioClient.Handler	file:
-uri	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^    public String uri() {$/;"	m	class:ClickablePeercoinAddress
+uri	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^    public String uri() {$/;"	m	class:ClickableHTMLcoinAddress
 useAutoSave	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    protected boolean useAutoSave = true;$/;"	f	class:WalletAppKit
 useFilteredBlocks	core/src/main/java/com/matthewmitchell/peercoinj/core/Peer.java	/^    @GuardedBy("lock") private boolean useFilteredBlocks = false;$/;"	f	class:Peer	file:
 userAgent	core/src/main/java/com/matthewmitchell/peercoinj/kits/WalletAppKit.java	/^    protected String userAgent, version;$/;"	f	class:WalletAppKit
@@ -7589,8 +7589,8 @@ wallets	core/src/main/java/com/matthewmitchell/peercoinj/core/PeerGroup.java	/^ 
 wallettemplate	wallettemplate/src/main/java/wallettemplate/Controller.java	/^package wallettemplate;$/;"	p
 wallettemplate	wallettemplate/src/main/java/wallettemplate/Main.java	/^package wallettemplate;$/;"	p
 wallettemplate	wallettemplate/src/main/java/wallettemplate/SendMoneyController.java	/^package wallettemplate;$/;"	p
-wallettemplate.controls	wallettemplate/src/main/java/wallettemplate/controls/ClickablePeercoinAddress.java	/^package wallettemplate.controls;$/;"	p
-wallettemplate.controls	wallettemplate/src/main/java/wallettemplate/controls/PeercoinAddressValidator.java	/^package wallettemplate.controls;$/;"	p
+wallettemplate.controls	wallettemplate/src/main/java/wallettemplate/controls/ClickableHTMLcoinAddress.java	/^package wallettemplate.controls;$/;"	p
+wallettemplate.controls	wallettemplate/src/main/java/wallettemplate/controls/HTMLcoinAddressValidator.java	/^package wallettemplate.controls;$/;"	p
 wallettemplate.utils	wallettemplate/src/main/java/wallettemplate/utils/AlertWindowController.java	/^package wallettemplate.utils;$/;"	p
 wallettemplate.utils	wallettemplate/src/main/java/wallettemplate/utils/GuiUtils.java	/^package wallettemplate.utils;$/;"	p
 wallettemplate.utils	wallettemplate/src/main/java/wallettemplate/utils/TextFieldValidator.java	/^package wallettemplate.utils;$/;"	p
