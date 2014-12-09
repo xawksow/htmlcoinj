@@ -113,6 +113,7 @@ public abstract class NetworkParameters implements Serializable {
         genesisBlock.addTransaction(t);
         
         String merkleHash = genesisBlock.getMerkleRoot().toString();
+	java.util.logging.Logger.getLogger("mytag").info("merkleHash2 = " + merkleHash);
         checkState(merkleHash.equals("7755c5ef38a5993f6f22a78e4f22053d92fd0aa1b373e5c2bb78acdf3968e6b8"), merkleHash);
         
         return genesisBlock;

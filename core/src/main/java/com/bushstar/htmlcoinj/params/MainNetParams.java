@@ -30,20 +30,21 @@ public class MainNetParams extends NetworkParameters {
         super();
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
-        proofOfWorkLimit = Utils.decodeCompactBits(0x1e0ffff0L);
+        proofOfWorkLimit = Utils.decodeCompactBits(0x1e0ffffL);
         dumpedPrivateKeyHeader = 168;
         addressHeader = 40;
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         port = 6877;
         packetMagic= 0xa8a3a1a4L;
-        genesisBlock.setDifficultyTarget(0x1e0ffff0L);
+        genesisBlock.setDifficultyTarget(0x1e0ffffL);
         genesisBlock.setTime(1409500351L);
         genesisBlock.setNonce(0L);
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = 90000000;
+        subsidyDecreaseBlockCount = 900000000;
         spendableCoinbaseDepth = 500;
         String genesisHash = genesisBlock.getHashAsString();
+	java.util.logging.Logger.getLogger("mytag").info("genesishash = " + genesisHash);
         checkState(genesisHash.equals("1f1af97f0962d248116bc139ba251646dac0a03eb5688feb5f999d7f52436dad"), genesisHash);
 
         dnsSeeds = new String[] {

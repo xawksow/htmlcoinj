@@ -21,6 +21,7 @@ import com.bushstar.htmlcoinj.script.ScriptBuilder;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
+import com.bushstar.crypto.X15;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +40,7 @@ import java.util.List;
 
 import static com.bushstar.htmlcoinj.core.Utils.doubleDigest;
 import static com.bushstar.htmlcoinj.core.Utils.doubleDigestTwoBuffers;
+import static com.bushstar.crypto.X15.x15Digest;
 
 /**
  * <p>A block is a group of transactions, and is one of the fundamental data structures of the HTMLcoin system.
@@ -108,7 +110,7 @@ public class Block extends Message {
         super(params);
         // Set up a few basic things. We are not complete after this though.
         version = 1;
-        difficultyTarget = 0x1d07fff8L;
+        difficultyTarget = 0x1e0ffffL;
         time = System.currentTimeMillis() / 1000;
         prevBlockHash = Sha256Hash.ZERO_HASH;
 
@@ -172,7 +174,7 @@ public class Block extends Message {
      * </p>
      */
     public BigInteger getBlockInflation(int height) {
-        return Utils.toNanoCoins(50, 0).shiftRight(height / params.getSubsidyDecreaseBlockCount());
+        return Utils.toNanoCoins(5000, 0).shiftRight(height / params.getSubsidyDecreaseBlockCount());
     }
 
     private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
@@ -193,6 +195,8 @@ public class Block extends Message {
         time = readUint32();
         difficultyTarget = readUint32();
         nonce = readUint32();
+
+	hash = new Sha256Hash(Utils.reverseBytes(x15Digest(bytes, offset, cursor)));
 
         headerParsed = true;
         headerBytesValid = parseRetain;
@@ -227,13 +231,6 @@ public class Block extends Message {
         // If this is a genuine lazy parse then length must have been provided to the constructor.
         transactionsParsed = true;
         transactionBytesValid = parseRetain;
-        
-	if (! getHashAsString().equals("3cdd9c2facce405f5cc220fb21a10e493041451c463a22e1ff6fe903fc5769fc")) {
-		// Obtain signature
-		int sigLen = (int) readVarInt();
-		blockSig = readBytes(sigLen);
-	}
-        
     }
 
     void parse() throws ProtocolException {
@@ -521,7 +518,7 @@ public class Block extends Message {
         try {
             ByteArrayOutputStream bos = new UnsafeByteArrayOutputStream(HEADER_SIZE);
             writeHeader(bos);
-            return new Sha256Hash(Utils.reverseBytes(doubleDigest(bos.toByteArray())));
+            return new Sha256Hash(Utils.reverseBytes(x15Digest(bos.toByteArray())));
         } catch (IOException e) {
             throw new RuntimeException(e); // Cannot happen.
         }
@@ -992,9 +989,9 @@ public class Block extends Message {
         b.addCoinbaseTransaction(pubKey, coinbaseValue);
 
         if (to != null) {
-            // Add a transaction paying 50 coins to the "to" address.
+            // Add a transaction paying 5000 coins to the "to" address.
             Transaction t = new Transaction(params);
-            t.addOutput(new TransactionOutput(params, t, Utils.toNanoCoins(50, 0), to));
+            t.addOutput(new TransactionOutput(params, t, Utils.toNanoCoins(5000, 0), to));
             // The input does not really need to be a valid signature, as long as it has the right general form.
             TransactionInput input;
             if (prevOut == null) {
