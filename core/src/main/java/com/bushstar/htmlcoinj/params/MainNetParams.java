@@ -30,14 +30,14 @@ public class MainNetParams extends NetworkParameters {
         super();
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
-        proofOfWorkLimit = Utils.decodeCompactBits(0x1e0ffffL);
+        proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
         dumpedPrivateKeyHeader = 168;
         addressHeader = 40;
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         port = 6877;
         packetMagic= 0xa8a3a1a4L;
-        genesisBlock.setDifficultyTarget(0x1e0ffffL);
+        genesisBlock.setDifficultyTarget(0x1e0fffffL);
         genesisBlock.setTime(1409500351L);
         genesisBlock.setNonce(0L);
         id = ID_MAINNET;
